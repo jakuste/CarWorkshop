@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WarsztatSamochodowyModelStoreContainer" CdmEntityContainer="WarsztatSamochodowyEntities">
+    <EntitySetMapping Name="Act_dict">
+      <EntityTypeMapping TypeName="WarsztatSamochodowyModel.Act_dict">
+        <MappingFragment StoreEntitySet="Act_dict">
+          <ScalarProperty Name="act_type" ColumnName="act_type" />
+          <ScalarProperty Name="act_name" ColumnName="act_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Activity">
+      <EntityTypeMapping TypeName="WarsztatSamochodowyModel.Activity">
+        <MappingFragment StoreEntitySet="Activity">
+          <ScalarProperty Name="id_activity" ColumnName="id_activity" />
+          <ScalarProperty Name="seq_no" ColumnName="seq_no" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="result" ColumnName="result" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="date_request" ColumnName="date/request" />
+          <ScalarProperty Name="date_fin_cancel" ColumnName="date_fin_cancel" />
+          <ScalarProperty Name="id_request" ColumnName="id_request" />
+          <ScalarProperty Name="act_type" ColumnName="act_type" />
+          <ScalarProperty Name="id_personel" ColumnName="id_personel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Client">
+      <EntityTypeMapping TypeName="WarsztatSamochodowyModel.Client">
+        <MappingFragment StoreEntitySet="Client">
+          <ScalarProperty Name="id_client" ColumnName="id_client" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="street" ColumnName="street" />
+          <ScalarProperty Name="home" ColumnName="home" />
+          <ScalarProperty Name="flat" ColumnName="flat" />
+          <ScalarProperty Name="PESEL" ColumnName="PESEL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Object">
+      <EntityTypeMapping TypeName="WarsztatSamochodowyModel.Object">
+        <MappingFragment StoreEntitySet="Object">
+          <ScalarProperty Name="id_object" ColumnName="id_object" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id_client" ColumnName="id_client" />
+          <ScalarProperty Name="code_type" ColumnName="code_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Object_type">
+      <EntityTypeMapping TypeName="WarsztatSamochodowyModel.Object_type">
+        <MappingFragment StoreEntitySet="Object_type">
+          <ScalarProperty Name="code_type" ColumnName="code_type" />
+          <ScalarProperty Name="name_type" ColumnName="name_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Personel">
+      <EntityTypeMapping TypeName="WarsztatSamochodowyModel.Personel">
+        <MappingFragment StoreEntitySet="Personel">
+          <ScalarProperty Name="id_personel" ColumnName="id_personel" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="role" ColumnName="role" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="date_retire" ColumnName="date_retire" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Request">
+      <EntityTypeMapping TypeName="WarsztatSamochodowyModel.Request">
+        <MappingFragment StoreEntitySet="Request">
+          <ScalarProperty Name="id_request" ColumnName="id_request" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="result" ColumnName="result" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="date_request" ColumnName="date_request" />
+          <ScalarProperty Name="date_fin_cancel" ColumnName="date_fin_cancel" />
+          <ScalarProperty Name="id_activity" ColumnName="id_activity" />
+          <ScalarProperty Name="id_object" ColumnName="id_object" />
+          <ScalarProperty Name="id_personel" ColumnName="id_personel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="WarsztatSamochodowyModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="WarsztatSamochodowyModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="WarsztatSamochodowyModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="WarsztatSamochodowyModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="WarsztatSamochodowyModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WarsztatSamochodowyModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="WarsztatSamochodowyModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WarsztatSamochodowyModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="WarsztatSamochodowyModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="WarsztatSamochodowyModel.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>
