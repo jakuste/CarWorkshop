@@ -44,7 +44,7 @@
             this.DateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.Name_Label = new System.Windows.Forms.Label();
             this.Name_TextBox = new System.Windows.Forms.TextBox();
-            this.LogOut_button = new System.Windows.Forms.Button();
+            this.LogOut_Button = new System.Windows.Forms.Button();
             this.WelcomeText_Label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -57,7 +57,6 @@
             this.Search_Button.TabIndex = 20;
             this.Search_Button.Text = "Search";
             this.Search_Button.UseVisualStyleBackColor = true;
-            this.Search_Button.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
@@ -73,7 +72,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(760, 365);
             this.dataGridView1.TabIndex = 13;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // SequenceNumber
             // 
@@ -132,7 +130,7 @@
             this.Show_Button.TabIndex = 25;
             this.Show_Button.Text = "Show";
             this.Show_Button.UseVisualStyleBackColor = true;
-            this.Show_Button.Click += new System.EventHandler(this.button2_Click);
+            this.Show_Button.Click += new System.EventHandler(this.Show_Button_Click);
             // 
             // NextDay_Button
             // 
@@ -177,20 +175,21 @@
             this.Name_TextBox.Size = new System.Drawing.Size(150, 20);
             this.Name_TextBox.TabIndex = 40;
             // 
-            // LogOut_button
+            // LogOut_Button
             // 
-            this.LogOut_button.Location = new System.Drawing.Point(697, 2);
-            this.LogOut_button.Name = "LogOut_button";
-            this.LogOut_button.Size = new System.Drawing.Size(75, 23);
-            this.LogOut_button.TabIndex = 42;
-            this.LogOut_button.Text = "Log out";
-            this.LogOut_button.UseVisualStyleBackColor = true;
+            this.LogOut_Button.Location = new System.Drawing.Point(697, 2);
+            this.LogOut_Button.Name = "LogOut_Button";
+            this.LogOut_Button.Size = new System.Drawing.Size(75, 23);
+            this.LogOut_Button.TabIndex = 42;
+            this.LogOut_Button.Text = "Log out";
+            this.LogOut_Button.UseVisualStyleBackColor = true;
+            this.LogOut_Button.Click += new System.EventHandler(this.LogOut_Button_Click);
             // 
             // WelcomeText_Label
             // 
             this.WelcomeText_Label.AutoSize = true;
             this.WelcomeText_Label.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.WelcomeText_Label.Location = new System.Drawing.Point(14, 7);
+            this.WelcomeText_Label.Location = new System.Drawing.Point(9, 7);
             this.WelcomeText_Label.Name = "WelcomeText_Label";
             this.WelcomeText_Label.Size = new System.Drawing.Size(55, 13);
             this.WelcomeText_Label.TabIndex = 43;
@@ -202,7 +201,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.WelcomeText_Label);
-            this.Controls.Add(this.LogOut_button);
+            this.Controls.Add(this.LogOut_Button);
             this.Controls.Add(this.Name_Label);
             this.Controls.Add(this.Name_TextBox);
             this.Controls.Add(this.NextDay_Button);
@@ -241,7 +240,7 @@
         private System.Windows.Forms.DateTimePicker DateTimePicker;
         private System.Windows.Forms.Label Name_Label;
         private System.Windows.Forms.TextBox Name_TextBox;
-        private System.Windows.Forms.Button LogOut_button;
+        private System.Windows.Forms.Button LogOut_Button;
         private System.Windows.Forms.Label WelcomeText_Label;
     }
 }

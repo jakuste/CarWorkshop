@@ -37,7 +37,7 @@ namespace Przychodnia
     
         public override void InitOnShow()
         {
-            this.WelcomeText_Label.Text = "Hi, you are logged in as ";
+            this.WelcomeText_Label.Text = "Hi, you are logged in as [username]";
         }
 
         private void LogOut_Button_Click(object sender, EventArgs e)
@@ -57,5 +57,6 @@ namespace Przychodnia
             UserEditor addNewAccountWindow = new UserEditor();
             addNewAccountWindow.ShowDialog();
         }
+
     }
 }

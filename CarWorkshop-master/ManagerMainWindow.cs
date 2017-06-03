@@ -41,7 +41,8 @@ namespace Przychodnia
 
         public override void InitOnShow()
         {
-           //--
+            this.WelcomeText_Label.Text = "Hi, you are logged in as [username]";
         }
+
     }
 }

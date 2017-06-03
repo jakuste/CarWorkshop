@@ -28,29 +28,21 @@ namespace Przychodnia
             }
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         public override void InitOnShow()
         {
-            //
+            this.WelcomeText_Label.Text = "Hi, you are logged in as [username]";
+        }
+
+        private void LogOut_Button_Click(object sender, EventArgs e)
+        {
+            Program.loginWindow.Visible = true;
+            this.Visible = false;
+        }
+
+        private void Show_Button_Click(object sender, EventArgs e)
+        {
+            ActivityViever ShowActivityWindow = new ActivityViever();
+            ShowActivityWindow.ShowDialog();
         }
     }
 }

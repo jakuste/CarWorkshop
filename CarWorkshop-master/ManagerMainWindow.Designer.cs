@@ -30,6 +30,11 @@
         {
             this.ManagerMainWindow_TabControl = new System.Windows.Forms.TabControl();
             this.Customers_TabPage = new System.Windows.Forms.TabPage();
+            this.AddObject_Button = new System.Windows.Forms.Button();
+            this.ShowObjects_Button = new System.Windows.Forms.Button();
+            this.AddNewCustomer_Button = new System.Windows.Forms.Button();
+            this.Edit_Button = new System.Windows.Forms.Button();
+            this.Delete_Button = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.Country_TextBox = new System.Windows.Forms.TextBox();
             this.Country_Label = new System.Windows.Forms.Label();
@@ -46,7 +51,17 @@
             this.Name_Label = new System.Windows.Forms.Label();
             this.Name_TextBox = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Street = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NumberOfHouse = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.City = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Country = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Objects_TabPage = new System.Windows.Forms.TabPage();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
@@ -63,17 +78,14 @@
             this.RegistrationNo_Label = new System.Windows.Forms.Label();
             this.RegistrationNo_TextBox = new System.Windows.Forms.TextBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.FirstNameInObjects = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SurnameInObjects = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RegistrationNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Manufacturer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Model = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Engine = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Year = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Request_TabPage = new System.Windows.Forms.TabPage();
-            this.LogOut_button = new System.Windows.Forms.Button();
-            this.AddNewCustomer_Button = new System.Windows.Forms.Button();
-            this.Edit_Button = new System.Windows.Forms.Button();
-            this.Delete_Button = new System.Windows.Forms.Button();
-            this.ShowObjects_Button = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.AddObject_Button = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.NextDay_Button = new System.Windows.Forms.Button();
@@ -90,19 +102,8 @@
             this.DateRequest = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateFinCancel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Street = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NumberOfHouse = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.City = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Country = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FirstNameInObjects = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SurnameInObjects = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RegistrationNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Manufacturer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Model = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Engine = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Year = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LogOut_button = new System.Windows.Forms.Button();
+            this.WelcomeText_Label = new System.Windows.Forms.Label();
             this.ManagerMainWindow_TabControl.SuspendLayout();
             this.Customers_TabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -117,10 +118,10 @@
             this.ManagerMainWindow_TabControl.Controls.Add(this.Customers_TabPage);
             this.ManagerMainWindow_TabControl.Controls.Add(this.Objects_TabPage);
             this.ManagerMainWindow_TabControl.Controls.Add(this.Request_TabPage);
-            this.ManagerMainWindow_TabControl.Location = new System.Drawing.Point(12, 12);
+            this.ManagerMainWindow_TabControl.Location = new System.Drawing.Point(12, 20);
             this.ManagerMainWindow_TabControl.Name = "ManagerMainWindow_TabControl";
             this.ManagerMainWindow_TabControl.SelectedIndex = 0;
-            this.ManagerMainWindow_TabControl.Size = new System.Drawing.Size(760, 447);
+            this.ManagerMainWindow_TabControl.Size = new System.Drawing.Size(760, 439);
             this.ManagerMainWindow_TabControl.TabIndex = 0;
             // 
             // Customers_TabPage
@@ -149,10 +150,55 @@
             this.Customers_TabPage.Location = new System.Drawing.Point(4, 22);
             this.Customers_TabPage.Name = "Customers_TabPage";
             this.Customers_TabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.Customers_TabPage.Size = new System.Drawing.Size(752, 421);
+            this.Customers_TabPage.Size = new System.Drawing.Size(752, 413);
             this.Customers_TabPage.TabIndex = 0;
             this.Customers_TabPage.Text = "Customers";
             this.Customers_TabPage.UseVisualStyleBackColor = true;
+            // 
+            // AddObject_Button
+            // 
+            this.AddObject_Button.Location = new System.Drawing.Point(504, 390);
+            this.AddObject_Button.Name = "AddObject_Button";
+            this.AddObject_Button.Size = new System.Drawing.Size(121, 23);
+            this.AddObject_Button.TabIndex = 41;
+            this.AddObject_Button.Text = "Add object";
+            this.AddObject_Button.UseVisualStyleBackColor = true;
+            // 
+            // ShowObjects_Button
+            // 
+            this.ShowObjects_Button.Location = new System.Drawing.Point(631, 390);
+            this.ShowObjects_Button.Name = "ShowObjects_Button";
+            this.ShowObjects_Button.Size = new System.Drawing.Size(121, 23);
+            this.ShowObjects_Button.TabIndex = 40;
+            this.ShowObjects_Button.Text = "Show objects";
+            this.ShowObjects_Button.UseVisualStyleBackColor = true;
+            // 
+            // AddNewCustomer_Button
+            // 
+            this.AddNewCustomer_Button.Location = new System.Drawing.Point(0, 390);
+            this.AddNewCustomer_Button.Name = "AddNewCustomer_Button";
+            this.AddNewCustomer_Button.Size = new System.Drawing.Size(121, 23);
+            this.AddNewCustomer_Button.TabIndex = 39;
+            this.AddNewCustomer_Button.Text = "Add new customer";
+            this.AddNewCustomer_Button.UseVisualStyleBackColor = true;
+            // 
+            // Edit_Button
+            // 
+            this.Edit_Button.Location = new System.Drawing.Point(125, 390);
+            this.Edit_Button.Name = "Edit_Button";
+            this.Edit_Button.Size = new System.Drawing.Size(121, 23);
+            this.Edit_Button.TabIndex = 38;
+            this.Edit_Button.Text = "Edit";
+            this.Edit_Button.UseVisualStyleBackColor = true;
+            // 
+            // Delete_Button
+            // 
+            this.Delete_Button.Location = new System.Drawing.Point(252, 390);
+            this.Delete_Button.Name = "Delete_Button";
+            this.Delete_Button.Size = new System.Drawing.Size(121, 23);
+            this.Delete_Button.TabIndex = 37;
+            this.Delete_Button.Text = "Delete";
+            this.Delete_Button.UseVisualStyleBackColor = true;
             // 
             // button8
             // 
@@ -293,8 +339,38 @@
             this.Country});
             this.dataGridView2.Location = new System.Drawing.Point(0, 55);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(752, 336);
+            this.dataGridView2.Size = new System.Drawing.Size(752, 327);
             this.dataGridView2.TabIndex = 17;
+            // 
+            // FirstName
+            // 
+            this.FirstName.HeaderText = "Name";
+            this.FirstName.Name = "FirstName";
+            // 
+            // LastName
+            // 
+            this.LastName.HeaderText = "Surname";
+            this.LastName.Name = "LastName";
+            // 
+            // Street
+            // 
+            this.Street.HeaderText = "Street";
+            this.Street.Name = "Street";
+            // 
+            // NumberOfHouse
+            // 
+            this.NumberOfHouse.HeaderText = "Number";
+            this.NumberOfHouse.Name = "NumberOfHouse";
+            // 
+            // City
+            // 
+            this.City.HeaderText = "City";
+            this.City.Name = "City";
+            // 
+            // Country
+            // 
+            this.Country.HeaderText = "Country";
+            this.Country.Name = "Country";
             // 
             // Objects_TabPage
             // 
@@ -321,10 +397,46 @@
             this.Objects_TabPage.Location = new System.Drawing.Point(4, 22);
             this.Objects_TabPage.Name = "Objects_TabPage";
             this.Objects_TabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.Objects_TabPage.Size = new System.Drawing.Size(752, 421);
+            this.Objects_TabPage.Size = new System.Drawing.Size(752, 413);
             this.Objects_TabPage.TabIndex = 1;
             this.Objects_TabPage.Text = "Objects";
             this.Objects_TabPage.UseVisualStyleBackColor = true;
+            // 
+            // button18
+            // 
+            this.button18.Location = new System.Drawing.Point(501, 390);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(121, 23);
+            this.button18.TabIndex = 61;
+            this.button18.Text = "Add request";
+            this.button18.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(631, 390);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(121, 23);
+            this.button7.TabIndex = 60;
+            this.button7.Text = "Show requests";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button19
+            // 
+            this.button19.Location = new System.Drawing.Point(127, 390);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(121, 23);
+            this.button19.TabIndex = 58;
+            this.button19.Text = "Edit";
+            this.button19.UseVisualStyleBackColor = true;
+            // 
+            // button20
+            // 
+            this.button20.Location = new System.Drawing.Point(254, 390);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(121, 23);
+            this.button20.TabIndex = 57;
+            this.button20.Text = "Delete";
+            this.button20.UseVisualStyleBackColor = true;
             // 
             // comboBox2
             // 
@@ -465,8 +577,43 @@
             this.Year});
             this.dataGridView3.Location = new System.Drawing.Point(0, 61);
             this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(748, 304);
+            this.dataGridView3.Size = new System.Drawing.Size(748, 323);
             this.dataGridView3.TabIndex = 37;
+            // 
+            // FirstNameInObjects
+            // 
+            this.FirstNameInObjects.HeaderText = "Name";
+            this.FirstNameInObjects.Name = "FirstNameInObjects";
+            // 
+            // SurnameInObjects
+            // 
+            this.SurnameInObjects.HeaderText = "Surname";
+            this.SurnameInObjects.Name = "SurnameInObjects";
+            // 
+            // RegistrationNumber
+            // 
+            this.RegistrationNumber.HeaderText = "Registration no.";
+            this.RegistrationNumber.Name = "RegistrationNumber";
+            // 
+            // Manufacturer
+            // 
+            this.Manufacturer.HeaderText = "Manufacturer";
+            this.Manufacturer.Name = "Manufacturer";
+            // 
+            // Model
+            // 
+            this.Model.HeaderText = "Model";
+            this.Model.Name = "Model";
+            // 
+            // Engine
+            // 
+            this.Engine.HeaderText = "Engine";
+            this.Engine.Name = "Engine";
+            // 
+            // Year
+            // 
+            this.Year.HeaderText = "Year";
+            this.Year.Name = "Year";
             // 
             // Request_TabPage
             // 
@@ -482,101 +629,10 @@
             this.Request_TabPage.Controls.Add(this.dataGridView1);
             this.Request_TabPage.Location = new System.Drawing.Point(4, 22);
             this.Request_TabPage.Name = "Request_TabPage";
-            this.Request_TabPage.Size = new System.Drawing.Size(752, 421);
+            this.Request_TabPage.Size = new System.Drawing.Size(752, 413);
             this.Request_TabPage.TabIndex = 2;
             this.Request_TabPage.Text = "Requests";
             this.Request_TabPage.UseVisualStyleBackColor = true;
-            // 
-            // LogOut_button
-            // 
-            this.LogOut_button.Location = new System.Drawing.Point(697, 4);
-            this.LogOut_button.Name = "LogOut_button";
-            this.LogOut_button.Size = new System.Drawing.Size(75, 23);
-            this.LogOut_button.TabIndex = 1;
-            this.LogOut_button.Text = "Log out";
-            this.LogOut_button.UseVisualStyleBackColor = true;
-            this.LogOut_button.Click += new System.EventHandler(this.LogOut_button_Click);
-            // 
-            // AddNewCustomer_Button
-            // 
-            this.AddNewCustomer_Button.Location = new System.Drawing.Point(0, 397);
-            this.AddNewCustomer_Button.Name = "AddNewCustomer_Button";
-            this.AddNewCustomer_Button.Size = new System.Drawing.Size(121, 23);
-            this.AddNewCustomer_Button.TabIndex = 39;
-            this.AddNewCustomer_Button.Text = "Add new customer";
-            this.AddNewCustomer_Button.UseVisualStyleBackColor = true;
-            // 
-            // Edit_Button
-            // 
-            this.Edit_Button.Location = new System.Drawing.Point(125, 397);
-            this.Edit_Button.Name = "Edit_Button";
-            this.Edit_Button.Size = new System.Drawing.Size(121, 23);
-            this.Edit_Button.TabIndex = 38;
-            this.Edit_Button.Text = "Edit";
-            this.Edit_Button.UseVisualStyleBackColor = true;
-            // 
-            // Delete_Button
-            // 
-            this.Delete_Button.Location = new System.Drawing.Point(252, 397);
-            this.Delete_Button.Name = "Delete_Button";
-            this.Delete_Button.Size = new System.Drawing.Size(121, 23);
-            this.Delete_Button.TabIndex = 37;
-            this.Delete_Button.Text = "Delete";
-            this.Delete_Button.UseVisualStyleBackColor = true;
-            // 
-            // ShowObjects_Button
-            // 
-            this.ShowObjects_Button.Location = new System.Drawing.Point(631, 397);
-            this.ShowObjects_Button.Name = "ShowObjects_Button";
-            this.ShowObjects_Button.Size = new System.Drawing.Size(121, 23);
-            this.ShowObjects_Button.TabIndex = 40;
-            this.ShowObjects_Button.Text = "Show objects";
-            this.ShowObjects_Button.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(631, 397);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(121, 23);
-            this.button7.TabIndex = 60;
-            this.button7.Text = "Show requests";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button19
-            // 
-            this.button19.Location = new System.Drawing.Point(127, 397);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(121, 23);
-            this.button19.TabIndex = 58;
-            this.button19.Text = "Edit";
-            this.button19.UseVisualStyleBackColor = true;
-            // 
-            // button20
-            // 
-            this.button20.Location = new System.Drawing.Point(254, 397);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(121, 23);
-            this.button20.TabIndex = 57;
-            this.button20.Text = "Delete";
-            this.button20.UseVisualStyleBackColor = true;
-            // 
-            // AddObject_Button
-            // 
-            this.AddObject_Button.Location = new System.Drawing.Point(504, 397);
-            this.AddObject_Button.Name = "AddObject_Button";
-            this.AddObject_Button.Size = new System.Drawing.Size(121, 23);
-            this.AddObject_Button.TabIndex = 41;
-            this.AddObject_Button.Text = "Add object";
-            this.AddObject_Button.UseVisualStyleBackColor = true;
-            // 
-            // button18
-            // 
-            this.button18.Location = new System.Drawing.Point(501, 397);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(121, 23);
-            this.button18.TabIndex = 61;
-            this.button18.Text = "Add request";
-            this.button18.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -623,7 +679,7 @@
             // 
             // Show_Button
             // 
-            this.Show_Button.Location = new System.Drawing.Point(631, 395);
+            this.Show_Button.Location = new System.Drawing.Point(631, 387);
             this.Show_Button.Name = "Show_Button";
             this.Show_Button.Size = new System.Drawing.Size(121, 26);
             this.Show_Button.TabIndex = 46;
@@ -668,7 +724,7 @@
             this.Status});
             this.dataGridView1.Location = new System.Drawing.Point(0, 38);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(756, 351);
+            this.dataGridView1.Size = new System.Drawing.Size(756, 343);
             this.dataGridView1.TabIndex = 42;
             // 
             // SequenceNumber
@@ -703,76 +759,32 @@
             this.Status.HeaderText = "Status";
             this.Status.Name = "Status";
             // 
-            // FirstName
+            // LogOut_button
             // 
-            this.FirstName.HeaderText = "Name";
-            this.FirstName.Name = "FirstName";
+            this.LogOut_button.Location = new System.Drawing.Point(697, 4);
+            this.LogOut_button.Name = "LogOut_button";
+            this.LogOut_button.Size = new System.Drawing.Size(75, 23);
+            this.LogOut_button.TabIndex = 1;
+            this.LogOut_button.Text = "Log out";
+            this.LogOut_button.UseVisualStyleBackColor = true;
+            this.LogOut_button.Click += new System.EventHandler(this.LogOut_button_Click);
             // 
-            // LastName
+            // WelcomeText_Label
             // 
-            this.LastName.HeaderText = "Surname";
-            this.LastName.Name = "LastName";
-            // 
-            // Street
-            // 
-            this.Street.HeaderText = "Street";
-            this.Street.Name = "Street";
-            // 
-            // NumberOfHouse
-            // 
-            this.NumberOfHouse.HeaderText = "Number";
-            this.NumberOfHouse.Name = "NumberOfHouse";
-            // 
-            // City
-            // 
-            this.City.HeaderText = "City";
-            this.City.Name = "City";
-            // 
-            // Country
-            // 
-            this.Country.HeaderText = "Country";
-            this.Country.Name = "Country";
-            // 
-            // FirstNameInObjects
-            // 
-            this.FirstNameInObjects.HeaderText = "Name";
-            this.FirstNameInObjects.Name = "FirstNameInObjects";
-            // 
-            // SurnameInObjects
-            // 
-            this.SurnameInObjects.HeaderText = "Surname";
-            this.SurnameInObjects.Name = "SurnameInObjects";
-            // 
-            // RegistrationNumber
-            // 
-            this.RegistrationNumber.HeaderText = "Registration no.";
-            this.RegistrationNumber.Name = "RegistrationNumber";
-            // 
-            // Manufacturer
-            // 
-            this.Manufacturer.HeaderText = "Manufacturer";
-            this.Manufacturer.Name = "Manufacturer";
-            // 
-            // Model
-            // 
-            this.Model.HeaderText = "Model";
-            this.Model.Name = "Model";
-            // 
-            // Engine
-            // 
-            this.Engine.HeaderText = "Engine";
-            this.Engine.Name = "Engine";
-            // 
-            // Year
-            // 
-            this.Year.HeaderText = "Year";
-            this.Year.Name = "Year";
+            this.WelcomeText_Label.AutoSize = true;
+            this.WelcomeText_Label.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.WelcomeText_Label.Location = new System.Drawing.Point(2, 4);
+            this.WelcomeText_Label.Name = "WelcomeText_Label";
+            this.WelcomeText_Label.Size = new System.Drawing.Size(55, 13);
+            this.WelcomeText_Label.TabIndex = 19;
+            this.WelcomeText_Label.Text = "Welcome!";
             // 
             // ManagerMainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.WelcomeText_Label);
             this.Controls.Add(this.LogOut_button);
             this.Controls.Add(this.ManagerMainWindow_TabControl);
             this.MaximumSize = new System.Drawing.Size(800, 500);
@@ -791,6 +803,7 @@
             this.Request_TabPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -871,5 +884,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Model;
         private System.Windows.Forms.DataGridViewTextBoxColumn Engine;
         private System.Windows.Forms.DataGridViewTextBoxColumn Year;
+        private System.Windows.Forms.Label WelcomeText_Label;
     }
 }

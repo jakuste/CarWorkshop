@@ -19,13 +19,14 @@ namespace Przychodnia
 
         private void Save_Button_Click(object sender, EventArgs e)
         {
-
             this.Close();
+            this.Dispose();
         }
 
         private void Cancel_Button_Click(object sender, EventArgs e)
         {
             this.Close();
+            this.Dispose();
         }
     }
 }
