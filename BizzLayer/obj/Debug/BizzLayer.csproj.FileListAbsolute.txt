@@ -25,3 +25,16 @@ C:\Projekty Visual Studio\BDII_CarWorkshop\BizzLayer\bin\Debug\DataLayer.dll.con
 C:\Projekty Visual Studio\BDII_CarWorkshop\BizzLayer\obj\Debug\BizzLayer.csprojResolveAssemblyReference.cache
 C:\Projekty Visual Studio\BDII_CarWorkshop\BizzLayer\obj\Debug\BizzLayer.dll
 C:\Projekty Visual Studio\BDII_CarWorkshop\BizzLayer\obj\Debug\BizzLayer.pdb
+C:\Users\Aramilion\Documents\GitHub\CarWorkshop\BizzLayer\bin\Debug\BizzLayer.dll.config
+C:\Users\Aramilion\Documents\GitHub\CarWorkshop\BizzLayer\bin\Debug\BizzLayer.dll
+C:\Users\Aramilion\Documents\GitHub\CarWorkshop\BizzLayer\bin\Debug\BizzLayer.pdb
+C:\Users\Aramilion\Documents\GitHub\CarWorkshop\BizzLayer\bin\Debug\DataLayer.dll
+C:\Users\Aramilion\Documents\GitHub\CarWorkshop\BizzLayer\bin\Debug\EntityFramework.dll
+C:\Users\Aramilion\Documents\GitHub\CarWorkshop\BizzLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Aramilion\Documents\GitHub\CarWorkshop\BizzLayer\bin\Debug\DataLayer.pdb
+C:\Users\Aramilion\Documents\GitHub\CarWorkshop\BizzLayer\bin\Debug\DataLayer.dll.config
+C:\Users\Aramilion\Documents\GitHub\CarWorkshop\BizzLayer\bin\Debug\EntityFramework.xml
+C:\Users\Aramilion\Documents\GitHub\CarWorkshop\BizzLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Aramilion\Documents\GitHub\CarWorkshop\BizzLayer\obj\Debug\BizzLayer.csprojResolveAssemblyReference.cache
+C:\Users\Aramilion\Documents\GitHub\CarWorkshop\BizzLayer\obj\Debug\BizzLayer.dll
+C:\Users\Aramilion\Documents\GitHub\CarWorkshop\BizzLayer\obj\Debug\BizzLayer.pdb

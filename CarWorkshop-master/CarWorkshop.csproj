@@ -134,6 +134,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RequestEditor.Designer.cs">
+      <DependentUpon>RequestEditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sandbox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +188,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RequestEditor.resx">
+      <DependentUpon>RequestEditor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sandbox.resx">
       <DependentUpon>Sandbox.cs</DependentUpon>
     </EmbeddedResource>

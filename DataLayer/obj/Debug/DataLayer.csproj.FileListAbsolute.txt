@@ -12,3 +12,13 @@ C:\home\aei\BD2-proj\2017\demo-przychodnia_3warstwy-2017\DataLayer\obj\Debug\Dat
 C:\Projekty Visual Studio\BDII_CarWorkshop\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
 C:\Projekty Visual Studio\BDII_CarWorkshop\DataLayer\obj\Debug\DataLayer.dll
 C:\Projekty Visual Studio\BDII_CarWorkshop\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\Aramilion\Documents\GitHub\CarWorkshop\DataLayer\bin\Debug\DataLayer.dll.config
+C:\Users\Aramilion\Documents\GitHub\CarWorkshop\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\Aramilion\Documents\GitHub\CarWorkshop\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\Aramilion\Documents\GitHub\CarWorkshop\DataLayer\bin\Debug\EntityFramework.dll
+C:\Users\Aramilion\Documents\GitHub\CarWorkshop\DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Aramilion\Documents\GitHub\CarWorkshop\DataLayer\bin\Debug\EntityFramework.xml
+C:\Users\Aramilion\Documents\GitHub\CarWorkshop\DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Aramilion\Documents\GitHub\CarWorkshop\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+C:\Users\Aramilion\Documents\GitHub\CarWorkshop\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\Aramilion\Documents\GitHub\CarWorkshop\DataLayer\obj\Debug\DataLayer.pdb
