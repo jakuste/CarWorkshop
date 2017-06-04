@@ -28,227 +28,204 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnApply = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.Save_Button = new System.Windows.Forms.Button();
+            this.Cancel_Button = new System.Windows.Forms.Button();
+            this.Company_Label = new System.Windows.Forms.Label();
+            this.Company_CheckBox = new System.Windows.Forms.CheckBox();
+            this.Name_TextBox = new System.Windows.Forms.TextBox();
+            this.Name_Label = new System.Windows.Forms.Label();
+            this.Surname_TextBox = new System.Windows.Forms.TextBox();
+            this.Surname_Label = new System.Windows.Forms.Label();
+            this.Number_TextBox = new System.Windows.Forms.TextBox();
+            this.Number_Label = new System.Windows.Forms.Label();
+            this.Street_TextBox = new System.Windows.Forms.TextBox();
+            this.Street_Label = new System.Windows.Forms.Label();
+            this.City_TextBox = new System.Windows.Forms.TextBox();
+            this.City_Label = new System.Windows.Forms.Label();
+            this.Country_TextBox = new System.Windows.Forms.TextBox();
+            this.Country_Label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label3
+            // Save_Button
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 45);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 13);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Company name";
+            this.Save_Button.Location = new System.Drawing.Point(147, 201);
+            this.Save_Button.Name = "Save_Button";
+            this.Save_Button.Size = new System.Drawing.Size(75, 23);
+            this.Save_Button.TabIndex = 12;
+            this.Save_Button.Text = "Save";
+            this.Save_Button.UseVisualStyleBackColor = true;
+            this.Save_Button.Click += new System.EventHandler(this.Save_Button_Click);
             // 
-            // btnApply
+            // Cancel_Button
             // 
-            this.btnApply.Location = new System.Drawing.Point(197, 276);
-            this.btnApply.Name = "btnApply";
-            this.btnApply.Size = new System.Drawing.Size(75, 23);
-            this.btnApply.TabIndex = 12;
-            this.btnApply.Text = "Save";
-            this.btnApply.UseVisualStyleBackColor = true;
-            this.btnApply.Click += new System.EventHandler(this.button1_Click);
+            this.Cancel_Button.Location = new System.Drawing.Point(66, 201);
+            this.Cancel_Button.Name = "Cancel_Button";
+            this.Cancel_Button.Size = new System.Drawing.Size(75, 23);
+            this.Cancel_Button.TabIndex = 13;
+            this.Cancel_Button.Text = "Cancel";
+            this.Cancel_Button.UseVisualStyleBackColor = true;
+            this.Cancel_Button.Click += new System.EventHandler(this.Cancel_Button_Click);
             // 
-            // button2
+            // Company_Label
             // 
-            this.button2.Location = new System.Drawing.Point(116, 276);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Company_Label.AutoSize = true;
+            this.Company_Label.Location = new System.Drawing.Point(12, 9);
+            this.Company_Label.Name = "Company_Label";
+            this.Company_Label.Size = new System.Drawing.Size(51, 13);
+            this.Company_Label.TabIndex = 33;
+            this.Company_Label.Text = "Company";
             // 
-            // label8
+            // Company_CheckBox
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(46, 19);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 13);
-            this.label8.TabIndex = 33;
-            this.label8.Text = "Company";
+            this.Company_CheckBox.AutoSize = true;
+            this.Company_CheckBox.Location = new System.Drawing.Point(72, 9);
+            this.Company_CheckBox.Name = "Company_CheckBox";
+            this.Company_CheckBox.Size = new System.Drawing.Size(15, 14);
+            this.Company_CheckBox.TabIndex = 32;
+            this.Company_CheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // Name_TextBox
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(103, 19);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(15, 14);
-            this.checkBox2.TabIndex = 32;
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.Name_TextBox.Location = new System.Drawing.Point(72, 29);
+            this.Name_TextBox.Name = "Name_TextBox";
+            this.Name_TextBox.Size = new System.Drawing.Size(150, 20);
+            this.Name_TextBox.TabIndex = 37;
             // 
-            // textBox6
+            // Name_Label
             // 
-            this.textBox6.Location = new System.Drawing.Point(103, 42);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(150, 20);
-            this.textBox6.TabIndex = 35;
+            this.Name_Label.AutoSize = true;
+            this.Name_Label.Location = new System.Drawing.Point(12, 32);
+            this.Name_Label.Name = "Name_Label";
+            this.Name_Label.Size = new System.Drawing.Size(35, 13);
+            this.Name_Label.TabIndex = 36;
+            this.Name_Label.Text = "Name";
             // 
-            // textBox4
+            // Surname_TextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(103, 68);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(150, 20);
-            this.textBox4.TabIndex = 37;
+            this.Surname_TextBox.Location = new System.Drawing.Point(72, 55);
+            this.Surname_TextBox.Name = "Surname_TextBox";
+            this.Surname_TextBox.Size = new System.Drawing.Size(150, 20);
+            this.Surname_TextBox.TabIndex = 39;
             // 
-            // label1
+            // Surname_Label
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(62, 71);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 36;
-            this.label1.Text = "Name";
+            this.Surname_Label.AutoSize = true;
+            this.Surname_Label.Location = new System.Drawing.Point(12, 58);
+            this.Surname_Label.Name = "Surname_Label";
+            this.Surname_Label.Size = new System.Drawing.Size(49, 13);
+            this.Surname_Label.TabIndex = 38;
+            this.Surname_Label.Text = "Surname";
             // 
-            // textBox1
+            // Number_TextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(103, 94);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 20);
-            this.textBox1.TabIndex = 39;
+            this.Number_TextBox.Location = new System.Drawing.Point(72, 107);
+            this.Number_TextBox.Name = "Number_TextBox";
+            this.Number_TextBox.Size = new System.Drawing.Size(150, 20);
+            this.Number_TextBox.TabIndex = 45;
             // 
-            // label2
+            // Number_Label
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(48, 97);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
-            this.label2.TabIndex = 38;
-            this.label2.Text = "Surname";
+            this.Number_Label.AutoSize = true;
+            this.Number_Label.Location = new System.Drawing.Point(12, 110);
+            this.Number_Label.Name = "Number_Label";
+            this.Number_Label.Size = new System.Drawing.Size(44, 13);
+            this.Number_Label.TabIndex = 44;
+            this.Number_Label.Text = "Number";
             // 
-            // textBox2
+            // Street_TextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(103, 172);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(150, 20);
-            this.textBox2.TabIndex = 45;
+            this.Street_TextBox.Location = new System.Drawing.Point(72, 81);
+            this.Street_TextBox.Name = "Street_TextBox";
+            this.Street_TextBox.Size = new System.Drawing.Size(150, 20);
+            this.Street_TextBox.TabIndex = 43;
             // 
-            // label6
+            // Street_Label
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(54, 175);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 13);
-            this.label6.TabIndex = 44;
-            this.label6.Text = "Number";
+            this.Street_Label.AutoSize = true;
+            this.Street_Label.Location = new System.Drawing.Point(12, 84);
+            this.Street_Label.Name = "Street_Label";
+            this.Street_Label.Size = new System.Drawing.Size(35, 13);
+            this.Street_Label.TabIndex = 42;
+            this.Street_Label.Text = "Street";
             // 
-            // textBox3
+            // City_TextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(103, 146);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(150, 20);
-            this.textBox3.TabIndex = 43;
+            this.City_TextBox.Location = new System.Drawing.Point(72, 133);
+            this.City_TextBox.Name = "City_TextBox";
+            this.City_TextBox.Size = new System.Drawing.Size(150, 20);
+            this.City_TextBox.TabIndex = 41;
             // 
-            // label7
+            // City_Label
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(62, 149);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 42;
-            this.label7.Text = "Street";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+            this.City_Label.AutoSize = true;
+            this.City_Label.Location = new System.Drawing.Point(12, 136);
+            this.City_Label.Name = "City_Label";
+            this.City_Label.Size = new System.Drawing.Size(24, 13);
+            this.City_Label.TabIndex = 40;
+            this.City_Label.Text = "City";
             // 
-            // textBox5
+            // Country_TextBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(103, 198);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(150, 20);
-            this.textBox5.TabIndex = 41;
+            this.Country_TextBox.Location = new System.Drawing.Point(72, 159);
+            this.Country_TextBox.Name = "Country_TextBox";
+            this.Country_TextBox.Size = new System.Drawing.Size(150, 20);
+            this.Country_TextBox.TabIndex = 47;
             // 
-            // label9
+            // Country_Label
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(73, 201);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(24, 13);
-            this.label9.TabIndex = 40;
-            this.label9.Text = "City";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(103, 224);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(150, 20);
-            this.textBox7.TabIndex = 47;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(54, 227);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 13);
-            this.label4.TabIndex = 46;
-            this.label4.Text = "Country";
+            this.Country_Label.AutoSize = true;
+            this.Country_Label.Location = new System.Drawing.Point(12, 162);
+            this.Country_Label.Name = "Country_Label";
+            this.Country_Label.Size = new System.Drawing.Size(43, 13);
+            this.Country_Label.TabIndex = 46;
+            this.Country_Label.Text = "Country";
             // 
             // CustomerEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 311);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.btnApply);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(234, 236);
+            this.Controls.Add(this.Country_TextBox);
+            this.Controls.Add(this.Country_Label);
+            this.Controls.Add(this.Number_TextBox);
+            this.Controls.Add(this.Number_Label);
+            this.Controls.Add(this.Street_TextBox);
+            this.Controls.Add(this.Street_Label);
+            this.Controls.Add(this.City_TextBox);
+            this.Controls.Add(this.City_Label);
+            this.Controls.Add(this.Surname_TextBox);
+            this.Controls.Add(this.Surname_Label);
+            this.Controls.Add(this.Name_TextBox);
+            this.Controls.Add(this.Name_Label);
+            this.Controls.Add(this.Company_Label);
+            this.Controls.Add(this.Company_CheckBox);
+            this.Controls.Add(this.Cancel_Button);
+            this.Controls.Add(this.Save_Button);
+            this.MaximumSize = new System.Drawing.Size(250, 275);
+            this.MinimumSize = new System.Drawing.Size(250, 275);
             this.Name = "CustomerEditor";
             this.Text = "CustomerEditor";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EdycjaPacjenta_FormClosed);
-            this.Load += new System.EventHandler(this.EdycjaPacjenta_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnApply;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button Save_Button;
+        private System.Windows.Forms.Button Cancel_Button;
+        private System.Windows.Forms.Label Company_Label;
+        private System.Windows.Forms.CheckBox Company_CheckBox;
+        private System.Windows.Forms.TextBox Name_TextBox;
+        private System.Windows.Forms.Label Name_Label;
+        private System.Windows.Forms.TextBox Surname_TextBox;
+        private System.Windows.Forms.Label Surname_Label;
+        private System.Windows.Forms.TextBox Number_TextBox;
+        private System.Windows.Forms.Label Number_Label;
+        private System.Windows.Forms.TextBox Street_TextBox;
+        private System.Windows.Forms.Label Street_Label;
+        private System.Windows.Forms.TextBox City_TextBox;
+        private System.Windows.Forms.Label City_Label;
+        private System.Windows.Forms.TextBox Country_TextBox;
+        private System.Windows.Forms.Label Country_Label;
     }
 }

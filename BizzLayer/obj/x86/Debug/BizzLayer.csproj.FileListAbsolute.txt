@@ -10,3 +10,16 @@ C:\Projekty Visual Studio\BDII_CarWorkshop\BizzLayer\bin\x86\Debug\EntityFramewo
 C:\Projekty Visual Studio\BDII_CarWorkshop\BizzLayer\bin\x86\Debug\EntityFramework.SqlServer.dll
 C:\Projekty Visual Studio\BDII_CarWorkshop\BizzLayer\bin\x86\Debug\EntityFramework.xml
 C:\Projekty Visual Studio\BDII_CarWorkshop\BizzLayer\bin\x86\Debug\EntityFramework.SqlServer.xml
+C:\Users\Jashmine\Documents\GitHub\CarWorkshop\BizzLayer\bin\x86\Debug\BizzLayer.dll.config
+C:\Users\Jashmine\Documents\GitHub\CarWorkshop\BizzLayer\bin\x86\Debug\BizzLayer.dll
+C:\Users\Jashmine\Documents\GitHub\CarWorkshop\BizzLayer\bin\x86\Debug\BizzLayer.pdb
+C:\Users\Jashmine\Documents\GitHub\CarWorkshop\BizzLayer\bin\x86\Debug\DataLayer.dll
+C:\Users\Jashmine\Documents\GitHub\CarWorkshop\BizzLayer\bin\x86\Debug\EntityFramework.dll
+C:\Users\Jashmine\Documents\GitHub\CarWorkshop\BizzLayer\bin\x86\Debug\EntityFramework.SqlServer.dll
+C:\Users\Jashmine\Documents\GitHub\CarWorkshop\BizzLayer\bin\x86\Debug\DataLayer.pdb
+C:\Users\Jashmine\Documents\GitHub\CarWorkshop\BizzLayer\bin\x86\Debug\DataLayer.dll.config
+C:\Users\Jashmine\Documents\GitHub\CarWorkshop\BizzLayer\bin\x86\Debug\EntityFramework.xml
+C:\Users\Jashmine\Documents\GitHub\CarWorkshop\BizzLayer\bin\x86\Debug\EntityFramework.SqlServer.xml
+C:\Users\Jashmine\Documents\GitHub\CarWorkshop\BizzLayer\obj\x86\Debug\BizzLayer.dll
+C:\Users\Jashmine\Documents\GitHub\CarWorkshop\BizzLayer\obj\x86\Debug\BizzLayer.pdb
+C:\Users\Jashmine\Documents\GitHub\CarWorkshop\BizzLayer\obj\x86\Debug\BizzLayer.csprojResolveAssemblyReference.cache

@@ -7,3 +7,13 @@ C:\Projekty Visual Studio\BDII_CarWorkshop\DataLayer\bin\x86\Debug\EntityFramewo
 C:\Projekty Visual Studio\BDII_CarWorkshop\DataLayer\bin\x86\Debug\EntityFramework.SqlServer.xml
 C:\Projekty Visual Studio\BDII_CarWorkshop\DataLayer\obj\x86\Debug\DataLayer.dll
 C:\Projekty Visual Studio\BDII_CarWorkshop\DataLayer\obj\x86\Debug\DataLayer.pdb
+C:\Users\Jashmine\Documents\GitHub\CarWorkshop\DataLayer\bin\x86\Debug\DataLayer.dll.config
+C:\Users\Jashmine\Documents\GitHub\CarWorkshop\DataLayer\bin\x86\Debug\DataLayer.dll
+C:\Users\Jashmine\Documents\GitHub\CarWorkshop\DataLayer\bin\x86\Debug\DataLayer.pdb
+C:\Users\Jashmine\Documents\GitHub\CarWorkshop\DataLayer\bin\x86\Debug\EntityFramework.dll
+C:\Users\Jashmine\Documents\GitHub\CarWorkshop\DataLayer\bin\x86\Debug\EntityFramework.SqlServer.dll
+C:\Users\Jashmine\Documents\GitHub\CarWorkshop\DataLayer\bin\x86\Debug\EntityFramework.xml
+C:\Users\Jashmine\Documents\GitHub\CarWorkshop\DataLayer\bin\x86\Debug\EntityFramework.SqlServer.xml
+C:\Users\Jashmine\Documents\GitHub\CarWorkshop\DataLayer\obj\x86\Debug\DataLayer.csprojResolveAssemblyReference.cache
+C:\Users\Jashmine\Documents\GitHub\CarWorkshop\DataLayer\obj\x86\Debug\DataLayer.dll
+C:\Users\Jashmine\Documents\GitHub\CarWorkshop\DataLayer\obj\x86\Debug\DataLayer.pdb

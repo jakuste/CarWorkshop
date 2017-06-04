@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.Search_Button = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Activity_DataGridView = new System.Windows.Forms.DataGridView();
             this.SequenceNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameOfRequwst = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,7 +46,7 @@
             this.Name_TextBox = new System.Windows.Forms.TextBox();
             this.LogOut_Button = new System.Windows.Forms.Button();
             this.WelcomeText_Label = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Activity_DataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // Search_Button
@@ -58,20 +58,20 @@
             this.Search_Button.Text = "Search";
             this.Search_Button.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // Activity_DataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Activity_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Activity_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SequenceNumber,
             this.nameOfRequwst,
             this.Description,
             this.DateRequest,
             this.dateFinCancel,
             this.Status});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 59);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(760, 365);
-            this.dataGridView1.TabIndex = 13;
+            this.Activity_DataGridView.Location = new System.Drawing.Point(12, 59);
+            this.Activity_DataGridView.Name = "Activity_DataGridView";
+            this.Activity_DataGridView.Size = new System.Drawing.Size(760, 365);
+            this.Activity_DataGridView.TabIndex = 13;
             // 
             // SequenceNumber
             // 
@@ -211,12 +211,12 @@
             this.Controls.Add(this.Status_Label);
             this.Controls.Add(this.Status_ComboBox);
             this.Controls.Add(this.Search_Button);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.Activity_DataGridView);
             this.MaximumSize = new System.Drawing.Size(800, 500);
             this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "WorkerMainWindow";
             this.Text = "WorkerMainWindow";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Activity_DataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,7 +225,7 @@
         #endregion
 
         private System.Windows.Forms.Button Search_Button;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView Activity_DataGridView;
         private System.Windows.Forms.ComboBox Status_ComboBox;
         private System.Windows.Forms.Label Status_Label;
         private System.Windows.Forms.DataGridViewTextBoxColumn SequenceNumber;

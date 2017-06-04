@@ -44,5 +44,58 @@ namespace Przychodnia
             this.WelcomeText_Label.Text = "Hi, you are logged in as [username]";
         }
 
+        private void AddNewCustomer_Button_Click(object sender, EventArgs e)
+        {
+            CustomerEditor addNewCustomerWindow = new CustomerEditor();
+            addNewCustomerWindow.ShowDialog();
+        }
+
+        private void Edit_Button_Click(object sender, EventArgs e)
+        {
+            CustomerEditor EditCustomerWindow = new CustomerEditor();
+            EditCustomerWindow.ShowDialog();
+        }
+
+        private void AddObject_Button_Click(object sender, EventArgs e)
+        {
+            ObjectEditor objectEditor = new ObjectEditor();
+            objectEditor.ShowDialog();
+        }
+
+        private void ShowObjects_Button_Click(object sender, EventArgs e)
+        {
+            // przenosi do zakładki z obiektami "Objects_TabPage", 
+            // gdzie będą wyświetlone obiekty tego konkretnego klienta
+        }
+
+        private void SeeDetails_Button_Click(object sender, EventArgs e)
+        {
+            ObjectEditor objectEditor = new ObjectEditor("seeDatails");
+            objectEditor.ShowDialog();
+        }
+
+        private void EditObject_Button_Click(object sender, EventArgs e)
+        {
+            ObjectEditor objectEditor = new ObjectEditor();
+            objectEditor.ShowDialog();
+        }
+
+        private void AddRequest_Button_Click(object sender, EventArgs e)
+        {
+            RequestEditor requestEditor = new RequestEditor();
+            requestEditor.ShowDialog();
+        }
+
+        private void Show_Button_Click(object sender, EventArgs e)
+        {
+            RequestEditor requestEditor = new RequestEditor();
+            requestEditor.ShowDialog();
+        }
+
+        private void ShowActivity_Button_Click(object sender, EventArgs e)
+        {
+            ActivityViever activityViever = new ActivityViever();
+            activityViever.ShowDialog();
+        }
     }
 }

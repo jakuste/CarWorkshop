@@ -82,11 +82,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AssignWorker.cs">
+    <Compile Include="ActivityEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AssignWorker.Designer.cs">
-      <DependentUpon>AssignWorker.cs</DependentUpon>
+    <Compile Include="ActivityEditor.Designer.cs">
+      <DependentUpon>ActivityEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomerEditor.cs">
       <SubType>Form</SubType>
@@ -104,6 +104,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RequestEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RequestEditor.Designer.cs">
+      <DependentUpon>RequestEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
@@ -126,6 +132,12 @@
     <Compile Include="ActivityViever.Designer.cs">
       <DependentUpon>ActivityViever.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewTypeAdding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewTypeAdding.Designer.cs">
+      <DependentUpon>NewTypeAdding.cs</DependentUpon>
+    </Compile>
     <Compile Include="ObjectEditor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,18 +146,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RequestEditor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RequestEditor.Designer.cs">
-      <DependentUpon>RequestEditor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Sandbox.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sandbox.Designer.cs">
-      <DependentUpon>Sandbox.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserEditor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,14 +158,17 @@
     <Compile Include="WorkerMainWindow.Designer.cs">
       <DependentUpon>WorkerMainWindow.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ActivityEditor.resx">
+      <DependentUpon>ActivityEditor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminMainWindow.resx">
       <DependentUpon>AdminMainWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AssignWorker.resx">
-      <DependentUpon>AssignWorker.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CustomerEditor.resx">
       <DependentUpon>CustomerEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RequestEditor.resx">
+      <DependentUpon>RequestEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -175,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ActivityViever.resx">
       <DependentUpon>ActivityViever.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewTypeAdding.resx">
+      <DependentUpon>NewTypeAdding.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ObjectEditor.resx">
       <DependentUpon>ObjectEditor.cs</DependentUpon>
@@ -188,12 +194,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="RequestEditor.resx">
-      <DependentUpon>RequestEditor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Sandbox.resx">
-      <DependentUpon>Sandbox.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserEditor.resx">
       <DependentUpon>UserEditor.cs</DependentUpon>
     </EmbeddedResource>

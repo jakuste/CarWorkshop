@@ -28,359 +28,435 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.Description_Label = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.Date_Label = new System.Windows.Forms.Label();
+            this.ActivityDescription_TextBox = new System.Windows.Forms.TextBox();
+            this.Cancel_Button = new System.Windows.Forms.Button();
+            this.StartWork_Button = new System.Windows.Forms.Button();
+            this.Finish_Button = new System.Windows.Forms.Button();
+            this.WorkInProgres_GroupBox = new System.Windows.Forms.GroupBox();
+            this.Return_Button = new System.Windows.Forms.Button();
+            this.Result_Label = new System.Windows.Forms.Label();
+            this.Result_TextBox = new System.Windows.Forms.TextBox();
+            this.Object_GroupBox = new System.Windows.Forms.GroupBox();
+            this.Name_TextBox = new System.Windows.Forms.TextBox();
+            this.Name_Label = new System.Windows.Forms.Label();
+            this.Year_TextBox = new System.Windows.Forms.TextBox();
+            this.Engine_TextBox = new System.Windows.Forms.TextBox();
+            this.RegistrationNumber_Label = new System.Windows.Forms.Label();
+            this.BodyType_TextBox = new System.Windows.Forms.TextBox();
+            this.Other_Label = new System.Windows.Forms.Label();
+            this.Other_TextBox = new System.Windows.Forms.TextBox();
+            this.BodyType_Label = new System.Windows.Forms.Label();
+            this.Model_TextBox = new System.Windows.Forms.TextBox();
+            this.Year_Label = new System.Windows.Forms.Label();
+            this.Model_Label = new System.Windows.Forms.Label();
+            this.Manufacturer_TextBox = new System.Windows.Forms.TextBox();
+            this.Engine_Label = new System.Windows.Forms.Label();
+            this.Manufacturer_Label = new System.Windows.Forms.Label();
+            this.RegistrationNumber_TextBox = new System.Windows.Forms.TextBox();
+            this.Activity_GroupBox = new System.Windows.Forms.GroupBox();
+            this.ActivityDescription_Label = new System.Windows.Forms.Label();
+            this.Status_Label = new System.Windows.Forms.Label();
+            this.Date_TextBox = new System.Windows.Forms.TextBox();
+            this.Status_TextBox = new System.Windows.Forms.TextBox();
+            this.Request_GroupBox = new System.Windows.Forms.GroupBox();
+            this.RequestDescription_Label = new System.Windows.Forms.Label();
+            this.RequestDescription_TextBox = new System.Windows.Forms.TextBox();
+            this.WorkInProgres_GroupBox.SuspendLayout();
+            this.Object_GroupBox.SuspendLayout();
+            this.Activity_GroupBox.SuspendLayout();
+            this.Request_GroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label2
+            // Date_Label
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(255, 70);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Date";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.Date_Label.AutoSize = true;
+            this.Date_Label.Location = new System.Drawing.Point(255, 18);
+            this.Date_Label.Name = "Date_Label";
+            this.Date_Label.Size = new System.Drawing.Size(30, 13);
+            this.Date_Label.TabIndex = 3;
+            this.Date_Label.Text = "Date";
             // 
-            // textBox3
+            // ActivityDescription_TextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(26, 93);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(204, 154);
-            this.textBox3.TabIndex = 7;
+            this.ActivityDescription_TextBox.Enabled = false;
+            this.ActivityDescription_TextBox.Location = new System.Drawing.Point(26, 41);
+            this.ActivityDescription_TextBox.Multiline = true;
+            this.ActivityDescription_TextBox.Name = "ActivityDescription_TextBox";
+            this.ActivityDescription_TextBox.Size = new System.Drawing.Size(204, 125);
+            this.ActivityDescription_TextBox.TabIndex = 7;
             // 
-            // button1
+            // Cancel_Button
             // 
-            this.button1.Location = new System.Drawing.Point(41, 29);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 45);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Cancel";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Cancel_Button.Location = new System.Drawing.Point(127, 19);
+            this.Cancel_Button.Name = "Cancel_Button";
+            this.Cancel_Button.Size = new System.Drawing.Size(125, 35);
+            this.Cancel_Button.TabIndex = 9;
+            this.Cancel_Button.Text = "Cancel";
+            this.Cancel_Button.UseVisualStyleBackColor = true;
+            this.Cancel_Button.Click += new System.EventHandler(this.Cancel_Button_Click);
             // 
-            // button3
+            // StartWork_Button
             // 
-            this.button3.Location = new System.Drawing.Point(214, 29);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 45);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "Start Work";
-            this.button3.UseVisualStyleBackColor = true;
+            this.StartWork_Button.Location = new System.Drawing.Point(258, 19);
+            this.StartWork_Button.Name = "StartWork_Button";
+            this.StartWork_Button.Size = new System.Drawing.Size(125, 35);
+            this.StartWork_Button.TabIndex = 11;
+            this.StartWork_Button.Text = "Start Work";
+            this.StartWork_Button.UseVisualStyleBackColor = true;
+            this.StartWork_Button.Click += new System.EventHandler(this.StartWork_Button_Click);
             // 
-            // button4
+            // Finish_Button
             // 
-            this.button4.Location = new System.Drawing.Point(371, 29);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 45);
-            this.button4.TabIndex = 12;
-            this.button4.Text = "Finish";
-            this.button4.UseVisualStyleBackColor = true;
+            this.Finish_Button.Location = new System.Drawing.Point(389, 19);
+            this.Finish_Button.Name = "Finish_Button";
+            this.Finish_Button.Size = new System.Drawing.Size(125, 35);
+            this.Finish_Button.TabIndex = 12;
+            this.Finish_Button.Text = "Finish";
+            this.Finish_Button.UseVisualStyleBackColor = true;
+            this.Finish_Button.Click += new System.EventHandler(this.Finish_Button_Click);
             // 
-            // groupBox1
+            // WorkInProgres_GroupBox
             // 
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Location = new System.Drawing.Point(12, 416);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(526, 92);
-            this.groupBox1.TabIndex = 13;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Work in progress";
+            this.WorkInProgres_GroupBox.Controls.Add(this.Return_Button);
+            this.WorkInProgres_GroupBox.Controls.Add(this.Cancel_Button);
+            this.WorkInProgres_GroupBox.Controls.Add(this.Finish_Button);
+            this.WorkInProgres_GroupBox.Controls.Add(this.StartWork_Button);
+            this.WorkInProgres_GroupBox.Location = new System.Drawing.Point(12, 443);
+            this.WorkInProgres_GroupBox.Name = "WorkInProgres_GroupBox";
+            this.WorkInProgres_GroupBox.Size = new System.Drawing.Size(526, 65);
+            this.WorkInProgres_GroupBox.TabIndex = 13;
+            this.WorkInProgres_GroupBox.TabStop = false;
+            this.WorkInProgres_GroupBox.Text = "Work in progress";
             // 
-            // label5
+            // Return_Button
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(255, 96);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 13);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "Result";
+            this.Return_Button.Location = new System.Drawing.Point(26, 24);
+            this.Return_Button.Name = "Return_Button";
+            this.Return_Button.Size = new System.Drawing.Size(75, 25);
+            this.Return_Button.TabIndex = 13;
+            this.Return_Button.Text = "Return";
+            this.Return_Button.UseVisualStyleBackColor = true;
+            this.Return_Button.Click += new System.EventHandler(this.Return_Button_Click);
             // 
-            // textBox4
+            // Result_Label
             // 
-            this.textBox4.Location = new System.Drawing.Point(308, 93);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(206, 125);
-            this.textBox4.TabIndex = 16;
+            this.Result_Label.AutoSize = true;
+            this.Result_Label.Location = new System.Drawing.Point(255, 44);
+            this.Result_Label.Name = "Result_Label";
+            this.Result_Label.Size = new System.Drawing.Size(37, 13);
+            this.Result_Label.TabIndex = 17;
+            this.Result_Label.Text = "Result";
             // 
-            // groupBox2
+            // Result_TextBox
             // 
-            this.groupBox2.Controls.Add(this.textBox7);
-            this.groupBox2.Controls.Add(this.textBox6);
-            this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.textBox12);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.textBox9);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.textBox10);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.textBox8);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.textBox5);
-            this.groupBox2.Location = new System.Drawing.Point(12, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(526, 134);
-            this.groupBox2.TabIndex = 19;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Object";
+            this.Result_TextBox.Location = new System.Drawing.Point(314, 41);
+            this.Result_TextBox.Multiline = true;
+            this.Result_TextBox.Name = "Result_TextBox";
+            this.Result_TextBox.Size = new System.Drawing.Size(200, 99);
+            this.Result_TextBox.TabIndex = 16;
             // 
-            // textBox7
+            // Object_GroupBox
             // 
-            this.textBox7.Enabled = false;
-            this.textBox7.Location = new System.Drawing.Point(308, 45);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 18;
+            this.Object_GroupBox.Controls.Add(this.Name_TextBox);
+            this.Object_GroupBox.Controls.Add(this.Name_Label);
+            this.Object_GroupBox.Controls.Add(this.Year_TextBox);
+            this.Object_GroupBox.Controls.Add(this.Engine_TextBox);
+            this.Object_GroupBox.Controls.Add(this.RegistrationNumber_Label);
+            this.Object_GroupBox.Controls.Add(this.BodyType_TextBox);
+            this.Object_GroupBox.Controls.Add(this.Other_Label);
+            this.Object_GroupBox.Controls.Add(this.Other_TextBox);
+            this.Object_GroupBox.Controls.Add(this.BodyType_Label);
+            this.Object_GroupBox.Controls.Add(this.Model_TextBox);
+            this.Object_GroupBox.Controls.Add(this.Year_Label);
+            this.Object_GroupBox.Controls.Add(this.Model_Label);
+            this.Object_GroupBox.Controls.Add(this.Manufacturer_TextBox);
+            this.Object_GroupBox.Controls.Add(this.Engine_Label);
+            this.Object_GroupBox.Controls.Add(this.Manufacturer_Label);
+            this.Object_GroupBox.Controls.Add(this.RegistrationNumber_TextBox);
+            this.Object_GroupBox.Location = new System.Drawing.Point(12, 12);
+            this.Object_GroupBox.Name = "Object_GroupBox";
+            this.Object_GroupBox.Size = new System.Drawing.Size(526, 134);
+            this.Object_GroupBox.TabIndex = 19;
+            this.Object_GroupBox.TabStop = false;
+            this.Object_GroupBox.Text = "Object";
             // 
-            // textBox6
+            // Name_TextBox
             // 
-            this.textBox6.Enabled = false;
-            this.textBox6.Location = new System.Drawing.Point(308, 15);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 17;
+            this.Name_TextBox.Enabled = false;
+            this.Name_TextBox.Location = new System.Drawing.Point(130, 45);
+            this.Name_TextBox.Name = "Name_TextBox";
+            this.Name_TextBox.Size = new System.Drawing.Size(100, 20);
+            this.Name_TextBox.TabIndex = 20;
             // 
-            // label13
+            // Name_Label
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(23, 22);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(101, 13);
-            this.label13.TabIndex = 16;
-            this.label13.Text = "Registration number";
+            this.Name_Label.AutoSize = true;
+            this.Name_Label.Location = new System.Drawing.Point(23, 48);
+            this.Name_Label.Name = "Name_Label";
+            this.Name_Label.Size = new System.Drawing.Size(35, 13);
+            this.Name_Label.TabIndex = 19;
+            this.Name_Label.Text = "Name";
             // 
-            // textBox12
+            // Year_TextBox
             // 
-            this.textBox12.Enabled = false;
-            this.textBox12.Location = new System.Drawing.Point(130, 97);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(100, 20);
-            this.textBox12.TabIndex = 15;
+            this.Year_TextBox.Enabled = false;
+            this.Year_TextBox.Location = new System.Drawing.Point(314, 71);
+            this.Year_TextBox.Name = "Year_TextBox";
+            this.Year_TextBox.Size = new System.Drawing.Size(100, 20);
+            this.Year_TextBox.TabIndex = 18;
             // 
-            // label10
+            // Engine_TextBox
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(255, 74);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(33, 13);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "Other";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
+            this.Engine_TextBox.Enabled = false;
+            this.Engine_TextBox.Location = new System.Drawing.Point(314, 45);
+            this.Engine_TextBox.Name = "Engine_TextBox";
+            this.Engine_TextBox.Size = new System.Drawing.Size(100, 20);
+            this.Engine_TextBox.TabIndex = 17;
             // 
-            // textBox9
+            // RegistrationNumber_Label
             // 
-            this.textBox9.Enabled = false;
-            this.textBox9.Location = new System.Drawing.Point(308, 71);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(206, 46);
-            this.textBox9.TabIndex = 13;
+            this.RegistrationNumber_Label.AutoSize = true;
+            this.RegistrationNumber_Label.Location = new System.Drawing.Point(23, 22);
+            this.RegistrationNumber_Label.Name = "RegistrationNumber_Label";
+            this.RegistrationNumber_Label.Size = new System.Drawing.Size(101, 13);
+            this.RegistrationNumber_Label.TabIndex = 16;
+            this.RegistrationNumber_Label.Text = "Registration number";
             // 
-            // label11
+            // BodyType_TextBox
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(23, 100);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(54, 13);
-            this.label11.TabIndex = 12;
-            this.label11.Text = "Body type";
+            this.BodyType_TextBox.Enabled = false;
+            this.BodyType_TextBox.Location = new System.Drawing.Point(314, 19);
+            this.BodyType_TextBox.Name = "BodyType_TextBox";
+            this.BodyType_TextBox.Size = new System.Drawing.Size(100, 20);
+            this.BodyType_TextBox.TabIndex = 15;
             // 
-            // textBox10
+            // Other_Label
             // 
-            this.textBox10.Enabled = false;
-            this.textBox10.Location = new System.Drawing.Point(130, 71);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 20);
-            this.textBox10.TabIndex = 11;
+            this.Other_Label.AutoSize = true;
+            this.Other_Label.Location = new System.Drawing.Point(255, 100);
+            this.Other_Label.Name = "Other_Label";
+            this.Other_Label.Size = new System.Drawing.Size(33, 13);
+            this.Other_Label.TabIndex = 14;
+            this.Other_Label.Text = "Other";
             // 
-            // label8
+            // Other_TextBox
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(255, 48);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(29, 13);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Year";
+            this.Other_TextBox.Enabled = false;
+            this.Other_TextBox.Location = new System.Drawing.Point(314, 97);
+            this.Other_TextBox.Multiline = true;
+            this.Other_TextBox.Name = "Other_TextBox";
+            this.Other_TextBox.Size = new System.Drawing.Size(200, 20);
+            this.Other_TextBox.TabIndex = 13;
             // 
-            // label9
+            // BodyType_Label
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(23, 74);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(36, 13);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Model";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
+            this.BodyType_Label.AutoSize = true;
+            this.BodyType_Label.Location = new System.Drawing.Point(255, 22);
+            this.BodyType_Label.Name = "BodyType_Label";
+            this.BodyType_Label.Size = new System.Drawing.Size(54, 13);
+            this.BodyType_Label.TabIndex = 12;
+            this.BodyType_Label.Text = "Body type";
             // 
-            // textBox8
+            // Model_TextBox
             // 
-            this.textBox8.Enabled = false;
-            this.textBox8.Location = new System.Drawing.Point(130, 45);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 7;
+            this.Model_TextBox.Enabled = false;
+            this.Model_TextBox.Location = new System.Drawing.Point(130, 97);
+            this.Model_TextBox.Name = "Model_TextBox";
+            this.Model_TextBox.Size = new System.Drawing.Size(100, 20);
+            this.Model_TextBox.TabIndex = 11;
             // 
-            // label7
+            // Year_Label
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(255, 18);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(40, 13);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Engine";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+            this.Year_Label.AutoSize = true;
+            this.Year_Label.Location = new System.Drawing.Point(255, 74);
+            this.Year_Label.Name = "Year_Label";
+            this.Year_Label.Size = new System.Drawing.Size(29, 13);
+            this.Year_Label.TabIndex = 10;
+            this.Year_Label.Text = "Year";
             // 
-            // label6
+            // Model_Label
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(23, 48);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 13);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Manufacturer";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.Model_Label.AutoSize = true;
+            this.Model_Label.Location = new System.Drawing.Point(23, 100);
+            this.Model_Label.Name = "Model_Label";
+            this.Model_Label.Size = new System.Drawing.Size(36, 13);
+            this.Model_Label.TabIndex = 8;
+            this.Model_Label.Text = "Model";
             // 
-            // textBox5
+            // Manufacturer_TextBox
             // 
-            this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(130, 19);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 3;
+            this.Manufacturer_TextBox.Enabled = false;
+            this.Manufacturer_TextBox.Location = new System.Drawing.Point(130, 71);
+            this.Manufacturer_TextBox.Name = "Manufacturer_TextBox";
+            this.Manufacturer_TextBox.Size = new System.Drawing.Size(100, 20);
+            this.Manufacturer_TextBox.TabIndex = 7;
             // 
-            // groupBox3
+            // Engine_Label
             // 
-            this.groupBox3.Controls.Add(this.Description_Label);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.textBox11);
-            this.groupBox3.Controls.Add(this.textBox2);
-            this.groupBox3.Controls.Add(this.textBox4);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.textBox3);
-            this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Location = new System.Drawing.Point(12, 152);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(526, 258);
-            this.groupBox3.TabIndex = 20;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Activity";
+            this.Engine_Label.AutoSize = true;
+            this.Engine_Label.Location = new System.Drawing.Point(255, 48);
+            this.Engine_Label.Name = "Engine_Label";
+            this.Engine_Label.Size = new System.Drawing.Size(40, 13);
+            this.Engine_Label.TabIndex = 6;
+            this.Engine_Label.Text = "Engine";
             // 
-            // label4
+            // Manufacturer_Label
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(255, 227);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 13);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "Worker";
+            this.Manufacturer_Label.AutoSize = true;
+            this.Manufacturer_Label.Location = new System.Drawing.Point(23, 74);
+            this.Manufacturer_Label.Name = "Manufacturer_Label";
+            this.Manufacturer_Label.Size = new System.Drawing.Size(70, 13);
+            this.Manufacturer_Label.TabIndex = 4;
+            this.Manufacturer_Label.Text = "Manufacturer";
             // 
-            // textBox11
+            // RegistrationNumber_TextBox
             // 
-            this.textBox11.Enabled = false;
-            this.textBox11.Location = new System.Drawing.Point(308, 67);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(100, 20);
-            this.textBox11.TabIndex = 19;
+            this.RegistrationNumber_TextBox.Enabled = false;
+            this.RegistrationNumber_TextBox.Location = new System.Drawing.Point(130, 19);
+            this.RegistrationNumber_TextBox.Name = "RegistrationNumber_TextBox";
+            this.RegistrationNumber_TextBox.Size = new System.Drawing.Size(100, 20);
+            this.RegistrationNumber_TextBox.TabIndex = 3;
             // 
-            // textBox2
+            // Activity_GroupBox
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(308, 224);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(206, 20);
-            this.textBox2.TabIndex = 4;
+            this.Activity_GroupBox.Controls.Add(this.ActivityDescription_Label);
+            this.Activity_GroupBox.Controls.Add(this.Status_Label);
+            this.Activity_GroupBox.Controls.Add(this.Date_TextBox);
+            this.Activity_GroupBox.Controls.Add(this.Status_TextBox);
+            this.Activity_GroupBox.Controls.Add(this.Result_TextBox);
+            this.Activity_GroupBox.Controls.Add(this.Result_Label);
+            this.Activity_GroupBox.Controls.Add(this.ActivityDescription_TextBox);
+            this.Activity_GroupBox.Controls.Add(this.Date_Label);
+            this.Activity_GroupBox.Location = new System.Drawing.Point(12, 253);
+            this.Activity_GroupBox.Name = "Activity_GroupBox";
+            this.Activity_GroupBox.Size = new System.Drawing.Size(526, 184);
+            this.Activity_GroupBox.TabIndex = 20;
+            this.Activity_GroupBox.TabStop = false;
+            this.Activity_GroupBox.Text = "Activity";
             // 
-            // Description_Label
+            // ActivityDescription_Label
             // 
-            this.Description_Label.AutoSize = true;
-            this.Description_Label.Location = new System.Drawing.Point(23, 70);
-            this.Description_Label.Name = "Description_Label";
-            this.Description_Label.Size = new System.Drawing.Size(30, 13);
-            this.Description_Label.TabIndex = 21;
-            this.Description_Label.Text = "Date";
+            this.ActivityDescription_Label.AutoSize = true;
+            this.ActivityDescription_Label.Location = new System.Drawing.Point(23, 18);
+            this.ActivityDescription_Label.Name = "ActivityDescription_Label";
+            this.ActivityDescription_Label.Size = new System.Drawing.Size(60, 13);
+            this.ActivityDescription_Label.TabIndex = 21;
+            this.ActivityDescription_Label.Text = "Description";
+            // 
+            // Status_Label
+            // 
+            this.Status_Label.AutoSize = true;
+            this.Status_Label.Location = new System.Drawing.Point(255, 149);
+            this.Status_Label.Name = "Status_Label";
+            this.Status_Label.Size = new System.Drawing.Size(37, 13);
+            this.Status_Label.TabIndex = 20;
+            this.Status_Label.Text = "Status";
+            // 
+            // Date_TextBox
+            // 
+            this.Date_TextBox.Enabled = false;
+            this.Date_TextBox.Location = new System.Drawing.Point(314, 15);
+            this.Date_TextBox.Name = "Date_TextBox";
+            this.Date_TextBox.Size = new System.Drawing.Size(100, 20);
+            this.Date_TextBox.TabIndex = 19;
+            // 
+            // Status_TextBox
+            // 
+            this.Status_TextBox.Enabled = false;
+            this.Status_TextBox.Location = new System.Drawing.Point(314, 146);
+            this.Status_TextBox.Name = "Status_TextBox";
+            this.Status_TextBox.ReadOnly = true;
+            this.Status_TextBox.Size = new System.Drawing.Size(200, 20);
+            this.Status_TextBox.TabIndex = 4;
+            // 
+            // Request_GroupBox
+            // 
+            this.Request_GroupBox.Controls.Add(this.RequestDescription_Label);
+            this.Request_GroupBox.Controls.Add(this.RequestDescription_TextBox);
+            this.Request_GroupBox.Location = new System.Drawing.Point(12, 152);
+            this.Request_GroupBox.Name = "Request_GroupBox";
+            this.Request_GroupBox.Size = new System.Drawing.Size(526, 95);
+            this.Request_GroupBox.TabIndex = 21;
+            this.Request_GroupBox.TabStop = false;
+            this.Request_GroupBox.Text = "Request";
+            // 
+            // RequestDescription_Label
+            // 
+            this.RequestDescription_Label.AutoSize = true;
+            this.RequestDescription_Label.Location = new System.Drawing.Point(23, 16);
+            this.RequestDescription_Label.Name = "RequestDescription_Label";
+            this.RequestDescription_Label.Size = new System.Drawing.Size(60, 13);
+            this.RequestDescription_Label.TabIndex = 23;
+            this.RequestDescription_Label.Text = "Description";
+            // 
+            // RequestDescription_TextBox
+            // 
+            this.RequestDescription_TextBox.Enabled = false;
+            this.RequestDescription_TextBox.Location = new System.Drawing.Point(26, 32);
+            this.RequestDescription_TextBox.Multiline = true;
+            this.RequestDescription_TextBox.Name = "RequestDescription_TextBox";
+            this.RequestDescription_TextBox.Size = new System.Drawing.Size(488, 46);
+            this.RequestDescription_TextBox.TabIndex = 22;
             // 
             // ActivityViever
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(550, 520);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(544, 521);
+            this.Controls.Add(this.Request_GroupBox);
+            this.Controls.Add(this.Activity_GroupBox);
+            this.Controls.Add(this.Object_GroupBox);
+            this.Controls.Add(this.WorkInProgres_GroupBox);
+            this.MaximumSize = new System.Drawing.Size(560, 560);
+            this.MinimumSize = new System.Drawing.Size(560, 560);
             this.Name = "ActivityViever";
             this.Text = "Activity Viever";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.WorkInProgres_GroupBox.ResumeLayout(false);
+            this.Object_GroupBox.ResumeLayout(false);
+            this.Object_GroupBox.PerformLayout();
+            this.Activity_GroupBox.ResumeLayout(false);
+            this.Activity_GroupBox.PerformLayout();
+            this.Request_GroupBox.ResumeLayout(false);
+            this.Request_GroupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label Description_Label;
+        private System.Windows.Forms.Label Date_Label;
+        private System.Windows.Forms.TextBox ActivityDescription_TextBox;
+        private System.Windows.Forms.Button Cancel_Button;
+        private System.Windows.Forms.Button StartWork_Button;
+        private System.Windows.Forms.Button Finish_Button;
+        private System.Windows.Forms.GroupBox WorkInProgres_GroupBox;
+        private System.Windows.Forms.Label Result_Label;
+        private System.Windows.Forms.TextBox Result_TextBox;
+        private System.Windows.Forms.GroupBox Object_GroupBox;
+        private System.Windows.Forms.Label RegistrationNumber_Label;
+        private System.Windows.Forms.TextBox BodyType_TextBox;
+        private System.Windows.Forms.Label Other_Label;
+        private System.Windows.Forms.TextBox Other_TextBox;
+        private System.Windows.Forms.Label BodyType_Label;
+        private System.Windows.Forms.TextBox Model_TextBox;
+        private System.Windows.Forms.Label Year_Label;
+        private System.Windows.Forms.Label Model_Label;
+        private System.Windows.Forms.TextBox Manufacturer_TextBox;
+        private System.Windows.Forms.Label Engine_Label;
+        private System.Windows.Forms.Label Manufacturer_Label;
+        private System.Windows.Forms.TextBox RegistrationNumber_TextBox;
+        private System.Windows.Forms.TextBox Year_TextBox;
+        private System.Windows.Forms.TextBox Engine_TextBox;
+        private System.Windows.Forms.GroupBox Activity_GroupBox;
+        private System.Windows.Forms.Label Status_Label;
+        private System.Windows.Forms.TextBox Date_TextBox;
+        private System.Windows.Forms.TextBox Status_TextBox;
+        private System.Windows.Forms.Label ActivityDescription_Label;
+        private System.Windows.Forms.GroupBox Request_GroupBox;
+        private System.Windows.Forms.Label RequestDescription_Label;
+        private System.Windows.Forms.TextBox RequestDescription_TextBox;
+        private System.Windows.Forms.Button Return_Button;
+        private System.Windows.Forms.TextBox Name_TextBox;
+        private System.Windows.Forms.Label Name_Label;
     }
 }

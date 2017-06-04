@@ -16,5 +16,23 @@ namespace Przychodnia
         {
             InitializeComponent();
         }
+
+        private void AddActivity_Button_Click(object sender, EventArgs e)
+        {
+            ActivityEditor activityEditor = new ActivityEditor();
+            activityEditor.ShowDialog();
+        }
+
+        private void Cancel_Button_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            this.Dispose();
+        }
+
+        private void Save_Button_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            this.Dispose();
+        }
     }
 }

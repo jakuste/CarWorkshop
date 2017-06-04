@@ -17,39 +17,29 @@ namespace Przychodnia
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void Cancel_Button_Click(object sender, EventArgs e)
         {
-
+            this.Close();
+            this.Dispose();
+            // + zmienia status na "cancled"
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void StartWork_Button_Click(object sender, EventArgs e)
         {
-
+            // + zmienia status na "in progress"
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void Finish_Button_Click(object sender, EventArgs e)
         {
-
+            this.Close();
+            this.Dispose();
+            // + zmienia status na "finished"
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void Return_Button_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
+            this.Close();
+            this.Dispose();
         }
     }
 }
