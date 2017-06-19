@@ -38,3 +38,15 @@ C:\Users\Aramilion\Documents\GitHub\CarWorkshop\BizzLayer\bin\Debug\EntityFramew
 C:\Users\Aramilion\Documents\GitHub\CarWorkshop\BizzLayer\obj\Debug\BizzLayer.csprojResolveAssemblyReference.cache
 C:\Users\Aramilion\Documents\GitHub\CarWorkshop\BizzLayer\obj\Debug\BizzLayer.dll
 C:\Users\Aramilion\Documents\GitHub\CarWorkshop\BizzLayer\obj\Debug\BizzLayer.pdb
+C:\Users\Wojtek\Documents\car workshop\CarWorkshop\BizzLayer\bin\Debug\BizzLayer.dll.config
+C:\Users\Wojtek\Documents\car workshop\CarWorkshop\BizzLayer\bin\Debug\BizzLayer.dll
+C:\Users\Wojtek\Documents\car workshop\CarWorkshop\BizzLayer\bin\Debug\BizzLayer.pdb
+C:\Users\Wojtek\Documents\car workshop\CarWorkshop\BizzLayer\bin\Debug\DataLayer.dll
+C:\Users\Wojtek\Documents\car workshop\CarWorkshop\BizzLayer\bin\Debug\EntityFramework.dll
+C:\Users\Wojtek\Documents\car workshop\CarWorkshop\BizzLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Wojtek\Documents\car workshop\CarWorkshop\BizzLayer\bin\Debug\DataLayer.pdb
+C:\Users\Wojtek\Documents\car workshop\CarWorkshop\BizzLayer\bin\Debug\EntityFramework.xml
+C:\Users\Wojtek\Documents\car workshop\CarWorkshop\BizzLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Wojtek\Documents\car workshop\CarWorkshop\BizzLayer\obj\Debug\BizzLayer.csprojResolveAssemblyReference.cache
+C:\Users\Wojtek\Documents\car workshop\CarWorkshop\BizzLayer\obj\Debug\BizzLayer.dll
+C:\Users\Wojtek\Documents\car workshop\CarWorkshop\BizzLayer\obj\Debug\BizzLayer.pdb

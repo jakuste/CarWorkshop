@@ -7,8 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BizzLayer;
+using DataLayer;
 
-namespace Przychodnia
+namespace CarWorkshop
 {
     public partial class AdminMainWindow : MainWindow
     {
@@ -18,6 +20,7 @@ namespace Przychodnia
             InitializeComponent();
   
             this.FormClosing += X_Clickd;
+            this.Role_ComboBox.Items.AddRange(new object[] {"Admin", "Manager", "Worker"});
         }
 
         private void X_Clickd(object sender, FormClosingEventArgs e)
@@ -54,9 +57,71 @@ namespace Przychodnia
 
         private void Edit_Button_Click(object sender, EventArgs e)
         {
-            UserEditor addNewAccountWindow = new UserEditor();
+            if((Personel)Users_DataGridView.CurrentRow.DataBoundItem == null)
+            {
+                Alert.DisplayError("No item selected!");
+                return;
+            }
+            UserEditor addNewAccountWindow = new UserEditor((Personel)Users_DataGridView.CurrentRow.DataBoundItem);
             addNewAccountWindow.ShowDialog();
         }
 
+        private void Search_Button_Click(object sender, EventArgs e)
+        {
+            Personel crit = new Personel();
+            crit.first_name = Name_TextBox.Text;
+            crit.last_name = Surname_TextBox.Text;
+            crit.role = Role_ComboBox.Text;
+            IQueryable<Personel> results;
+            try
+            {
+                if (IncludeRetire_CheckBox.Checked)
+                {
+                    results = AdminService.GetPersonel(crit);
+                }
+                else
+                {
+                    results = AdminService.GetPersonelActive(crit);
+                }
+                Users_DataGridView.Columns.Clear();
+                Users_DataGridView.DataSource = results.ToList();
+                CorrectGrid();
+            }catch(ServiceException exc)
+            {
+                Alert.DisplayError(exc.Message);
+            }
+            
+        }
+
+        private void Delete_Button_Click(object sender, EventArgs e)
+        {
+            if ((Personel)Users_DataGridView.CurrentRow.DataBoundItem == null)
+            {
+                Alert.DisplayError("No item selected!");
+                return;
+            }
+            try
+            {
+                AdminService.DeletePersonel((Personel)Users_DataGridView.CurrentRow.DataBoundItem);
+                Users_DataGridView.CurrentRow.Visible = false;
+            }catch(ServiceException exc)
+            {
+                Alert.DisplayError(exc.Message);
+            }
+        }
+
+        private void CorrectGrid()
+        {
+            Users_DataGridView.Columns[0].Visible = false;
+            Users_DataGridView.Columns[6].Visible = false;
+            Users_DataGridView.Columns[7].Visible = false;
+            Users_DataGridView.Columns[8].Visible = false;
+
+            Users_DataGridView.Columns[1].HeaderText = "Name";
+            Users_DataGridView.Columns[2].HeaderText = "Surname";
+            Users_DataGridView.Columns[3].HeaderText = "Username";
+            Users_DataGridView.Columns[4].HeaderText = "Date retire";
+            Users_DataGridView.Columns[5].HeaderText = "Role";
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Przychodnia
+﻿namespace CarWorkshop
 {
     partial class ActivityEditor
     {

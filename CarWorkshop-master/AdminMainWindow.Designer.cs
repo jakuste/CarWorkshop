@@ -1,4 +1,4 @@
-﻿namespace Przychodnia
+﻿namespace CarWorkshop
 {
     partial class AdminMainWindow
     {
@@ -146,6 +146,7 @@
             this.Search_Button.TabIndex = 12;
             this.Search_Button.Text = "Search";
             this.Search_Button.UseVisualStyleBackColor = true;
+            this.Search_Button.Click += new System.EventHandler(this.Search_Button_Click);
             // 
             // Delete_Button
             // 
@@ -155,6 +156,7 @@
             this.Delete_Button.TabIndex = 13;
             this.Delete_Button.Text = "Delete";
             this.Delete_Button.UseVisualStyleBackColor = true;
+            this.Delete_Button.Click += new System.EventHandler(this.Delete_Button_Click);
             // 
             // Edit_Button
             // 

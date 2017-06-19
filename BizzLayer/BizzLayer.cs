@@ -10,10 +10,9 @@ using DataLayer;
 namespace BizzLayer
 {
 
-
     static public class RegistrationFacade
     {
-        public static IQueryable<Patient> GetPatients(Patient searchCrit)
+        /*public static IQueryable<Patient> GetPatients(Patient searchCrit)
         {
             DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
             var res = from el in dc.Patients
@@ -44,13 +43,13 @@ namespace BizzLayer
 
             }
 
-        }
+        }*/
 
     }
 
     static public class DoctorFacade
     {
-        public static IQueryable GetVisits(Visit searchCrit)
+        /*public static IQueryable GetVisits(Visit searchCrit)
         {
             DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
             var res = from vis in dc.Visits
@@ -68,7 +67,7 @@ namespace BizzLayer
         public static void UpdateVisitData(Visit vis)
         {
             return;
-        }
+        }*/
     }
 
 }

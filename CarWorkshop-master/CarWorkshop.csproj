@@ -7,8 +7,8 @@
     <ProjectGuid>{2B85DB74-8417-46BE-8593-D5F3C8B68F68}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Przychodnia</RootNamespace>
-    <AssemblyName>Przychodnia</AssemblyName>
+    <RootNamespace>CarWorkshop</RootNamespace>
+    <AssemblyName>CarWorkshop</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -88,6 +88,7 @@
     <Compile Include="ActivityEditor.Designer.cs">
       <DependentUpon>ActivityEditor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Alert.cs" />
     <Compile Include="CustomerEditor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +194,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UserEditor.resx">
       <DependentUpon>UserEditor.cs</DependentUpon>

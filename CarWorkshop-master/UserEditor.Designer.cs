@@ -1,4 +1,4 @@
-﻿namespace Przychodnia
+﻿namespace CarWorkshop
 {
     partial class UserEditor
     {
@@ -32,7 +32,6 @@
             this.Name_TextBox = new System.Windows.Forms.TextBox();
             this.Surname_TextBox = new System.Windows.Forms.TextBox();
             this.Surname_Label = new System.Windows.Forms.Label();
-            this.DateRetire_TextBox = new System.Windows.Forms.TextBox();
             this.DateRetire_Label = new System.Windows.Forms.Label();
             this.Username_TextBox = new System.Windows.Forms.TextBox();
             this.Username_Label = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@
             this.Cancel_Button = new System.Windows.Forms.Button();
             this.Password_TextBox = new System.Windows.Forms.TextBox();
             this.Password_Label = new System.Windows.Forms.Label();
+            this.Date_Retire = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // Name_Label
@@ -75,13 +75,6 @@
             this.Surname_Label.Size = new System.Drawing.Size(49, 13);
             this.Surname_Label.TabIndex = 2;
             this.Surname_Label.Text = "Surname";
-            // 
-            // DateRetire_TextBox
-            // 
-            this.DateRetire_TextBox.Location = new System.Drawing.Point(82, 120);
-            this.DateRetire_TextBox.Name = "DateRetire_TextBox";
-            this.DateRetire_TextBox.Size = new System.Drawing.Size(140, 20);
-            this.DateRetire_TextBox.TabIndex = 7;
             // 
             // DateRetire_Label
             // 
@@ -162,18 +155,25 @@
             this.Password_Label.TabIndex = 13;
             this.Password_Label.Text = "Password";
             // 
+            // Date_Retire
+            // 
+            this.Date_Retire.Location = new System.Drawing.Point(82, 121);
+            this.Date_Retire.Name = "Date_Retire";
+            this.Date_Retire.Size = new System.Drawing.Size(200, 20);
+            this.Date_Retire.TabIndex = 15;
+            // 
             // UserEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(234, 211);
+            this.ClientSize = new System.Drawing.Size(294, 211);
+            this.Controls.Add(this.Date_Retire);
             this.Controls.Add(this.Password_TextBox);
             this.Controls.Add(this.Password_Label);
             this.Controls.Add(this.Cancel_Button);
             this.Controls.Add(this.Save_Button);
             this.Controls.Add(this.Role_ComboBox);
             this.Controls.Add(this.Role_Label);
-            this.Controls.Add(this.DateRetire_TextBox);
             this.Controls.Add(this.DateRetire_Label);
             this.Controls.Add(this.Username_TextBox);
             this.Controls.Add(this.Username_Label);
@@ -181,10 +181,11 @@
             this.Controls.Add(this.Surname_Label);
             this.Controls.Add(this.Name_TextBox);
             this.Controls.Add(this.Name_Label);
-            this.MaximumSize = new System.Drawing.Size(250, 250);
+            this.MaximumSize = new System.Drawing.Size(310, 250);
             this.MinimumSize = new System.Drawing.Size(250, 250);
             this.Name = "UserEditor";
             this.Text = "UserEditor";
+            this.Load += new System.EventHandler(this.UserEditor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,7 +197,6 @@
         private System.Windows.Forms.TextBox Name_TextBox;
         private System.Windows.Forms.TextBox Surname_TextBox;
         private System.Windows.Forms.Label Surname_Label;
-        private System.Windows.Forms.TextBox DateRetire_TextBox;
         private System.Windows.Forms.Label DateRetire_Label;
         private System.Windows.Forms.TextBox Username_TextBox;
         private System.Windows.Forms.Label Username_Label;
@@ -206,5 +206,6 @@
         private System.Windows.Forms.Button Cancel_Button;
         private System.Windows.Forms.TextBox Password_TextBox;
         private System.Windows.Forms.Label Password_Label;
+        private System.Windows.Forms.DateTimePicker Date_Retire;
     }
 }

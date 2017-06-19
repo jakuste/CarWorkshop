@@ -50,9 +50,11 @@
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\CarWorkshop-master\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\CarWorkshop-master\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -68,45 +70,37 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activity.cs">
-      <DependentUpon>DataCarWorkshop.tt</DependentUpon>
+      <DependentUpon>CarWorkshopModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Act_dict.cs">
-      <DependentUpon>DataCarWorkshop.tt</DependentUpon>
+      <DependentUpon>CarWorkshopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarWorkshopModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarWorkshopModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarWorkshopModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarWorkshopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarWorkshopModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarWorkshopModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Client.cs">
-      <DependentUpon>DataCarWorkshop.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataCarWorkshop.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataCarWorkshop.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataCarWorkshop.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataCarWorkshop.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataCarWorkshop.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataCarWorkshop.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="DataClassesClinic.cs">
-      <DependentUpon>DataClassesClinic.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="DataClassesClinic.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataClassesClinic.dbml</DependentUpon>
+      <DependentUpon>CarWorkshopModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Object.cs">
-      <DependentUpon>DataCarWorkshop.tt</DependentUpon>
+      <DependentUpon>CarWorkshopModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Object_type.cs">
-      <DependentUpon>DataCarWorkshop.tt</DependentUpon>
+      <DependentUpon>CarWorkshopModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Personel.cs">
-      <DependentUpon>DataCarWorkshop.tt</DependentUpon>
+      <DependentUpon>CarWorkshopModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -115,16 +109,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Request.cs">
-      <DependentUpon>DataCarWorkshop.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>DataCarWorkshop.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_helpdiagrams_Result.cs">
-      <DependentUpon>DataCarWorkshop.tt</DependentUpon>
+      <DependentUpon>CarWorkshopModel.tt</DependentUpon>
     </Compile>
     <Compile Include="sysdiagrams.cs">
-      <DependentUpon>DataCarWorkshop.tt</DependentUpon>
+      <DependentUpon>CarWorkshopModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -132,18 +120,13 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
-    <EntityDeploy Include="DataCarWorkshop.edmx">
+    <EntityDeploy Include="CarWorkshopModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DataCarWorkshop.Designer.cs</LastGenOutput>
+      <LastGenOutput>CarWorkshopModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="DataCarWorkshop.edmx.diagram">
-      <DependentUpon>DataCarWorkshop.edmx</DependentUpon>
-    </None>
-    <None Include="DataClassesClinic.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>DataClassesClinic.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
+    <None Include="App.Config" />
+    <None Include="CarWorkshopModel.edmx.diagram">
+      <DependentUpon>CarWorkshopModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -152,20 +135,15 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="DataClassesClinic.dbml.layout">
-      <DependentUpon>DataClassesClinic.dbml</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="DataCarWorkshop.Context.tt">
+    <Content Include="CarWorkshopModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DataCarWorkshop.Context.cs</LastGenOutput>
-      <DependentUpon>DataCarWorkshop.edmx</DependentUpon>
+      <DependentUpon>CarWorkshopModel.edmx</DependentUpon>
+      <LastGenOutput>CarWorkshopModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="DataCarWorkshop.tt">
+    <Content Include="CarWorkshopModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DataCarWorkshop.edmx</DependentUpon>
-      <LastGenOutput>DataCarWorkshop.cs</LastGenOutput>
+      <DependentUpon>CarWorkshopModel.edmx</DependentUpon>
+      <LastGenOutput>CarWorkshopModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

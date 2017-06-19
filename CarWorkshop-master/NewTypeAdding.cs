@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Przychodnia
+namespace CarWorkshop
 {
     // okno dodawania nowego typu obiektu oraz nowego typu activity
     public partial class NewTypeAdding : Form
