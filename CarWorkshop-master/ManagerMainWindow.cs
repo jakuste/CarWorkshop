@@ -93,18 +93,18 @@ namespace CarWorkshop
             {
                 var result = ManagerService.GetObjects(obj);
 
-                Objects_DataGridView.DataSource = (from ob in result select new {Name = ob.Client.name}).ToList();
+                Objects_DataGridView.DataSource = (from ob in result select new {ob.id_object ,ob.Client.name, ob.Client.last_name, ObName = ob.name, ob.registration_number, ob.manufacturer, ob.model}).ToList();
 
                 Objects_DataGridView.Columns[0].Visible = false;
                 //Objects_DataGridView.Columns[7].Visible = false;
                 //Objects_DataGridView.Columns[8].Visible = false;
 
-                Objects_DataGridView.Columns[1].HeaderText = "Name";
-                //Objects_DataGridView.Columns[2].HeaderText = "Surname";
-                //Objects_DataGridView.Columns[3].HeaderText = "Street";
-                //Objects_DataGridView.Columns[4].HeaderText = "Number";
-                //Objects_DataGridView.Columns[5].HeaderText = "City";
-                //Objects_DataGridView.Columns[6].HeaderText = "Country";
+                Objects_DataGridView.Columns[1].HeaderText = "Customer's name";
+                Objects_DataGridView.Columns[2].HeaderText = "Customer's surname";
+                Objects_DataGridView.Columns[3].HeaderText = "Name";
+                Objects_DataGridView.Columns[4].HeaderText = "Registration No.";
+                Objects_DataGridView.Columns[5].HeaderText = "Manufacturer";
+                Objects_DataGridView.Columns[6].HeaderText = "Model";
             }
             catch (ServiceException exc)
             {
@@ -119,24 +119,46 @@ namespace CarWorkshop
 
         private void EditObject_Button_Click(object sender, EventArgs e)
         {
-            if ((DataLayer.Object)Objects_DataGridView.CurrentRow.DataBoundItem == null)
+            if (Objects_DataGridView.CurrentRow.DataBoundItem == null)
             {
                 Alert.DisplayError("No item selected!");
                 return;
             }
-            //ObjectEditor objectEditor = new ObjectEditor((DataLayer.Object)Objects_DataGridView.CurrentRow.DataBoundItem);
-            //objectEditor.ShowDialog();
+            DataLayer.Object obj = new DataLayer.Object();
+            obj.id_object = Int32.Parse(Objects_DataGridView.CurrentRow.Cells[0].ToString());
+            try
+            {
+                obj = ManagerService.GetObjects(obj).SingleOrDefault();
+                //ObjectEditor objectEditor = new ObjectEditor(obj);
+                //objectEditor.ShowDialog();
+            }catch(ServiceException exc)
+            {
+                Alert.DisplayError(exc.Message);
+            }
+
+
         }
 
         private void AddRequest_Button_Click(object sender, EventArgs e)
         {
-            if ((DataLayer.Object)Objects_DataGridView.CurrentRow.DataBoundItem == null)
+            if (Objects_DataGridView.CurrentRow.DataBoundItem == null)
             {
                 Alert.DisplayError("No item selected!");
                 return;
             }
-            RequestEditor requestEditor = new RequestEditor((DataLayer.Object)Objects_DataGridView.CurrentRow.DataBoundItem);
-            requestEditor.ShowDialog();
+            DataLayer.Object obj = new DataLayer.Object();
+            obj.id_object = Int32.Parse(Objects_DataGridView.CurrentRow.Cells[0].ToString());
+            try
+            {
+                obj = ManagerService.GetObjects(obj).SingleOrDefault();
+                RequestEditor requestEditor = new RequestEditor(obj);
+                requestEditor.ShowDialog();
+            }
+            catch (ServiceException exc)
+            {
+                Alert.DisplayError(exc.Message);
+            }
+            
         }
 
         private void Show_Button_Click(object sender, EventArgs e)
@@ -226,14 +248,16 @@ namespace CarWorkshop
 
         private void DeleteObject_Button_Click(object sender, EventArgs e)
         {
-            if ((DataLayer.Object)Objects_DataGridView.CurrentRow.DataBoundItem == null)
+            if (Objects_DataGridView.CurrentRow.DataBoundItem == null)
             {
                 Alert.DisplayError("No item selected!");
                 return;
             }
             try
             {
-                ManagerService.DeleteObject((DataLayer.Object)Objects_DataGridView.CurrentRow.DataBoundItem);
+                DataLayer.Object obj = new DataLayer.Object();
+                obj.id_object = Int32.Parse(Objects_DataGridView.CurrentRow.Cells[0].ToString());
+                ManagerService.DeleteObject(obj);
                 Objects_DataGridView.CurrentRow.Visible = false;
             }
             catch (ServiceException exc)
@@ -244,13 +268,13 @@ namespace CarWorkshop
 
         private void ShowRequests_Button_Click(object sender, EventArgs e)
         {
-            if ((DataLayer.Object)Objects_DataGridView.CurrentRow.DataBoundItem == null)
+            if (Objects_DataGridView.CurrentRow.DataBoundItem == null)
             {
                 Alert.DisplayError("No item selected!");
                 return;
             }
             Request request = new Request();
-            request.id_object = ((DataLayer.Object)Objects_DataGridView.CurrentRow.DataBoundItem).id_object;
+            request.id_object = Int32.Parse(Objects_DataGridView.CurrentRow.Cells[0].ToString());
             GetRequests(request);
         }
 

@@ -94,7 +94,7 @@ namespace BizzLayer
                     //       select el).SingleOrDefault();
                 //if (res == null)
                 //{
-                    dc.Personel.Add(personel);
+                    dc.Client.Add(client);
                     dc.SaveChanges();
                     return;
                 //}
