@@ -52,15 +52,13 @@
             this.Save_Button = new System.Windows.Forms.Button();
             this.DeleteActivity_Button = new System.Windows.Forms.Button();
             this.AddActivity_Button = new System.Windows.Forms.Button();
-            this.MoveDown_Button = new System.Windows.Forms.Button();
-            this.MoveUp_Button = new System.Windows.Forms.Button();
             this.Activities_Label = new System.Windows.Forms.Label();
             this.Activities_DataGridView = new System.Windows.Forms.DataGridView();
             this.Seq_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateRequest = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateFinish = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Object_GroupBox.SuspendLayout();
             this.Request_GroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Activities_DataGridView)).BeginInit();
@@ -236,8 +234,6 @@
             this.Request_GroupBox.Controls.Add(this.Save_Button);
             this.Request_GroupBox.Controls.Add(this.DeleteActivity_Button);
             this.Request_GroupBox.Controls.Add(this.AddActivity_Button);
-            this.Request_GroupBox.Controls.Add(this.MoveDown_Button);
-            this.Request_GroupBox.Controls.Add(this.MoveUp_Button);
             this.Request_GroupBox.Controls.Add(this.Activities_Label);
             this.Request_GroupBox.Controls.Add(this.Activities_DataGridView);
             this.Request_GroupBox.Location = new System.Drawing.Point(13, 153);
@@ -292,6 +288,7 @@
             this.DeleteActivity_Button.TabIndex = 58;
             this.DeleteActivity_Button.Text = "Delete activity";
             this.DeleteActivity_Button.UseVisualStyleBackColor = true;
+            this.DeleteActivity_Button.Click += new System.EventHandler(this.DeleteActivity_Button_Click);
             // 
             // AddActivity_Button
             // 
@@ -302,26 +299,6 @@
             this.AddActivity_Button.Text = "Add activity";
             this.AddActivity_Button.UseVisualStyleBackColor = true;
             this.AddActivity_Button.Click += new System.EventHandler(this.AddActivity_Button_Click);
-            // 
-            // MoveDown_Button
-            // 
-            this.MoveDown_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.MoveDown_Button.Location = new System.Drawing.Point(529, 175);
-            this.MoveDown_Button.Name = "MoveDown_Button";
-            this.MoveDown_Button.Size = new System.Drawing.Size(24, 24);
-            this.MoveDown_Button.TabIndex = 56;
-            this.MoveDown_Button.Text = "↓";
-            this.MoveDown_Button.UseVisualStyleBackColor = true;
-            // 
-            // MoveUp_Button
-            // 
-            this.MoveUp_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.MoveUp_Button.Location = new System.Drawing.Point(529, 146);
-            this.MoveUp_Button.Name = "MoveUp_Button";
-            this.MoveUp_Button.Size = new System.Drawing.Size(24, 24);
-            this.MoveUp_Button.TabIndex = 55;
-            this.MoveUp_Button.Text = "↑";
-            this.MoveUp_Button.UseVisualStyleBackColor = true;
             // 
             // Activities_Label
             // 
@@ -338,9 +315,9 @@
             this.Activities_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Seq_no,
             this.Description,
-            this.Status,
             this.DateRequest,
-            this.DateFinish});
+            this.DateFinish,
+            this.Status});
             this.Activities_DataGridView.Location = new System.Drawing.Point(25, 127);
             this.Activities_DataGridView.Name = "Activities_DataGridView";
             this.Activities_DataGridView.Size = new System.Drawing.Size(498, 196);
@@ -358,12 +335,6 @@
             this.Description.Name = "Description";
             this.Description.Width = 150;
             // 
-            // Status
-            // 
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.Width = 75;
-            // 
             // DateRequest
             // 
             this.DateRequest.HeaderText = "Date Request";
@@ -373,6 +344,12 @@
             // 
             this.DateFinish.HeaderText = "Date Finish";
             this.DateFinish.Name = "DateFinish";
+            // 
+            // Status
+            // 
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.Width = 75;
             // 
             // RequestEditor
             // 
@@ -420,14 +397,12 @@
         private System.Windows.Forms.Button Save_Button;
         private System.Windows.Forms.Button DeleteActivity_Button;
         private System.Windows.Forms.Button AddActivity_Button;
-        private System.Windows.Forms.Button MoveDown_Button;
-        private System.Windows.Forms.Button MoveUp_Button;
         private System.Windows.Forms.Label Activities_Label;
         private System.Windows.Forms.DataGridView Activities_DataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn Seq_no;
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.DataGridViewTextBoxColumn DateRequest;
         private System.Windows.Forms.DataGridViewTextBoxColumn DateFinish;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
     }
 }

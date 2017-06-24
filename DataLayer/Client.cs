@@ -24,11 +24,12 @@ namespace DataLayer
         public string name { get; set; }
         public string first_name { get; set; }
         public string last_name { get; set; }
-        public string street { get; set; }
-        public string flat { get; set; }
         public string city { get; set; }
+        public string street { get; set; }
         public string home { get; set; }
-        public string PESEL { get; set; }
+        public string flat { get; set; }
+        public string country { get; set; }
+        public string PESEL_NIP { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Object> Object { get; set; }

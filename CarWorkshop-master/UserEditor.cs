@@ -36,28 +36,22 @@ namespace CarWorkshop
 
         private void Save_Button_Click(object sender, EventArgs e)
         {
-            if((Name_TextBox.Text==null)||(Surname_TextBox.Text==null)||(Username_TextBox.Text==null)||(Password_TextBox.Text==null))
+            if(String.IsNullOrWhiteSpace(Name_TextBox.Text)||String.IsNullOrWhiteSpace(Surname_TextBox.Text)||String.IsNullOrWhiteSpace(Username_TextBox.Text)||String.IsNullOrWhiteSpace(Password_TextBox.Text)||String.IsNullOrWhiteSpace(Role_ComboBox.Text))
             {
                 Alert.DisplayError("Invalid input values!");
                 return;
             }
             try
             {
-                Personel personel = new Personel();
-                personel.date_retire = Date_Retire.Value;
-                personel.first_name = Name_TextBox.Text;
-                personel.last_name = Surname_TextBox.Text;
-                personel.username = Username_TextBox.Text;
-                personel.password = Password_TextBox.Text;
-                personel.role = Role_ComboBox.Text;
                 if (user == null)
                 {
-                    AdminService.NewPersonel(personel);
-
+                    FillUser();
+                    AdminService.NewPersonel(user);
                 }
                 else
                 {
-                    AdminService.UpdatePersonel(personel);
+                    FillUser();
+                    AdminService.UpdatePersonel(user);
                 }
                 this.Close();
                 this.Dispose();
@@ -76,6 +70,20 @@ namespace CarWorkshop
         private void UserEditor_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void FillUser()
+        {
+            if(user == null)
+            {
+                user = new Personel();
+                user.password = Password_TextBox.Text;
+            }
+            user.date_retire = Date_Retire.Value;
+            user.first_name = Name_TextBox.Text;
+            user.last_name = Surname_TextBox.Text;
+            user.username = Username_TextBox.Text;
+            user.role = Role_ComboBox.Text;
         }
     }
 }

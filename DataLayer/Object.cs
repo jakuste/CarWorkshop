@@ -24,14 +24,14 @@ namespace DataLayer
         public string name { get; set; }
         public Nullable<int> id_client { get; set; }
         public string code_type { get; set; }
-        public Nullable<int> registration_number { get; set; }
+        public string registration_number { get; set; }
         public string manufacturer { get; set; }
         public string model { get; set; }
         public string body_type { get; set; }
         public string engine { get; set; }
         public Nullable<int> year { get; set; }
         public string other { get; set; }
-    
+
         public virtual Client Client { get; set; }
         public virtual Object_type Object_type { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

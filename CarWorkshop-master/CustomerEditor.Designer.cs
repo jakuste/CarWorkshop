@@ -44,11 +44,15 @@
             this.City_Label = new System.Windows.Forms.Label();
             this.Country_TextBox = new System.Windows.Forms.TextBox();
             this.Country_Label = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.PESEL_TextBox = new System.Windows.Forms.TextBox();
+            this.Flat_TextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Save_Button
             // 
-            this.Save_Button.Location = new System.Drawing.Point(147, 201);
+            this.Save_Button.Location = new System.Drawing.Point(147, 246);
             this.Save_Button.Name = "Save_Button";
             this.Save_Button.Size = new System.Drawing.Size(75, 23);
             this.Save_Button.TabIndex = 12;
@@ -58,7 +62,7 @@
             // 
             // Cancel_Button
             // 
-            this.Cancel_Button.Location = new System.Drawing.Point(66, 201);
+            this.Cancel_Button.Location = new System.Drawing.Point(66, 246);
             this.Cancel_Button.Name = "Cancel_Button";
             this.Cancel_Button.Size = new System.Drawing.Size(75, 23);
             this.Cancel_Button.TabIndex = 13;
@@ -118,7 +122,7 @@
             // 
             // Number_TextBox
             // 
-            this.Number_TextBox.Location = new System.Drawing.Point(72, 107);
+            this.Number_TextBox.Location = new System.Drawing.Point(72, 142);
             this.Number_TextBox.Name = "Number_TextBox";
             this.Number_TextBox.Size = new System.Drawing.Size(150, 20);
             this.Number_TextBox.TabIndex = 45;
@@ -126,7 +130,7 @@
             // Number_Label
             // 
             this.Number_Label.AutoSize = true;
-            this.Number_Label.Location = new System.Drawing.Point(12, 110);
+            this.Number_Label.Location = new System.Drawing.Point(12, 145);
             this.Number_Label.Name = "Number_Label";
             this.Number_Label.Size = new System.Drawing.Size(44, 13);
             this.Number_Label.TabIndex = 44;
@@ -134,7 +138,7 @@
             // 
             // Street_TextBox
             // 
-            this.Street_TextBox.Location = new System.Drawing.Point(72, 81);
+            this.Street_TextBox.Location = new System.Drawing.Point(72, 116);
             this.Street_TextBox.Name = "Street_TextBox";
             this.Street_TextBox.Size = new System.Drawing.Size(150, 20);
             this.Street_TextBox.TabIndex = 43;
@@ -142,7 +146,7 @@
             // Street_Label
             // 
             this.Street_Label.AutoSize = true;
-            this.Street_Label.Location = new System.Drawing.Point(12, 84);
+            this.Street_Label.Location = new System.Drawing.Point(12, 119);
             this.Street_Label.Name = "Street_Label";
             this.Street_Label.Size = new System.Drawing.Size(35, 13);
             this.Street_Label.TabIndex = 42;
@@ -150,7 +154,7 @@
             // 
             // City_TextBox
             // 
-            this.City_TextBox.Location = new System.Drawing.Point(72, 133);
+            this.City_TextBox.Location = new System.Drawing.Point(72, 194);
             this.City_TextBox.Name = "City_TextBox";
             this.City_TextBox.Size = new System.Drawing.Size(150, 20);
             this.City_TextBox.TabIndex = 41;
@@ -158,7 +162,7 @@
             // City_Label
             // 
             this.City_Label.AutoSize = true;
-            this.City_Label.Location = new System.Drawing.Point(12, 136);
+            this.City_Label.Location = new System.Drawing.Point(12, 197);
             this.City_Label.Name = "City_Label";
             this.City_Label.Size = new System.Drawing.Size(24, 13);
             this.City_Label.TabIndex = 40;
@@ -166,7 +170,7 @@
             // 
             // Country_TextBox
             // 
-            this.Country_TextBox.Location = new System.Drawing.Point(72, 159);
+            this.Country_TextBox.Location = new System.Drawing.Point(72, 220);
             this.Country_TextBox.Name = "Country_TextBox";
             this.Country_TextBox.Size = new System.Drawing.Size(150, 20);
             this.Country_TextBox.TabIndex = 47;
@@ -174,17 +178,54 @@
             // Country_Label
             // 
             this.Country_Label.AutoSize = true;
-            this.Country_Label.Location = new System.Drawing.Point(12, 162);
+            this.Country_Label.Location = new System.Drawing.Point(12, 223);
             this.Country_Label.Name = "Country_Label";
             this.Country_Label.Size = new System.Drawing.Size(43, 13);
             this.Country_Label.TabIndex = 46;
             this.Country_Label.Text = "Country";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 175);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(24, 13);
+            this.label1.TabIndex = 48;
+            this.label1.Text = "Flat";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 88);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 13);
+            this.label2.TabIndex = 49;
+            this.label2.Text = "PESEL/NIP";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // PESEL_TextBox
+            // 
+            this.PESEL_TextBox.Location = new System.Drawing.Point(83, 85);
+            this.PESEL_TextBox.Name = "PESEL_TextBox";
+            this.PESEL_TextBox.Size = new System.Drawing.Size(139, 20);
+            this.PESEL_TextBox.TabIndex = 50;
+            // 
+            // Flat_TextBox
+            // 
+            this.Flat_TextBox.Location = new System.Drawing.Point(72, 169);
+            this.Flat_TextBox.Name = "Flat_TextBox";
+            this.Flat_TextBox.Size = new System.Drawing.Size(150, 20);
+            this.Flat_TextBox.TabIndex = 51;
+            // 
             // CustomerEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(234, 236);
+            this.ClientSize = new System.Drawing.Size(234, 281);
+            this.Controls.Add(this.Flat_TextBox);
+            this.Controls.Add(this.PESEL_TextBox);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Country_TextBox);
             this.Controls.Add(this.Country_Label);
             this.Controls.Add(this.Number_TextBox);
@@ -201,7 +242,7 @@
             this.Controls.Add(this.Company_CheckBox);
             this.Controls.Add(this.Cancel_Button);
             this.Controls.Add(this.Save_Button);
-            this.MaximumSize = new System.Drawing.Size(250, 275);
+            this.MaximumSize = new System.Drawing.Size(250, 320);
             this.MinimumSize = new System.Drawing.Size(250, 275);
             this.Name = "CustomerEditor";
             this.Text = "CustomerEditor";
@@ -227,5 +268,9 @@
         private System.Windows.Forms.Label City_Label;
         private System.Windows.Forms.TextBox Country_TextBox;
         private System.Windows.Forms.Label Country_Label;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox PESEL_TextBox;
+        private System.Windows.Forms.TextBox Flat_TextBox;
     }
 }

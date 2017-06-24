@@ -120,11 +120,11 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.Config" />
     <EntityDeploy Include="CarWorkshopModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>CarWorkshopModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="App.Config" />
     <None Include="CarWorkshopModel.edmx.diagram">
       <DependentUpon>CarWorkshopModel.edmx</DependentUpon>
     </None>

@@ -29,7 +29,7 @@ namespace DataLayer
         public int id_activity { get; set; }
         public Nullable<int> id_object { get; set; }
         public Nullable<int> id_personel { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Activity> Activity { get; set; }
         public virtual Object Object { get; set; }

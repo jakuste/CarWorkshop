@@ -103,8 +103,13 @@ namespace CarWorkshop
             try
             {
                 AdminService.DeletePersonel((Personel)Users_DataGridView.CurrentRow.DataBoundItem);
-                Users_DataGridView.CurrentRow.Visible = false;
-            }catch(ServiceException exc)
+                int index = Users_DataGridView.CurrentRow.Index;
+                CurrencyManager currencyManager = (CurrencyManager)BindingContext[Users_DataGridView.DataSource];
+                currencyManager.SuspendBinding();
+                Users_DataGridView.Rows[index].Visible = false;
+                currencyManager.ResumeBinding();
+            }
+            catch(ServiceException exc)
             {
                 Alert.DisplayError(exc.Message);
             }

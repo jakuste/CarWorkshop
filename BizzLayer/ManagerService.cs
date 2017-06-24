@@ -16,6 +16,8 @@ namespace BizzLayer
                 CarWorkshopModelContext dc = new CarWorkshopModelContext();
                 var result = from el in dc.Client
                              where
+                             String.IsNullOrEmpty(searchCrit.name) || el.last_name.StartsWith(searchCrit.name)
+                             &&
                              String.IsNullOrEmpty(searchCrit.last_name) || el.last_name.StartsWith(searchCrit.last_name)
                              &&
                              String.IsNullOrEmpty(searchCrit.first_name) || el.first_name.StartsWith(searchCrit.first_name)
@@ -27,6 +29,8 @@ namespace BizzLayer
                              String.IsNullOrEmpty(searchCrit.home) || el.home.StartsWith(searchCrit.home)
                              &&
                              String.IsNullOrEmpty(searchCrit.street) || el.street.StartsWith(searchCrit.street)
+                             ||
+                             el.id_client == searchCrit.id_client
                              select el;
                 return result;
             }
@@ -50,11 +54,14 @@ namespace BizzLayer
                     return;
                 }
                 result.name = client.name;
-                result.last_name = client.name;
+                result.first_name = client.first_name;
+                result.last_name = client.last_name;
                 result.home = client.home;
                 result.city = client.city;
                 result.flat = client.flat;
                 result.street = client.street;
+                result.PESEL_NIP = client.PESEL_NIP;
+                result.country = client.country;
                 dc.SaveChanges();
             }
             catch (System.Data.Entity.Core.EntityException e)
@@ -137,7 +144,7 @@ namespace BizzLayer
             }
         }
 
-        public static void UpdateObjects(DataLayer.Object obj)
+        public static void UpdateObject(DataLayer.Object obj)
         {
             try
             {
@@ -180,6 +187,28 @@ namespace BizzLayer
                 }
                 dc.Object.Remove(res);
                 dc.SaveChanges();
+            }
+            catch (System.Data.Entity.Core.EntityException e)
+            {
+                throw new ServiceException("Database connection error!");
+            }
+        }
+
+        public static void NewObject(DataLayer.Object obj)
+        {
+            try
+            {
+                CarWorkshopModelContext dc = new CarWorkshopModelContext();
+                var res = (from el in dc.Object
+                           where el.registration_number == obj.registration_number
+                           select el).SingleOrDefault();
+                if (res == null)
+                {
+                    dc.Object.Add(obj);
+                    dc.SaveChanges();
+                    return;
+                }
+                throw new ServiceException("Object already exists!");
             }
             catch (System.Data.Entity.Core.EntityException e)
             {
@@ -268,6 +297,21 @@ namespace BizzLayer
             }
         }
 
+        public static void NewRequest(Request request)
+        {
+            try
+            {
+                CarWorkshopModelContext dc = new CarWorkshopModelContext();
+                dc.Request.Add(request);
+                dc.SaveChanges();
+                return;
+            }
+            catch (System.Data.Entity.Core.EntityException e)
+            {
+                throw new ServiceException("Database connection error!");
+            } 
+        }
+
         public static IQueryable<Activity> GetActivities(Activity searchCrit)
         {
             try
@@ -343,6 +387,119 @@ namespace BizzLayer
                 }
                 dc.Activity.Remove(res);
                 dc.SaveChanges();
+            }
+            catch (System.Data.Entity.Core.EntityException e)
+            {
+                throw new ServiceException("Database connection error!");
+            }
+        }
+
+        public static void NewActivity(Activity activity)
+        {
+            try
+            {
+                CarWorkshopModelContext dc = new CarWorkshopModelContext();
+                Activity sequneceSearch = new Activity();
+                sequneceSearch.id_request = activity.id_request;
+                var sequence = from el in dc.Activity
+                               where
+                               el.id_request == sequneceSearch.id_request
+                               select el;
+                if(sequence.ToArray().Length == 0)
+                {
+                    activity.seq_no = 1;
+                }else
+                {
+                    activity.seq_no = sequence.ToArray().Last().seq_no + 1;
+                }
+                dc.Activity.Add(activity);
+                dc.SaveChanges();
+                return;
+            } catch (ServiceException e)
+            {
+                throw e;
+            } catch (System.Data.Entity.Core.EntityException e)
+            {
+                throw new ServiceException("Database connection error!");
+            }
+            catch (System.Data.Entity.Validation.DbEntityValidationException e)
+            {
+                var x = e.EntityValidationErrors;
+                int a = 0;
+            }
+        }
+
+        public static void NewActType(Act_dict type)
+        {
+            try
+            {
+                CarWorkshopModelContext dc = new CarWorkshopModelContext();
+                var res = (from el in dc.Act_dict
+                          where (el.act_name == type.act_name)
+                          ||
+                          (el.act_type == type.act_type)
+                          select el).SingleOrDefault();
+                if (res == null)
+                {
+                    dc.Act_dict.Add(type);
+                    dc.SaveChanges();
+                    return;
+                }
+                throw new ServiceException("Type already exists!");
+            }
+            catch (System.Data.Entity.Core.EntityException e)
+            {
+                throw new ServiceException("Database connection error!");
+            }
+        }
+
+        public static IQueryable<Act_dict> GetActTypes()
+        {
+            try
+            {
+                CarWorkshopModelContext dc = new CarWorkshopModelContext();
+                var res = from el in dc.Act_dict
+                          select el;
+                return res;
+            }
+            catch (System.Data.Entity.Core.EntityException e)
+            {
+                throw new ServiceException("Database connection error!");
+            }
+        }
+
+        public static void NewObjectType(Object_type type)
+        {
+            try
+            {
+                CarWorkshopModelContext dc = new CarWorkshopModelContext();
+                var res = (from el in dc.Object_type
+                           where (el.name_type == type.name_type)
+                           ||
+                           (el.code_type == type.code_type)
+                           select el).SingleOrDefault();
+                if (res == null)
+                {
+                    dc.Object_type.Add(type);
+                    dc.SaveChanges();
+                    return;
+                }
+                throw new ServiceException("Type already exists!");
+            }
+            catch (System.Data.Entity.Core.EntityException e)
+            {
+                throw new ServiceException("Database connection error!");
+            }
+        }
+
+        public static IQueryable<Object_type> GetObjectTypes()
+        {
+            try
+            {
+                CarWorkshopModelContext dc = new CarWorkshopModelContext();
+                var res = from el in dc.Object_type
+                          select el;
+                return res;
             }
             catch (System.Data.Entity.Core.EntityException e)
             {

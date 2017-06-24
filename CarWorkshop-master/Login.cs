@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DataLayer;
+using BizzLayer;
 
 namespace CarWorkshop
 {
@@ -23,6 +25,33 @@ namespace CarWorkshop
 
         private void Login_Button_Click(object sender, EventArgs e)
         {
+            /*
+            Personel user = new Personel();
+            user.password = Password_TextBox.Text;
+            user.username = Username_TextBox.Text;
+            var result = AdminService.GetPersonelWithPassword(user);
+            if(result==null)
+            {
+                Alert.DisplayError("Invalid username or password!");
+                return;
+            }
+            MainWindow mainWindow;
+            if (result.role=="Admin")
+            {
+                mainWindow = new AdminMainWindow();
+            } else if (result.role == "Manager")
+            {
+                mainWindow = new ManagerMainWindow(result);
+            } else
+            {
+                mainWindow = new WorkerMainWindow(result);
+            }
+
+            Program.mainWindow = mainWindow;
+            mainWindow.InitOnShow();
+
+            this.Visible = false;
+            mainWindow.ShowDialog();*/
             string adminText = "admin";
             string managerText = "manager";
             //this.Username_TextBox.Text = managerText;
@@ -33,17 +62,18 @@ namespace CarWorkshop
             }
             else if (this.Username_TextBox.Text == managerText)
             {
-                mainWindow = new ManagerMainWindow();    
+                mainWindow = new ManagerMainWindow(new DataLayer.Personel());    
             }
             else
             {
-                mainWindow = new WorkerMainWindow();
+                mainWindow = new WorkerMainWindow(new DataLayer.Personel());
             }
             Program.mainWindow = mainWindow;
             mainWindow.InitOnShow();
 
             this.Visible = false;
             mainWindow.ShowDialog();
+
         }
     }
 }

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="WarsztatSamochodowyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="CarWorkshopModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Act_dict">
           <Key>
             <PropertyRef Name="act_type" />
@@ -20,7 +20,7 @@
           <Property Name="seq_no" Type="int" />
           <Property Name="description" Type="nvarchar" MaxLength="254" />
           <Property Name="result" Type="nvarchar" MaxLength="254" />
-          <Property Name="status" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="status" Type="nchar" MaxLength="20" Nullable="false" />
           <Property Name="date/request" Type="nchar" MaxLength="10" />
           <Property Name="date_fin_cancel" Type="datetime" />
           <Property Name="id_request" Type="int" />
@@ -39,7 +39,8 @@
           <Property Name="street" Type="nvarchar" MaxLength="50" />
           <Property Name="home" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="flat" Type="nvarchar" MaxLength="50" />
-          <Property Name="PESEL" Type="nchar" MaxLength="11" Nullable="false" />
+          <Property Name="PESEL_NIP" Type="nchar" MaxLength="11" Nullable="false" />
+          <Property Name="country" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Object">
           <Key>
@@ -49,7 +50,7 @@
           <Property Name="name" Type="nvarchar" MaxLength="50" />
           <Property Name="id_client" Type="int" />
           <Property Name="code_type" Type="nchar" MaxLength="10" />
-          <Property Name="registration_number" Type="int" />
+          <Property Name="registration_number" Type="nchar" MaxLength="10" />
           <Property Name="manufacturer" Type="nchar" MaxLength="50" />
           <Property Name="model" Type="nchar" MaxLength="50" />
           <Property Name="body_type" Type="nchar" MaxLength="50" />
@@ -184,7 +185,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="WarsztatSamochodowyModelStoreContainer">
+        <EntityContainer Name="CarWorkshopModelStoreContainer">
           <EntitySet Name="Act_dict" EntityType="Self.Act_dict" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Activity" EntityType="Self.Activity" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
@@ -226,7 +227,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="WarsztatSamochodowyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="CarWorkshopModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Act_dict">
           <Key>
             <PropertyRef Name="act_type" />
@@ -243,7 +244,7 @@
           <Property Name="seq_no" Type="Int32" />
           <Property Name="description" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
           <Property Name="result" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
-          <Property Name="status" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="status" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="date_request" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="date_fin_cancel" Type="DateTime" Precision="3" />
           <Property Name="id_request" Type="Int32" />
@@ -265,7 +266,8 @@
           <Property Name="street" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="home" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="flat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="PESEL" Type="String" MaxLength="11" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="PESEL_NIP" Type="String" MaxLength="11" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Object" Relationship="Self.FK_Object_Client" FromRole="Client" ToRole="Object" />
         </EntityType>
         <EntityType Name="Object">
@@ -276,7 +278,7 @@
           <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="id_client" Type="Int32" />
           <Property Name="code_type" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="registration_number" Type="Int32" />
+          <Property Name="registration_number" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="manufacturer" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
           <Property Name="model" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
           <Property Name="body_type" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
@@ -420,7 +422,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="WarsztatSamochodowyEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="CarWorkshopModelContext" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Act_dict" EntityType="Self.Act_dict" />
           <EntitySet Name="Activity" EntityType="Self.Activity" />
           <EntitySet Name="Client" EntityType="Self.Client" />
@@ -463,9 +465,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="WarsztatSamochodowyModelStoreContainer" CdmEntityContainer="WarsztatSamochodowyEntities">
+        <EntityContainerMapping StorageEntityContainer="CarWorkshopModelStoreContainer" CdmEntityContainer="CarWorkshopModelContext">
           <EntitySetMapping Name="Act_dict">
-            <EntityTypeMapping TypeName="WarsztatSamochodowyModel.Act_dict">
+            <EntityTypeMapping TypeName="CarWorkshopModel.Act_dict">
               <MappingFragment StoreEntitySet="Act_dict">
                 <ScalarProperty Name="act_type" ColumnName="act_type" />
                 <ScalarProperty Name="act_name" ColumnName="act_name" />
@@ -473,7 +475,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Activity">
-            <EntityTypeMapping TypeName="WarsztatSamochodowyModel.Activity">
+            <EntityTypeMapping TypeName="CarWorkshopModel.Activity">
               <MappingFragment StoreEntitySet="Activity">
                 <ScalarProperty Name="id_activity" ColumnName="id_activity" />
                 <ScalarProperty Name="seq_no" ColumnName="seq_no" />
@@ -489,7 +491,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Client">
-            <EntityTypeMapping TypeName="WarsztatSamochodowyModel.Client">
+            <EntityTypeMapping TypeName="CarWorkshopModel.Client">
               <MappingFragment StoreEntitySet="Client">
                 <ScalarProperty Name="id_client" ColumnName="id_client" />
                 <ScalarProperty Name="name" ColumnName="name" />
@@ -499,12 +501,13 @@
                 <ScalarProperty Name="street" ColumnName="street" />
                 <ScalarProperty Name="home" ColumnName="home" />
                 <ScalarProperty Name="flat" ColumnName="flat" />
-                <ScalarProperty Name="PESEL" ColumnName="PESEL" />
+                <ScalarProperty Name="PESEL_NIP" ColumnName="PESEL_NIP" />
+                <ScalarProperty Name="country" ColumnName="country" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Object">
-            <EntityTypeMapping TypeName="WarsztatSamochodowyModel.Object">
+            <EntityTypeMapping TypeName="CarWorkshopModel.Object">
               <MappingFragment StoreEntitySet="Object">
                 <ScalarProperty Name="id_object" ColumnName="id_object" />
                 <ScalarProperty Name="name" ColumnName="name" />
@@ -521,7 +524,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Object_type">
-            <EntityTypeMapping TypeName="WarsztatSamochodowyModel.Object_type">
+            <EntityTypeMapping TypeName="CarWorkshopModel.Object_type">
               <MappingFragment StoreEntitySet="Object_type">
                 <ScalarProperty Name="code_type" ColumnName="code_type" />
                 <ScalarProperty Name="name_type" ColumnName="name_type" />
@@ -529,7 +532,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Personel">
-            <EntityTypeMapping TypeName="WarsztatSamochodowyModel.Personel">
+            <EntityTypeMapping TypeName="CarWorkshopModel.Personel">
               <MappingFragment StoreEntitySet="Personel">
                 <ScalarProperty Name="id_personel" ColumnName="id_personel" />
                 <ScalarProperty Name="first_name" ColumnName="first_name" />
@@ -542,7 +545,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Request">
-            <EntityTypeMapping TypeName="WarsztatSamochodowyModel.Request">
+            <EntityTypeMapping TypeName="CarWorkshopModel.Request">
               <MappingFragment StoreEntitySet="Request">
                 <ScalarProperty Name="id_request" ColumnName="id_request" />
                 <ScalarProperty Name="description" ColumnName="description" />
@@ -557,7 +560,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="WarsztatSamochodowyModel.sysdiagrams">
+            <EntityTypeMapping TypeName="CarWorkshopModel.sysdiagrams">
               <MappingFragment StoreEntitySet="sysdiagrams">
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="principal_id" ColumnName="principal_id" />

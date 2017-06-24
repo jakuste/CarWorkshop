@@ -18,13 +18,13 @@ namespace DataLayer
         public Nullable<int> seq_no { get; set; }
         public string description { get; set; }
         public string result { get; set; }
-        public string status { get; set; }
         public string date_request { get; set; }
         public Nullable<System.DateTime> date_fin_cancel { get; set; }
+        public string status { get; set; }
         public Nullable<int> id_request { get; set; }
         public string act_type { get; set; }
         public Nullable<int> id_personel { get; set; }
-    
+
         public virtual Act_dict Act_dict { get; set; }
         public virtual Personel Personel { get; set; }
         public virtual Request Request { get; set; }

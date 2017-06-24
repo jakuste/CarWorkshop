@@ -24,15 +24,19 @@ namespace CarWorkshop
         {
             InitializeComponent();
             this.client = client;
-            Name_TextBox.Text = client.name;
+            Name_TextBox.Text = client.first_name;
             Surname_TextBox.Text = client.last_name;
             if(client.last_name==null)
             {
                 Company_CheckBox.Checked = true;
+                Name_TextBox.Text = client.name;
             }
             Street_TextBox.Text = client.street;
             City_TextBox.Text = client.city;
-
+            Country_TextBox.Text = client.country;
+            Number_TextBox.Text = client.home;
+            Flat_TextBox.Text = client.flat;
+            PESEL_TextBox.Text = client.PESEL_NIP;
         }
 
         private void Cancel_Button_Click(object sender, EventArgs e)
@@ -43,38 +47,24 @@ namespace CarWorkshop
 
         private void Save_Button_Click(object sender, EventArgs e)
         {
-            
-            if(Company_CheckBox.Checked)
+
+            if (String.IsNullOrWhiteSpace(PESEL_TextBox.Text))
             {
-                if ((Name_TextBox.Text == null) || (Street_TextBox.Text == null) || (City_TextBox.Text == null) || (Country_TextBox.Text == null) || (Number_TextBox.Text == null))
-                {
-                    Alert.DisplayError("Invalid input values!");
-                    return;
-                }
+                Alert.DisplayError("Invalid input values!");
+                return;
             }
-            else
-            {
-                if ((Name_TextBox.Text == null) || (Surname_TextBox.Text == null) || (Street_TextBox.Text == null) || (City_TextBox.Text == null) || (Country_TextBox.Text == null) || (Number_TextBox.Text == null))
-                {
-                    Alert.DisplayError("Invalid input values!");
-                    return;
-                }
-            }
+
+
             try
-            {
-                Client client = new Client();
-                client.name = Name_TextBox.Text;
-                client.last_name = Name_TextBox.Text;
-                client.street = Street_TextBox.Text;
-                client.city = City_TextBox.Text;
-                client.flat = Number_TextBox.Text;
+            { 
                 if (client == null)
                 {
+                    FillClient();
                     ManagerService.NewClient(client);
-
                 }
                 else
                 {
+                    FillClient();
                     ManagerService.UpdateClient(client);
                 }
                 this.Close();
@@ -83,6 +73,34 @@ namespace CarWorkshop
             {
                 Alert.DisplayError(exc.Message);
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FillClient()
+        {
+            if(client==null)
+            {
+                client = new Client();
+            }
+            if(Company_CheckBox.Checked)
+            {
+                client.name = Name_TextBox.Text;
+            }
+            else
+            {
+                client.first_name = Name_TextBox.Text;
+                client.last_name = Surname_TextBox.Text;
+            }
+            client.street = Street_TextBox.Text;
+            client.city = City_TextBox.Text;
+            client.home = Number_TextBox.Text;
+            client.flat = Flat_TextBox.Text;
+            client.PESEL_NIP = PESEL_TextBox.Text;
+            client.country = Country_TextBox.Text;
         }
     }
 }

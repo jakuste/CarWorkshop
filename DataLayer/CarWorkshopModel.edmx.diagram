@@ -4,22 +4,22 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="58c77379d4ba46e2bf226ac5841eb168" Name="Diagram1">
-        <EntityTypeShape EntityType="WarsztatSamochodowyModel.Act_dict" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="WarsztatSamochodowyModel.Activity" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="WarsztatSamochodowyModel.Client" Width="1.5" PointX="1.5" PointY="9.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="WarsztatSamochodowyModel.Object" Width="1.5" PointX="3.75" PointY="10.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="WarsztatSamochodowyModel.Object_type" Width="1.5" PointX="1.5" PointY="13" IsExpanded="true" />
-        <EntityTypeShape EntityType="WarsztatSamochodowyModel.Personel" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="WarsztatSamochodowyModel.Request" Width="1.5" PointX="6" PointY="3.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="WarsztatSamochodowyModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="7.75" IsExpanded="true" />
-        <AssociationConnector Association="WarsztatSamochodowyModel.FK_Activity_Act_dict" ManuallyRouted="false" />
-        <AssociationConnector Association="WarsztatSamochodowyModel.FK_Activity_Personel" ManuallyRouted="false" />
-        <AssociationConnector Association="WarsztatSamochodowyModel.FK_Activity_Request" ManuallyRouted="false" />
-        <AssociationConnector Association="WarsztatSamochodowyModel.FK_Object_Client" ManuallyRouted="false" />
-        <AssociationConnector Association="WarsztatSamochodowyModel.FK_Object_object_type" ManuallyRouted="false" />
-        <AssociationConnector Association="WarsztatSamochodowyModel.FK_Request_Object" ManuallyRouted="false" />
-        <AssociationConnector Association="WarsztatSamochodowyModel.FK_Request_Personel" ManuallyRouted="false" />
+      <Diagram DiagramId="09239e4510f740099a2e44f3d6350c21" Name="Diagram1">
+        <EntityTypeShape EntityType="CarWorkshopModel.Act_dict" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarWorkshopModel.Activity" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarWorkshopModel.Client" Width="1.5" PointX="1.5" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarWorkshopModel.Object" Width="1.5" PointX="3.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarWorkshopModel.Object_type" Width="1.5" PointX="1.5" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarWorkshopModel.Personel" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarWorkshopModel.Request" Width="1.5" PointX="6" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarWorkshopModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="7.75" IsExpanded="true" />
+        <AssociationConnector Association="CarWorkshopModel.FK_Activity_Act_dict" ManuallyRouted="false" />
+        <AssociationConnector Association="CarWorkshopModel.FK_Activity_Personel" ManuallyRouted="false" />
+        <AssociationConnector Association="CarWorkshopModel.FK_Activity_Request" ManuallyRouted="false" />
+        <AssociationConnector Association="CarWorkshopModel.FK_Object_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="CarWorkshopModel.FK_Object_object_type" ManuallyRouted="false" />
+        <AssociationConnector Association="CarWorkshopModel.FK_Request_Object" ManuallyRouted="false" />
+        <AssociationConnector Association="CarWorkshopModel.FK_Request_Personel" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

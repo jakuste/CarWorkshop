@@ -43,12 +43,12 @@
             this.Engine_TextBox = new System.Windows.Forms.TextBox();
             this.Cancel_Button = new System.Windows.Forms.Button();
             this.Save_Button = new System.Windows.Forms.Button();
-            this.Year_ComboBox = new System.Windows.Forms.ComboBox();
             this.Type_Label = new System.Windows.Forms.Label();
             this.Type_ComboBox = new System.Windows.Forms.ComboBox();
             this.AddType_Button = new System.Windows.Forms.Button();
-            this.Name_TextBox = new System.Windows.Forms.TextBox();
             this.Name_label = new System.Windows.Forms.Label();
+            this.Year_textBox = new System.Windows.Forms.TextBox();
+            this.Name_TextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // RegistrationNumber_Label
@@ -177,14 +177,6 @@
             this.Save_Button.UseVisualStyleBackColor = true;
             this.Save_Button.Click += new System.EventHandler(this.Save_Button_Click);
             // 
-            // Year_ComboBox
-            // 
-            this.Year_ComboBox.FormattingEnabled = true;
-            this.Year_ComboBox.Location = new System.Drawing.Point(122, 192);
-            this.Year_ComboBox.Name = "Year_ComboBox";
-            this.Year_ComboBox.Size = new System.Drawing.Size(150, 21);
-            this.Year_ComboBox.TabIndex = 49;
-            // 
             // Type_Label
             // 
             this.Type_Label.AutoSize = true;
@@ -212,13 +204,6 @@
             this.AddType_Button.UseVisualStyleBackColor = true;
             this.AddType_Button.Click += new System.EventHandler(this.AddType_Button_Click);
             // 
-            // Name_TextBox
-            // 
-            this.Name_TextBox.Location = new System.Drawing.Point(122, 36);
-            this.Name_TextBox.Name = "Name_TextBox";
-            this.Name_TextBox.Size = new System.Drawing.Size(150, 20);
-            this.Name_TextBox.TabIndex = 54;
-            // 
             // Name_label
             // 
             this.Name_label.AutoSize = true;
@@ -228,17 +213,31 @@
             this.Name_label.TabIndex = 53;
             this.Name_label.Text = "Name";
             // 
+            // Year_textBox
+            // 
+            this.Year_textBox.Location = new System.Drawing.Point(122, 192);
+            this.Year_textBox.Name = "Year_textBox";
+            this.Year_textBox.Size = new System.Drawing.Size(150, 20);
+            this.Year_textBox.TabIndex = 55;
+            // 
+            // Name_TextBox
+            // 
+            this.Name_TextBox.Location = new System.Drawing.Point(122, 36);
+            this.Name_TextBox.Name = "Name_TextBox";
+            this.Name_TextBox.Size = new System.Drawing.Size(150, 20);
+            this.Name_TextBox.TabIndex = 54;
+            // 
             // ObjectEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 341);
+            this.Controls.Add(this.Year_textBox);
             this.Controls.Add(this.Name_TextBox);
             this.Controls.Add(this.Name_label);
             this.Controls.Add(this.AddType_Button);
             this.Controls.Add(this.Type_ComboBox);
             this.Controls.Add(this.Type_Label);
-            this.Controls.Add(this.Year_ComboBox);
             this.Controls.Add(this.Cancel_Button);
             this.Controls.Add(this.Save_Button);
             this.Controls.Add(this.Other_TextBox);
@@ -280,11 +279,11 @@
         private System.Windows.Forms.TextBox Engine_TextBox;
         private System.Windows.Forms.Button Cancel_Button;
         private System.Windows.Forms.Button Save_Button;
-        private System.Windows.Forms.ComboBox Year_ComboBox;
         private System.Windows.Forms.Label Type_Label;
         private System.Windows.Forms.ComboBox Type_ComboBox;
         private System.Windows.Forms.Button AddType_Button;
-        private System.Windows.Forms.TextBox Name_TextBox;
         private System.Windows.Forms.Label Name_label;
+        private System.Windows.Forms.TextBox Year_textBox;
+        private System.Windows.Forms.TextBox Name_TextBox;
     }
 }

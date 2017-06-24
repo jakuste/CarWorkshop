@@ -51,16 +51,9 @@
             this.CustomerName_Label = new System.Windows.Forms.Label();
             this.CustomerName_TextBox = new System.Windows.Forms.TextBox();
             this.Customers_DataGridView = new System.Windows.Forms.DataGridView();
-            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Street = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NumberOfHouse = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.City = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Country = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Objects_TabPage = new System.Windows.Forms.TabPage();
             this.RegistrationNo_Label = new System.Windows.Forms.Label();
             this.RegistrationNo_TextBox = new System.Windows.Forms.TextBox();
-            this.SeeDetails_Button = new System.Windows.Forms.Button();
             this.AddRequest_Button = new System.Windows.Forms.Button();
             this.ShowRequests_Button = new System.Windows.Forms.Button();
             this.EditObject_Button = new System.Windows.Forms.Button();
@@ -84,22 +77,12 @@
             this.Manufacturer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Model = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Request_TabPage = new System.Windows.Forms.TabPage();
-            this.RequestName_Label = new System.Windows.Forms.Label();
-            this.RequestName_TextBox = new System.Windows.Forms.TextBox();
-            this.RequestNextDay_Button = new System.Windows.Forms.Button();
-            this.RequestPreviousDay_Button = new System.Windows.Forms.Button();
             this.RequestDate_DateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.ShowRequest_Button = new System.Windows.Forms.Button();
             this.RequestStatus_Label = new System.Windows.Forms.Label();
             this.RequestStatus_ComboBox = new System.Windows.Forms.ComboBox();
             this.SearchRequests_Button = new System.Windows.Forms.Button();
             this.Requests_DataGridView = new System.Windows.Forms.DataGridView();
-            this.SequenceNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameOfRequest = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateRequest = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateFinCancel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Activities_TabPage = new System.Windows.Forms.TabPage();
             this.ShowOnlyMyActivities_CheckBox = new System.Windows.Forms.CheckBox();
             this.ShowOnlyMyActivities_Label = new System.Windows.Forms.Label();
@@ -113,14 +96,26 @@
             this.ActivityStatus_ComboBox = new System.Windows.Forms.ComboBox();
             this.SearchActivities_Button = new System.Windows.Forms.Button();
             this.Activities_DataGridView = new System.Windows.Forms.DataGridView();
+            this.LogOut_button = new System.Windows.Forms.Button();
+            this.WelcomeText_Label = new System.Windows.Forms.Label();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateRequest = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateFinCancel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LogOut_button = new System.Windows.Forms.Button();
-            this.WelcomeText_Label = new System.Windows.Forms.Label();
+            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.City = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Street = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NumberOfHouse = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Flat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Country = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PESEL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ManagerMainWindow_TabControl.SuspendLayout();
             this.Customers_TabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Customers_DataGridView)).BeginInit();
@@ -361,50 +356,21 @@
             this.Customers_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.FirstName,
             this.LastName,
+            this.City,
             this.Street,
             this.NumberOfHouse,
-            this.City,
-            this.Country});
+            this.Flat,
+            this.Country,
+            this.PESEL});
             this.Customers_DataGridView.Location = new System.Drawing.Point(0, 55);
             this.Customers_DataGridView.Name = "Customers_DataGridView";
             this.Customers_DataGridView.Size = new System.Drawing.Size(752, 327);
             this.Customers_DataGridView.TabIndex = 17;
             // 
-            // FirstName
-            // 
-            this.FirstName.HeaderText = "Name";
-            this.FirstName.Name = "FirstName";
-            // 
-            // LastName
-            // 
-            this.LastName.HeaderText = "Surname";
-            this.LastName.Name = "LastName";
-            // 
-            // Street
-            // 
-            this.Street.HeaderText = "Street";
-            this.Street.Name = "Street";
-            // 
-            // NumberOfHouse
-            // 
-            this.NumberOfHouse.HeaderText = "Number";
-            this.NumberOfHouse.Name = "NumberOfHouse";
-            // 
-            // City
-            // 
-            this.City.HeaderText = "City";
-            this.City.Name = "City";
-            // 
-            // Country
-            // 
-            this.Country.HeaderText = "Country";
-            this.Country.Name = "Country";
-            // 
             // Objects_TabPage
             // 
             this.Objects_TabPage.Controls.Add(this.RegistrationNo_Label);
             this.Objects_TabPage.Controls.Add(this.RegistrationNo_TextBox);
-            this.Objects_TabPage.Controls.Add(this.SeeDetails_Button);
             this.Objects_TabPage.Controls.Add(this.AddRequest_Button);
             this.Objects_TabPage.Controls.Add(this.ShowRequests_Button);
             this.Objects_TabPage.Controls.Add(this.EditObject_Button);
@@ -444,16 +410,6 @@
             this.RegistrationNo_TextBox.Name = "RegistrationNo_TextBox";
             this.RegistrationNo_TextBox.Size = new System.Drawing.Size(150, 20);
             this.RegistrationNo_TextBox.TabIndex = 63;
-            // 
-            // SeeDetails_Button
-            // 
-            this.SeeDetails_Button.Location = new System.Drawing.Point(374, 390);
-            this.SeeDetails_Button.Name = "SeeDetails_Button";
-            this.SeeDetails_Button.Size = new System.Drawing.Size(121, 23);
-            this.SeeDetails_Button.TabIndex = 62;
-            this.SeeDetails_Button.Text = "See details";
-            this.SeeDetails_Button.UseVisualStyleBackColor = true;
-            this.SeeDetails_Button.Click += new System.EventHandler(this.SeeDetails_Button_Click);
             // 
             // AddRequest_Button
             // 
@@ -637,10 +593,7 @@
             // 
             // Request_TabPage
             // 
-            this.Request_TabPage.Controls.Add(this.RequestName_Label);
-            this.Request_TabPage.Controls.Add(this.RequestName_TextBox);
-            this.Request_TabPage.Controls.Add(this.RequestNextDay_Button);
-            this.Request_TabPage.Controls.Add(this.RequestPreviousDay_Button);
+            this.Request_TabPage.Controls.Add(this.label1);
             this.Request_TabPage.Controls.Add(this.RequestDate_DateTimePicker);
             this.Request_TabPage.Controls.Add(this.ShowRequest_Button);
             this.Request_TabPage.Controls.Add(this.RequestStatus_Label);
@@ -654,45 +607,11 @@
             this.Request_TabPage.Text = "Requests";
             this.Request_TabPage.UseVisualStyleBackColor = true;
             // 
-            // RequestName_Label
-            // 
-            this.RequestName_Label.AutoSize = true;
-            this.RequestName_Label.Location = new System.Drawing.Point(0, 14);
-            this.RequestName_Label.Name = "RequestName_Label";
-            this.RequestName_Label.Size = new System.Drawing.Size(35, 13);
-            this.RequestName_Label.TabIndex = 51;
-            this.RequestName_Label.Text = "Name";
-            // 
-            // RequestName_TextBox
-            // 
-            this.RequestName_TextBox.Location = new System.Drawing.Point(41, 11);
-            this.RequestName_TextBox.Name = "RequestName_TextBox";
-            this.RequestName_TextBox.Size = new System.Drawing.Size(138, 20);
-            this.RequestName_TextBox.TabIndex = 50;
-            // 
-            // RequestNextDay_Button
-            // 
-            this.RequestNextDay_Button.Location = new System.Drawing.Point(429, 12);
-            this.RequestNextDay_Button.Name = "RequestNextDay_Button";
-            this.RequestNextDay_Button.Size = new System.Drawing.Size(21, 21);
-            this.RequestNextDay_Button.TabIndex = 49;
-            this.RequestNextDay_Button.Text = ">";
-            this.RequestNextDay_Button.UseVisualStyleBackColor = true;
-            // 
-            // RequestPreviousDay_Button
-            // 
-            this.RequestPreviousDay_Button.Location = new System.Drawing.Point(197, 11);
-            this.RequestPreviousDay_Button.Name = "RequestPreviousDay_Button";
-            this.RequestPreviousDay_Button.Size = new System.Drawing.Size(21, 21);
-            this.RequestPreviousDay_Button.TabIndex = 48;
-            this.RequestPreviousDay_Button.Text = "<";
-            this.RequestPreviousDay_Button.UseVisualStyleBackColor = true;
-            // 
             // RequestDate_DateTimePicker
             // 
             this.RequestDate_DateTimePicker.CustomFormat = "DD.MM.YYYY";
             this.RequestDate_DateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.RequestDate_DateTimePicker.Location = new System.Drawing.Point(225, 12);
+            this.RequestDate_DateTimePicker.Location = new System.Drawing.Point(84, 8);
             this.RequestDate_DateTimePicker.Name = "RequestDate_DateTimePicker";
             this.RequestDate_DateTimePicker.Size = new System.Drawing.Size(198, 20);
             this.RequestDate_DateTimePicker.TabIndex = 47;
@@ -710,7 +629,7 @@
             // RequestStatus_Label
             // 
             this.RequestStatus_Label.AutoSize = true;
-            this.RequestStatus_Label.Location = new System.Drawing.Point(457, 14);
+            this.RequestStatus_Label.Location = new System.Drawing.Point(312, 11);
             this.RequestStatus_Label.Name = "RequestStatus_Label";
             this.RequestStatus_Label.Size = new System.Drawing.Size(37, 13);
             this.RequestStatus_Label.TabIndex = 45;
@@ -719,7 +638,7 @@
             // RequestStatus_ComboBox
             // 
             this.RequestStatus_ComboBox.FormattingEnabled = true;
-            this.RequestStatus_ComboBox.Location = new System.Drawing.Point(500, 10);
+            this.RequestStatus_ComboBox.Location = new System.Drawing.Point(364, 8);
             this.RequestStatus_ComboBox.Name = "RequestStatus_ComboBox";
             this.RequestStatus_ComboBox.Size = new System.Drawing.Size(121, 21);
             this.RequestStatus_ComboBox.TabIndex = 44;
@@ -738,48 +657,14 @@
             // 
             this.Requests_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Requests_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.SequenceNumber,
-            this.NameOfRequest,
             this.Description,
+            this.Status,
             this.DateRequest,
-            this.dateFinCancel,
-            this.Status});
+            this.dateFinCancel});
             this.Requests_DataGridView.Location = new System.Drawing.Point(0, 38);
             this.Requests_DataGridView.Name = "Requests_DataGridView";
             this.Requests_DataGridView.Size = new System.Drawing.Size(756, 343);
             this.Requests_DataGridView.TabIndex = 42;
-            // 
-            // SequenceNumber
-            // 
-            this.SequenceNumber.HeaderText = "Seq Nr";
-            this.SequenceNumber.Name = "SequenceNumber";
-            this.SequenceNumber.Width = 50;
-            // 
-            // NameOfRequest
-            // 
-            this.NameOfRequest.HeaderText = "Name";
-            this.NameOfRequest.Name = "NameOfRequest";
-            // 
-            // Description
-            // 
-            this.Description.HeaderText = "Description";
-            this.Description.Name = "Description";
-            this.Description.Width = 200;
-            // 
-            // DateRequest
-            // 
-            this.DateRequest.HeaderText = "Date Request";
-            this.DateRequest.Name = "DateRequest";
-            // 
-            // dateFinCancel
-            // 
-            this.dateFinCancel.HeaderText = "Time Out";
-            this.dateFinCancel.Name = "dateFinCancel";
-            // 
-            // Status
-            // 
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
             // 
             // Activities_TabPage
             // 
@@ -906,7 +791,6 @@
             this.Activities_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Activities_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
@@ -916,16 +800,61 @@
             this.Activities_DataGridView.Size = new System.Drawing.Size(743, 319);
             this.Activities_DataGridView.TabIndex = 42;
             // 
+            // LogOut_button
+            // 
+            this.LogOut_button.Location = new System.Drawing.Point(697, 4);
+            this.LogOut_button.Name = "LogOut_button";
+            this.LogOut_button.Size = new System.Drawing.Size(75, 23);
+            this.LogOut_button.TabIndex = 1;
+            this.LogOut_button.Text = "Log out";
+            this.LogOut_button.UseVisualStyleBackColor = true;
+            this.LogOut_button.Click += new System.EventHandler(this.LogOut_button_Click);
+            // 
+            // WelcomeText_Label
+            // 
+            this.WelcomeText_Label.AutoSize = true;
+            this.WelcomeText_Label.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.WelcomeText_Label.Location = new System.Drawing.Point(2, 4);
+            this.WelcomeText_Label.Name = "WelcomeText_Label";
+            this.WelcomeText_Label.Size = new System.Drawing.Size(55, 13);
+            this.WelcomeText_Label.TabIndex = 19;
+            this.WelcomeText_Label.Text = "Welcome!";
+            // 
+            // Description
+            // 
+            this.Description.HeaderText = "Description";
+            this.Description.Name = "Description";
+            this.Description.Width = 200;
+            // 
+            // Status
+            // 
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            // 
+            // DateRequest
+            // 
+            this.DateRequest.HeaderText = "Date Request";
+            this.DateRequest.Name = "DateRequest";
+            // 
+            // dateFinCancel
+            // 
+            this.dateFinCancel.HeaderText = "Time Out";
+            this.dateFinCancel.Name = "dateFinCancel";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(34, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(30, 13);
+            this.label1.TabIndex = 48;
+            this.label1.Text = "Date";
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.HeaderText = "Seq Nr";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.Width = 50;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Name";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -948,25 +877,45 @@
             this.dataGridViewTextBoxColumn6.HeaderText = "Status";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
-            // LogOut_button
+            // FirstName
             // 
-            this.LogOut_button.Location = new System.Drawing.Point(697, 4);
-            this.LogOut_button.Name = "LogOut_button";
-            this.LogOut_button.Size = new System.Drawing.Size(75, 23);
-            this.LogOut_button.TabIndex = 1;
-            this.LogOut_button.Text = "Log out";
-            this.LogOut_button.UseVisualStyleBackColor = true;
-            this.LogOut_button.Click += new System.EventHandler(this.LogOut_button_Click);
+            this.FirstName.HeaderText = "Name";
+            this.FirstName.Name = "FirstName";
             // 
-            // WelcomeText_Label
+            // LastName
             // 
-            this.WelcomeText_Label.AutoSize = true;
-            this.WelcomeText_Label.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.WelcomeText_Label.Location = new System.Drawing.Point(2, 4);
-            this.WelcomeText_Label.Name = "WelcomeText_Label";
-            this.WelcomeText_Label.Size = new System.Drawing.Size(55, 13);
-            this.WelcomeText_Label.TabIndex = 19;
-            this.WelcomeText_Label.Text = "Welcome!";
+            this.LastName.HeaderText = "Surname";
+            this.LastName.Name = "LastName";
+            // 
+            // City
+            // 
+            this.City.HeaderText = "City";
+            this.City.Name = "City";
+            // 
+            // Street
+            // 
+            this.Street.HeaderText = "Street";
+            this.Street.Name = "Street";
+            // 
+            // NumberOfHouse
+            // 
+            this.NumberOfHouse.HeaderText = "Number";
+            this.NumberOfHouse.Name = "NumberOfHouse";
+            // 
+            // Flat
+            // 
+            this.Flat.HeaderText = "Flat";
+            this.Flat.Name = "Flat";
+            // 
+            // Country
+            // 
+            this.Country.HeaderText = "Country";
+            this.Country.Name = "Country";
+            // 
+            // PESEL
+            // 
+            this.PESEL.HeaderText = "PESEL";
+            this.PESEL.Name = "PESEL";
             // 
             // ManagerMainWindow
             // 
@@ -1043,24 +992,13 @@
         private System.Windows.Forms.Button ShowRequests_Button;
         private System.Windows.Forms.Button EditObject_Button;
         private System.Windows.Forms.Button DeleteObject_Button;
-        private System.Windows.Forms.Label RequestName_Label;
-        private System.Windows.Forms.TextBox RequestName_TextBox;
-        private System.Windows.Forms.Button RequestNextDay_Button;
-        private System.Windows.Forms.Button RequestPreviousDay_Button;
         private System.Windows.Forms.DateTimePicker RequestDate_DateTimePicker;
         private System.Windows.Forms.Button ShowRequest_Button;
         private System.Windows.Forms.Label RequestStatus_Label;
         private System.Windows.Forms.ComboBox RequestStatus_ComboBox;
         private System.Windows.Forms.Button SearchRequests_Button;
         private System.Windows.Forms.DataGridView Requests_DataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Street;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NumberOfHouse;
-        private System.Windows.Forms.DataGridViewTextBoxColumn City;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Country;
         private System.Windows.Forms.Label WelcomeText_Label;
-        private System.Windows.Forms.Button SeeDetails_Button;
         private System.Windows.Forms.DataGridViewTextBoxColumn NameOfCustomer;
         private System.Windows.Forms.DataGridViewTextBoxColumn SurnameOfCustomer;
         private System.Windows.Forms.DataGridViewTextBoxColumn NameOfObject;
@@ -1082,17 +1020,23 @@
         private System.Windows.Forms.ComboBox ActivityStatus_ComboBox;
         private System.Windows.Forms.Button SearchActivities_Button;
         private System.Windows.Forms.DataGridView Activities_DataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SequenceNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NameOfRequest;
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.DataGridViewTextBoxColumn DateRequest;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateFinCancel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn City;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Street;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NumberOfHouse;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Flat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Country;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PESEL;
     }
 }
