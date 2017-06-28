@@ -23,6 +23,7 @@ namespace CarWorkshop
 
             this.FormClosing += X_Clickd;
             ActivityStatus_ComboBox.Items.AddRange(new object[] { "In progress", "Canceled", "Finished" });
+            ActivityStatus_ComboBox.Items.AddRange(new object[] { "In progress", "Canceled", "Finished" });
         }
 
         private void X_Clickd(object sender, FormClosingEventArgs e)
@@ -102,11 +103,21 @@ namespace CarWorkshop
                 var result = ManagerService.GetObjects(obj);
                 Objects_DataGridView.Columns.Clear();
 
-                Objects_DataGridView.DataSource = (from ob in result select new {ob.id_object ,ob.Client.name, ob.Client.last_name, ObName = ob.name, ob.registration_number, ob.manufacturer, ob.model}).ToList();
+                Objects_DataGridView.DataSource = (from ob in result select new {
+                    ob.id_object,
+                    ob.Client.name,
+                    ob.Client.last_name,
+                    ObName = ob.name,
+                    ob.registration_number,
+                    ob.manufacturer,
+                    ob.model,
+                    ob.body_type,
+                    ob.year,
+                    ob.engine,
+                    ob.Object_type.name_type
+                }).ToList();
 
                 Objects_DataGridView.Columns[0].Visible = false;
-                //Objects_DataGridView.Columns[7].Visible = false;
-                //Objects_DataGridView.Columns[8].Visible = false;
 
                 Objects_DataGridView.Columns[1].HeaderText = "Customer's name";
                 Objects_DataGridView.Columns[2].HeaderText = "Customer's surname";
@@ -114,6 +125,10 @@ namespace CarWorkshop
                 Objects_DataGridView.Columns[4].HeaderText = "Registration No.";
                 Objects_DataGridView.Columns[5].HeaderText = "Manufacturer";
                 Objects_DataGridView.Columns[6].HeaderText = "Model";
+                Objects_DataGridView.Columns[7].HeaderText = "Body type";
+                Objects_DataGridView.Columns[8].HeaderText = "Year";
+                Objects_DataGridView.Columns[9].HeaderText = "Engine";
+                Objects_DataGridView.Columns[10].HeaderText = "Type";
             }
             catch (ServiceException exc)
             {
@@ -177,8 +192,17 @@ namespace CarWorkshop
                 Alert.DisplayError("No item selected!");
                 return;
             }
-            RequestEditor requestEditor = new RequestEditor((Request)Requests_DataGridView.CurrentRow.DataBoundItem);
-            requestEditor.ShowDialog();
+            try
+            {
+                Request request = new Request();
+                request.id_request = (int)Requests_DataGridView.CurrentRow.Cells[0].Value;
+                request = ManagerService.GetRequests(request).SingleOrDefault();
+                RequestEditor requestEditor = new RequestEditor(request);
+                requestEditor.ShowDialog();
+            } catch (ServiceException exc)
+            {
+                Alert.DisplayError(exc.Message);
+            }
         }
 
         private void ShowActivity_Button_Click(object sender, EventArgs e)
@@ -188,8 +212,18 @@ namespace CarWorkshop
                 Alert.DisplayError("No item selected!");
                 return;
             }
-            ActivityViever activityViever = new ActivityViever((Activity)Activities_DataGridView.CurrentRow.DataBoundItem);
-            activityViever.ShowDialog();
+            Activity activity = new Activity();
+            activity.id_activity = (int)Activities_DataGridView.CurrentRow.Cells[0].Value;
+            try
+            {
+                activity = ManagerService.GetActivities(activity).SingleOrDefault();
+                ActivityViever activityViever = new ActivityViever(activity);
+                activityViever.ShowDialog();
+            }
+            catch (ServiceException exc)
+            {
+                Alert.DisplayError(exc.Message);
+            }
         }
 
         private void SearchCustomers_Button_Click(object sender, EventArgs e)
@@ -323,21 +357,26 @@ namespace CarWorkshop
             {
                 var result = ManagerService.GetRequests(request);
                 Requests_DataGridView.Columns.Clear();
-                Requests_DataGridView.DataSource = result.ToList();
+                Requests_DataGridView.DataSource = (from el in result
+                                                    select new
+                                                    {
+                                                        el.id_request,
+                                                        el.Object.name,
+                                                        el.description,
+                                                        el.status,
+                                                        el.result,
+                                                        el.date_request,
+                                                        el.date_fin_cancel,
+                                                    }).ToList();
 
                 Requests_DataGridView.Columns[0].Visible = false;
-                Requests_DataGridView.Columns[2].Visible = false;
-                Requests_DataGridView.Columns[6].Visible = false;
-                Requests_DataGridView.Columns[7].Visible = false;
-                Requests_DataGridView.Columns[8].Visible = false;
-                Requests_DataGridView.Columns[9].Visible = false;
-                Requests_DataGridView.Columns[10].Visible = false;
-                Requests_DataGridView.Columns[11].Visible = false;
 
-                Requests_DataGridView.Columns[1].HeaderText = "Description";
+                Requests_DataGridView.Columns[1].HeaderText = "Object name";
+                Requests_DataGridView.Columns[2].HeaderText = "Description";
                 Requests_DataGridView.Columns[3].HeaderText = "Status";
-                Requests_DataGridView.Columns[4].HeaderText = "Date Request";
-                Requests_DataGridView.Columns[5].HeaderText = "Time Out";
+                Requests_DataGridView.Columns[4].HeaderText = "Result";
+                Requests_DataGridView.Columns[5].HeaderText = "Date request";
+                Requests_DataGridView.Columns[6].HeaderText = "Date finish";
             }
             catch (ServiceException exc)
             {
@@ -372,22 +411,51 @@ namespace CarWorkshop
             {
                 var result = ManagerService.GetActivities(activity);
                 Activities_DataGridView.Columns.Clear();
-                Activities_DataGridView.DataSource = result.ToList();
+                Activities_DataGridView.DataSource = (from el in result select new
+                {
+                    el.id_activity,
+                    el.description,
+                    el.Act_dict.act_name,
+                    el.date_request,
+                    el.date_fin_cancel,
+                    el.status,
+                    el.result
+                }).ToList();
 
                 Activities_DataGridView.Columns[0].Visible = false;
-                Activities_DataGridView.Columns[3].Visible = false;
-                Activities_DataGridView.Columns[7].Visible = false;
-                Activities_DataGridView.Columns[8].Visible = false;
-                Activities_DataGridView.Columns[9].Visible = false;
-                Activities_DataGridView.Columns[10].Visible = false;
-                Activities_DataGridView.Columns[11].Visible = false;
-                Activities_DataGridView.Columns[12].Visible = false;
 
                 Activities_DataGridView.Columns[1].HeaderText = "Seq Nr";
                 Activities_DataGridView.Columns[2].HeaderText = "Description";
-                Activities_DataGridView.Columns[4].HeaderText = "Date Request";
-                Activities_DataGridView.Columns[5].HeaderText = "Time Out";
+                Activities_DataGridView.Columns[3].HeaderText = "Type";
+                Activities_DataGridView.Columns[4].HeaderText = "Date";
+                Activities_DataGridView.Columns[5].HeaderText = "Date finish";
                 Activities_DataGridView.Columns[6].HeaderText = "Status";
+                Activities_DataGridView.Columns[7].HeaderText = "Result";
+            }
+            catch (ServiceException exc)
+            {
+                Alert.DisplayError(exc.Message);
+            }
+        }
+
+        private void DeleteRequest_Button_Click(object sender, EventArgs e)
+        {
+            if (Requests_DataGridView.CurrentRow == null)
+            {
+                Alert.DisplayError("No item selected!");
+                return;
+            }
+            try
+            {
+                Request request = new Request();
+                request.id_request = (int)Requests_DataGridView.CurrentRow.Cells[0].Value;
+                request = ManagerService.GetRequests(request).SingleOrDefault();
+                ManagerService.DeleteRequest(request);
+                int index = Requests_DataGridView.CurrentRow.Index;
+                CurrencyManager currencyManager = (CurrencyManager)BindingContext[Requests_DataGridView.DataSource];
+                currencyManager.SuspendBinding();
+                Requests_DataGridView.Rows[index].Visible = false;
+                currencyManager.ResumeBinding();
             }
             catch (ServiceException exc)
             {

@@ -65,22 +65,27 @@ namespace CarWorkshop
             {
                 var result = ManagerService.GetActivities(activity);
                 Activity_DataGridView.Columns.Clear();
-                Activity_DataGridView.DataSource = result.ToList();
+                Activity_DataGridView.DataSource = (from el in result
+                                                      select new
+                                                      {
+                                                          el.id_activity,
+                                                          el.description,
+                                                          el.Act_dict.act_name,
+                                                          el.date_request,
+                                                          el.date_fin_cancel,
+                                                          el.status,
+                                                          el.result
+                                                      }).ToList();
 
                 Activity_DataGridView.Columns[0].Visible = false;
-                Activity_DataGridView.Columns[3].Visible = false;
-                Activity_DataGridView.Columns[7].Visible = false;
-                Activity_DataGridView.Columns[8].Visible = false;
-                Activity_DataGridView.Columns[9].Visible = false;
-                Activity_DataGridView.Columns[10].Visible = false;
-                Activity_DataGridView.Columns[11].Visible = false;
-                Activity_DataGridView.Columns[12].Visible = false;
 
                 Activity_DataGridView.Columns[1].HeaderText = "Seq Nr";
                 Activity_DataGridView.Columns[2].HeaderText = "Description";
-                Activity_DataGridView.Columns[4].HeaderText = "Date Request";
-                Activity_DataGridView.Columns[5].HeaderText = "Time Out";
+                Activity_DataGridView.Columns[3].HeaderText = "Type";
+                Activity_DataGridView.Columns[4].HeaderText = "Date";
+                Activity_DataGridView.Columns[5].HeaderText = "Date finish";
                 Activity_DataGridView.Columns[6].HeaderText = "Status";
+                Activity_DataGridView.Columns[7].HeaderText = "Result";
             } catch(ServiceException exc)
             {
                 Alert.DisplayError(exc.Message);

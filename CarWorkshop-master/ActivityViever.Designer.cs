@@ -62,6 +62,7 @@
             this.Request_GroupBox = new System.Windows.Forms.GroupBox();
             this.RequestDescription_Label = new System.Windows.Forms.Label();
             this.RequestDescription_TextBox = new System.Windows.Forms.TextBox();
+            this.Save_Button = new System.Windows.Forms.Button();
             this.WorkInProgres_GroupBox.SuspendLayout();
             this.Object_GroupBox.SuspendLayout();
             this.Activity_GroupBox.SuspendLayout();
@@ -88,7 +89,7 @@
             // 
             // Cancel_Button
             // 
-            this.Cancel_Button.Location = new System.Drawing.Point(127, 19);
+            this.Cancel_Button.Location = new System.Drawing.Point(6, 19);
             this.Cancel_Button.Name = "Cancel_Button";
             this.Cancel_Button.Size = new System.Drawing.Size(125, 35);
             this.Cancel_Button.TabIndex = 9;
@@ -98,7 +99,7 @@
             // 
             // StartWork_Button
             // 
-            this.StartWork_Button.Location = new System.Drawing.Point(258, 19);
+            this.StartWork_Button.Location = new System.Drawing.Point(137, 19);
             this.StartWork_Button.Name = "StartWork_Button";
             this.StartWork_Button.Size = new System.Drawing.Size(125, 35);
             this.StartWork_Button.TabIndex = 11;
@@ -108,7 +109,7 @@
             // 
             // Finish_Button
             // 
-            this.Finish_Button.Location = new System.Drawing.Point(389, 19);
+            this.Finish_Button.Location = new System.Drawing.Point(268, 19);
             this.Finish_Button.Name = "Finish_Button";
             this.Finish_Button.Size = new System.Drawing.Size(125, 35);
             this.Finish_Button.TabIndex = 12;
@@ -118,20 +119,19 @@
             // 
             // WorkInProgres_GroupBox
             // 
-            this.WorkInProgres_GroupBox.Controls.Add(this.Return_Button);
             this.WorkInProgres_GroupBox.Controls.Add(this.Cancel_Button);
             this.WorkInProgres_GroupBox.Controls.Add(this.Finish_Button);
             this.WorkInProgres_GroupBox.Controls.Add(this.StartWork_Button);
-            this.WorkInProgres_GroupBox.Location = new System.Drawing.Point(12, 443);
+            this.WorkInProgres_GroupBox.Location = new System.Drawing.Point(123, 443);
             this.WorkInProgres_GroupBox.Name = "WorkInProgres_GroupBox";
-            this.WorkInProgres_GroupBox.Size = new System.Drawing.Size(526, 65);
+            this.WorkInProgres_GroupBox.Size = new System.Drawing.Size(415, 65);
             this.WorkInProgres_GroupBox.TabIndex = 13;
             this.WorkInProgres_GroupBox.TabStop = false;
-            this.WorkInProgres_GroupBox.Text = "Work in progress";
+            this.WorkInProgres_GroupBox.Text = "Status";
             // 
             // Return_Button
             // 
-            this.Return_Button.Location = new System.Drawing.Point(26, 24);
+            this.Return_Button.Location = new System.Drawing.Point(20, 483);
             this.Return_Button.Name = "Return_Button";
             this.Return_Button.Size = new System.Drawing.Size(75, 25);
             this.Return_Button.TabIndex = 13;
@@ -150,6 +150,8 @@
             // 
             // Result_TextBox
             // 
+            this.Result_TextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.Result_TextBox.Enabled = false;
             this.Result_TextBox.Location = new System.Drawing.Point(314, 41);
             this.Result_TextBox.Multiline = true;
             this.Result_TextBox.Name = "Result_TextBox";
@@ -399,11 +401,23 @@
             this.RequestDescription_TextBox.Size = new System.Drawing.Size(488, 46);
             this.RequestDescription_TextBox.TabIndex = 22;
             // 
+            // Save_Button
+            // 
+            this.Save_Button.Location = new System.Drawing.Point(20, 443);
+            this.Save_Button.Name = "Save_Button";
+            this.Save_Button.Size = new System.Drawing.Size(75, 25);
+            this.Save_Button.TabIndex = 22;
+            this.Save_Button.Text = "Save";
+            this.Save_Button.UseVisualStyleBackColor = true;
+            this.Save_Button.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ActivityViever
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(544, 521);
+            this.Controls.Add(this.Save_Button);
+            this.Controls.Add(this.Return_Button);
             this.Controls.Add(this.Request_GroupBox);
             this.Controls.Add(this.Activity_GroupBox);
             this.Controls.Add(this.Object_GroupBox);
@@ -458,5 +472,6 @@
         private System.Windows.Forms.Button Return_Button;
         private System.Windows.Forms.TextBox Name_TextBox;
         private System.Windows.Forms.Label Name_Label;
+        private System.Windows.Forms.Button Save_Button;
     }
 }

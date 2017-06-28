@@ -4,13 +4,13 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="09239e4510f740099a2e44f3d6350c21" Name="Diagram1">
-        <EntityTypeShape EntityType="CarWorkshopModel.Act_dict" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="CarWorkshopModel.Activity" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="CarWorkshopModel.Client" Width="1.5" PointX="1.5" PointY="9.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="CarWorkshopModel.Object" Width="1.5" PointX="3.75" PointY="10.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="CarWorkshopModel.Object_type" Width="1.5" PointX="1.5" PointY="13.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="CarWorkshopModel.Personel" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+      <Diagram DiagramId="3a2adc5412df43b9a9fe2cf2f58d902f" Name="Diagram1">
+        <EntityTypeShape EntityType="CarWorkshopModel.Act_dict" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarWorkshopModel.Activity" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarWorkshopModel.Client" Width="1.5" PointX="1.5" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarWorkshopModel.Object" Width="1.5" PointX="3.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarWorkshopModel.Object_type" Width="1.5" PointX="1.5" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarWorkshopModel.Personel" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="CarWorkshopModel.Request" Width="1.5" PointX="6" PointY="3.375" IsExpanded="true" />
         <EntityTypeShape EntityType="CarWorkshopModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="7.75" IsExpanded="true" />
         <AssociationConnector Association="CarWorkshopModel.FK_Activity_Act_dict" ManuallyRouted="false" />

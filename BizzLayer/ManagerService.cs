@@ -225,8 +225,6 @@ namespace BizzLayer
                              where
                              String.IsNullOrEmpty(searchCrit.description) || el.description.StartsWith(searchCrit.description)
                              &&
-                             (searchCrit.id_activity == null) || (el.id_activity == searchCrit.id_activity)
-                             &&
                              (searchCrit.id_object == null) || (el.id_object == searchCrit.id_object)
                              &&
                              (searchCrit.id_personel == null) || (el.id_personel == searchCrit.id_personel)
@@ -263,7 +261,6 @@ namespace BizzLayer
                 result.date_fin_cancel = request.date_fin_cancel;
                 result.date_request = request.date_request;
                 result.description = request.description;
-                result.id_activity = request.id_activity;
                 result.id_object = request.id_object;
                 result.id_personel = request.id_personel;
                 result.result = request.result;

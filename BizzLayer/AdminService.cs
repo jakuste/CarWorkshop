@@ -45,7 +45,7 @@ namespace BizzLayer
         {
             try
             {
-                //searchCrit.password = Md5Hash(searchCrit.password);
+                searchCrit.password = Md5Hash(searchCrit.password);
                 CarWorkshopModelContext dc = new CarWorkshopModelContext();
                 var result = from el in dc.Personel
                              where
@@ -65,7 +65,7 @@ namespace BizzLayer
             try
             {
                 CarWorkshopModelContext dc = new CarWorkshopModelContext();
-                //personel.password = Md5Hash(personel.password);
+                personel.password = Md5Hash(personel.password);
                 var res = (from el in dc.Personel
                            where el.id_personel == personel.id_personel
                            select el).SingleOrDefault();
@@ -114,7 +114,7 @@ namespace BizzLayer
             try
             {
                 CarWorkshopModelContext dc = new CarWorkshopModelContext();
-                //personel.password = Md5Hash(personel.password);
+                personel.password = Md5Hash(personel.password);
                 var res = (from el in dc.Personel
                            where el.username == personel.username
                            select el).SingleOrDefault();
@@ -132,7 +132,7 @@ namespace BizzLayer
             }
         }
 
-        /*private static string Md5Hash(string value)
+        private static string Md5Hash(string value)
         {
             if(value == null)
             {
@@ -151,6 +151,6 @@ namespace BizzLayer
                 }
                 return sb.ToString();
             }
-        }*/
+        }
     }
 }

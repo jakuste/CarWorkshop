@@ -28,6 +28,7 @@ namespace CarWorkshop
             Model_TextBox.Text = obj.model;
             Other_TextBox.Text = obj.other;
             RegistrationNumber_TextBox.Text = obj.registration_number;
+            Status_TextBox.Text = "In progress";
 
             AddActivity_Button.Enabled = false;
             DeleteActivity_Button.Enabled = false;
@@ -46,6 +47,11 @@ namespace CarWorkshop
             Model_TextBox.Text = request.Object.model;
             Other_TextBox.Text = request.Object.other;
             Description_TextBox.Text = request.description;
+            Status_TextBox.Text = request.status;
+            if(request.status!="In progress")
+            {
+                Status_TextBox.BackColor = Color.White;
+            }
 
             Activity activity = new Activity();
             activity.id_request = request.id_request;
@@ -53,19 +59,26 @@ namespace CarWorkshop
             {
                 var result = ManagerService.GetActivities(activity);
                 Activities_DataGridView.Columns.Clear();
-                Activities_DataGridView.DataSource = result.ToList();
+                Activities_DataGridView.DataSource = (from el in result select new
+                {
+                    el.id_activity,
+                    el.description,
+                    el.Act_dict.act_name,
+                    el.date_request,
+                    el.date_fin_cancel,
+                    el.status,
+                    el.result
+                }).ToList();
 
                 Activities_DataGridView.Columns[0].Visible = false;
-                Activities_DataGridView.Columns[3].Visible = false;
-                Activities_DataGridView.Columns[7].Visible = false;
-                Activities_DataGridView.Columns[8].Visible = false;
-                Activities_DataGridView.Columns[9].Visible = false;
 
-                Activities_DataGridView.Columns[1].HeaderText = "Seq";
+                Activities_DataGridView.Columns[1].HeaderText = "Seq Nr";
                 Activities_DataGridView.Columns[2].HeaderText = "Description";
-                Activities_DataGridView.Columns[4].HeaderText = "Date Request";
-                Activities_DataGridView.Columns[5].HeaderText = "Date Finish";
+                Activities_DataGridView.Columns[3].HeaderText = "Type";
+                Activities_DataGridView.Columns[4].HeaderText = "Date";
+                Activities_DataGridView.Columns[5].HeaderText = "Date finish";
                 Activities_DataGridView.Columns[6].HeaderText = "Status";
+                Activities_DataGridView.Columns[7].HeaderText = "Result";
             }
             catch (ServiceException exc)
             {
@@ -83,19 +96,26 @@ namespace CarWorkshop
             {
                 var result = ManagerService.GetActivities(activity);
                 Activities_DataGridView.Columns.Clear();
-                Activities_DataGridView.DataSource = result.ToList();
+                Activities_DataGridView.DataSource = (from el in result select new
+                {
+                    el.id_activity,
+                    el.description,
+                    el.Act_dict.act_name,
+                    el.date_request,
+                    el.date_fin_cancel,
+                    el.status,
+                    el.result
+                }).ToList();
 
                 Activities_DataGridView.Columns[0].Visible = false;
-                Activities_DataGridView.Columns[3].Visible = false;
-                Activities_DataGridView.Columns[7].Visible = false;
-                Activities_DataGridView.Columns[8].Visible = false;
-                Activities_DataGridView.Columns[9].Visible = false;
 
-                Activities_DataGridView.Columns[1].HeaderText = "Seq";
+                Activities_DataGridView.Columns[1].HeaderText = "Seq Nr";
                 Activities_DataGridView.Columns[2].HeaderText = "Description";
-                Activities_DataGridView.Columns[4].HeaderText = "Date Request";
-                Activities_DataGridView.Columns[5].HeaderText = "Date Finish";
+                Activities_DataGridView.Columns[3].HeaderText = "Type";
+                Activities_DataGridView.Columns[4].HeaderText = "Date";
+                Activities_DataGridView.Columns[5].HeaderText = "Date finish";
                 Activities_DataGridView.Columns[6].HeaderText = "Status";
+                Activities_DataGridView.Columns[7].HeaderText = "Result";
             }
             catch (ServiceException exc)
             {
@@ -118,16 +138,18 @@ namespace CarWorkshop
                     request = new Request();
                     request.description = Description_TextBox.Text;
                     request.id_object = obj.id_object;
-                    request.status = "PROG";
-                    request.id_activity = 0;
-                    request.result = "";
+                    request.status = Status_TextBox.Text;
+                    request.result = Result_textBox.Text;
                     request.date_request = System.DateTime.Now;
                     ManagerService.NewRequest(request);
                     AddActivity_Button.Enabled = true;
                     DeleteActivity_Button.Enabled = true;
+                    WorkInProgres_GroupBox.Enabled = true;
                 }else
                 {
                     request.description = Description_TextBox.Text;
+                    request.status = Status_TextBox.Text;
+                    request.result = Result_textBox.Text;
                     ManagerService.UpdateRequest(request);
                     this.Close();
                     this.Dispose();
@@ -151,14 +173,17 @@ namespace CarWorkshop
 
         private void DeleteActivity_Button_Click(object sender, EventArgs e)
         {
-            if ((Activity)Activities_DataGridView.CurrentRow.DataBoundItem == null)
+            if (Activities_DataGridView.CurrentRow == null)
             {
                 Alert.DisplayError("No item selected!");
                 return;
             }
             try
             {
-                ManagerService.DeleteActivity((Activity)Activities_DataGridView.CurrentRow.DataBoundItem);
+                Activity activity = new Activity();
+                activity.id_activity = (int)Activities_DataGridView.CurrentRow.Cells[0].Value;
+                activity = ManagerService.GetActivities(activity).SingleOrDefault();
+                ManagerService.DeleteActivity(activity);
                 int index = Activities_DataGridView.CurrentRow.Index;
                 CurrencyManager currencyManager = (CurrencyManager)BindingContext[Activities_DataGridView.DataSource];
                 currencyManager.SuspendBinding();
@@ -169,6 +194,48 @@ namespace CarWorkshop
             {
                 Alert.DisplayError(exc.Message);
             }
+        }
+
+        private void WorkInProgres_GroupBox_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Status_TextBox.Text = "Canceled";
+            Result_textBox.BackColor = Color.White;
+            Result_textBox.Enabled = true;
+        }
+
+        private void StartWork_Button_Click(object sender, EventArgs e)
+        {
+            Status_TextBox.Text = "In progress";
+            Result_textBox.Enabled = false;
+            Result_textBox.BackColor = Status_TextBox.BackColor;
+        }
+
+        private void Finish_Button_Click(object sender, EventArgs e)
+        {
+            Status_TextBox.Text = "Finished";
+            Result_textBox.BackColor = Color.White;
+            Result_textBox.Enabled = true;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ShowActivity_Button_Click(object sender, EventArgs e)
+        {
+            if (Activities_DataGridView.CurrentRow == null)
+            {
+                Alert.DisplayError("No item selected!");
+                return;
+            }
+            ActivityEditor activityEditor = new ActivityEditor((Activity)Activities_DataGridView.CurrentRow.DataBoundItem);
+            activityEditor.ShowDialog();
         }
     }
 }

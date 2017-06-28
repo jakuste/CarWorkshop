@@ -33,6 +33,10 @@ namespace CarWorkshop
             ActivityDescription_TextBox.Text = activity.description;
             Date_TextBox.Text = activity.date_fin_cancel.ToString();
             Result_TextBox.Text = activity.result;
+            if (activity.status != "In progress")
+            {
+                Status_TextBox.BackColor = Color.White;
+            }
             Status_TextBox.Text = activity.status;
         }
 
@@ -40,19 +44,25 @@ namespace CarWorkshop
         {
             //this.Close();
             //this.Dispose();
-            UpdateStatus("Canceled");
+            Status_TextBox.Text = "Canceled";
+            Result_TextBox.BackColor = Color.White;
+            Result_TextBox.Enabled = true;
         }
 
         private void StartWork_Button_Click(object sender, EventArgs e)
         {
-            UpdateStatus("In progress");
+            Status_TextBox.Text = "In progress";
+            Result_TextBox.Enabled = false;
+            Result_TextBox.BackColor = Status_TextBox.BackColor;
         }
 
         private void Finish_Button_Click(object sender, EventArgs e)
         {
             //this.Close();
             //this.Dispose();
-            UpdateStatus("Finished");
+            Status_TextBox.Text = "Finished";
+            Result_TextBox.BackColor = Color.White;
+            Result_TextBox.Enabled = true;
         }
 
         private void Return_Button_Click(object sender, EventArgs e)
@@ -77,6 +87,13 @@ namespace CarWorkshop
             {
                 Alert.DisplayError(e.Message);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            UpdateStatus(Status_TextBox.Text);
+            this.Close();
+            this.Dispose();
         }
     }
 }

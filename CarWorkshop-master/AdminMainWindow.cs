@@ -14,7 +14,6 @@ namespace CarWorkshop
 {
     public partial class AdminMainWindow : MainWindow
     {
-
         public AdminMainWindow()
         {
             InitializeComponent();

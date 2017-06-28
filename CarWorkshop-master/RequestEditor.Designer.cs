@@ -54,14 +54,25 @@
             this.AddActivity_Button = new System.Windows.Forms.Button();
             this.Activities_Label = new System.Windows.Forms.Label();
             this.Activities_DataGridView = new System.Windows.Forms.DataGridView();
+            this.WorkInProgres_GroupBox = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Finish_Button = new System.Windows.Forms.Button();
+            this.StartWork_Button = new System.Windows.Forms.Button();
+            this.Status_TextBox = new System.Windows.Forms.TextBox();
+            this.Result_textBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ShowActivity_Button = new System.Windows.Forms.Button();
             this.Seq_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateRequest = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateFinish = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Result1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Object_GroupBox.SuspendLayout();
             this.Request_GroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Activities_DataGridView)).BeginInit();
+            this.WorkInProgres_GroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // Object_GroupBox
@@ -228,17 +239,18 @@
             // 
             // Request_GroupBox
             // 
+            this.Request_GroupBox.Controls.Add(this.ShowActivity_Button);
+            this.Request_GroupBox.Controls.Add(this.label1);
+            this.Request_GroupBox.Controls.Add(this.Result_textBox);
             this.Request_GroupBox.Controls.Add(this.Description_Label);
             this.Request_GroupBox.Controls.Add(this.Description_TextBox);
-            this.Request_GroupBox.Controls.Add(this.Cancel_Button);
-            this.Request_GroupBox.Controls.Add(this.Save_Button);
             this.Request_GroupBox.Controls.Add(this.DeleteActivity_Button);
             this.Request_GroupBox.Controls.Add(this.AddActivity_Button);
             this.Request_GroupBox.Controls.Add(this.Activities_Label);
             this.Request_GroupBox.Controls.Add(this.Activities_DataGridView);
             this.Request_GroupBox.Location = new System.Drawing.Point(13, 153);
             this.Request_GroupBox.Name = "Request_GroupBox";
-            this.Request_GroupBox.Size = new System.Drawing.Size(559, 371);
+            this.Request_GroupBox.Size = new System.Drawing.Size(559, 509);
             this.Request_GroupBox.TabIndex = 54;
             this.Request_GroupBox.TabStop = false;
             this.Request_GroupBox.Text = "Request";
@@ -262,7 +274,7 @@
             // 
             // Cancel_Button
             // 
-            this.Cancel_Button.Location = new System.Drawing.Point(367, 339);
+            this.Cancel_Button.Location = new System.Drawing.Point(392, 749);
             this.Cancel_Button.Name = "Cancel_Button";
             this.Cancel_Button.Size = new System.Drawing.Size(75, 23);
             this.Cancel_Button.TabIndex = 60;
@@ -272,7 +284,7 @@
             // 
             // Save_Button
             // 
-            this.Save_Button.Location = new System.Drawing.Point(448, 339);
+            this.Save_Button.Location = new System.Drawing.Point(491, 749);
             this.Save_Button.Name = "Save_Button";
             this.Save_Button.Size = new System.Drawing.Size(75, 23);
             this.Save_Button.TabIndex = 59;
@@ -282,7 +294,7 @@
             // 
             // DeleteActivity_Button
             // 
-            this.DeleteActivity_Button.Location = new System.Drawing.Point(136, 339);
+            this.DeleteActivity_Button.Location = new System.Drawing.Point(136, 473);
             this.DeleteActivity_Button.Name = "DeleteActivity_Button";
             this.DeleteActivity_Button.Size = new System.Drawing.Size(105, 23);
             this.DeleteActivity_Button.TabIndex = 58;
@@ -292,7 +304,7 @@
             // 
             // AddActivity_Button
             // 
-            this.AddActivity_Button.Location = new System.Drawing.Point(25, 339);
+            this.AddActivity_Button.Location = new System.Drawing.Point(25, 473);
             this.AddActivity_Button.Name = "AddActivity_Button";
             this.AddActivity_Button.Size = new System.Drawing.Size(105, 23);
             this.AddActivity_Button.TabIndex = 57;
@@ -303,7 +315,7 @@
             // Activities_Label
             // 
             this.Activities_Label.AutoSize = true;
-            this.Activities_Label.Location = new System.Drawing.Point(22, 111);
+            this.Activities_Label.Location = new System.Drawing.Point(22, 245);
             this.Activities_Label.Name = "Activities_Label";
             this.Activities_Label.Size = new System.Drawing.Size(49, 13);
             this.Activities_Label.TabIndex = 54;
@@ -315,13 +327,98 @@
             this.Activities_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Seq_no,
             this.Description,
+            this.Type,
             this.DateRequest,
             this.DateFinish,
-            this.Status});
-            this.Activities_DataGridView.Location = new System.Drawing.Point(25, 127);
+            this.Status,
+            this.Result1});
+            this.Activities_DataGridView.Location = new System.Drawing.Point(25, 261);
             this.Activities_DataGridView.Name = "Activities_DataGridView";
             this.Activities_DataGridView.Size = new System.Drawing.Size(498, 196);
             this.Activities_DataGridView.TabIndex = 53;
+            // 
+            // WorkInProgres_GroupBox
+            // 
+            this.WorkInProgres_GroupBox.Controls.Add(this.Status_TextBox);
+            this.WorkInProgres_GroupBox.Controls.Add(this.button1);
+            this.WorkInProgres_GroupBox.Controls.Add(this.Finish_Button);
+            this.WorkInProgres_GroupBox.Controls.Add(this.StartWork_Button);
+            this.WorkInProgres_GroupBox.Location = new System.Drawing.Point(13, 668);
+            this.WorkInProgres_GroupBox.Name = "WorkInProgres_GroupBox";
+            this.WorkInProgres_GroupBox.Size = new System.Drawing.Size(559, 65);
+            this.WorkInProgres_GroupBox.TabIndex = 55;
+            this.WorkInProgres_GroupBox.TabStop = false;
+            this.WorkInProgres_GroupBox.Text = "Status";
+            this.WorkInProgres_GroupBox.Enter += new System.EventHandler(this.WorkInProgres_GroupBox_Enter);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(162, 19);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(125, 35);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Cancel";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Finish_Button
+            // 
+            this.Finish_Button.Location = new System.Drawing.Point(428, 19);
+            this.Finish_Button.Name = "Finish_Button";
+            this.Finish_Button.Size = new System.Drawing.Size(125, 35);
+            this.Finish_Button.TabIndex = 12;
+            this.Finish_Button.Text = "Finish";
+            this.Finish_Button.UseVisualStyleBackColor = true;
+            this.Finish_Button.Click += new System.EventHandler(this.Finish_Button_Click);
+            // 
+            // StartWork_Button
+            // 
+            this.StartWork_Button.Location = new System.Drawing.Point(297, 19);
+            this.StartWork_Button.Name = "StartWork_Button";
+            this.StartWork_Button.Size = new System.Drawing.Size(125, 35);
+            this.StartWork_Button.TabIndex = 11;
+            this.StartWork_Button.Text = "Start Work";
+            this.StartWork_Button.UseVisualStyleBackColor = true;
+            this.StartWork_Button.Click += new System.EventHandler(this.StartWork_Button_Click);
+            // 
+            // Status_TextBox
+            // 
+            this.Status_TextBox.Enabled = false;
+            this.Status_TextBox.Location = new System.Drawing.Point(6, 27);
+            this.Status_TextBox.Name = "Status_TextBox";
+            this.Status_TextBox.ReadOnly = true;
+            this.Status_TextBox.Size = new System.Drawing.Size(124, 20);
+            this.Status_TextBox.TabIndex = 13;
+            // 
+            // Result_textBox
+            // 
+            this.Result_textBox.BackColor = System.Drawing.SystemColors.Control;
+            this.Result_textBox.Enabled = false;
+            this.Result_textBox.Location = new System.Drawing.Point(25, 154);
+            this.Result_textBox.Multiline = true;
+            this.Result_textBox.Name = "Result_textBox";
+            this.Result_textBox.Size = new System.Drawing.Size(498, 76);
+            this.Result_textBox.TabIndex = 63;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(22, 138);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.TabIndex = 64;
+            this.label1.Text = "Result";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // ShowActivity_Button
+            // 
+            this.ShowActivity_Button.Location = new System.Drawing.Point(247, 473);
+            this.ShowActivity_Button.Name = "ShowActivity_Button";
+            this.ShowActivity_Button.Size = new System.Drawing.Size(121, 23);
+            this.ShowActivity_Button.TabIndex = 65;
+            this.ShowActivity_Button.Text = "Show";
+            this.ShowActivity_Button.UseVisualStyleBackColor = true;
+            this.ShowActivity_Button.Click += new System.EventHandler(this.ShowActivity_Button_Click);
             // 
             // Seq_no
             // 
@@ -335,9 +432,14 @@
             this.Description.Name = "Description";
             this.Description.Width = 150;
             // 
+            // Type
+            // 
+            this.Type.HeaderText = "Type";
+            this.Type.Name = "Type";
+            // 
             // DateRequest
             // 
-            this.DateRequest.HeaderText = "Date Request";
+            this.DateRequest.HeaderText = "Date";
             this.DateRequest.Name = "DateRequest";
             // 
             // DateFinish
@@ -351,14 +453,22 @@
             this.Status.Name = "Status";
             this.Status.Width = 75;
             // 
+            // Result1
+            // 
+            this.Result1.HeaderText = "Result";
+            this.Result1.Name = "Result1";
+            // 
             // RequestEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 536);
+            this.ClientSize = new System.Drawing.Size(584, 784);
+            this.Controls.Add(this.WorkInProgres_GroupBox);
             this.Controls.Add(this.Request_GroupBox);
+            this.Controls.Add(this.Save_Button);
+            this.Controls.Add(this.Cancel_Button);
             this.Controls.Add(this.Object_GroupBox);
-            this.MaximumSize = new System.Drawing.Size(600, 575);
+            this.MaximumSize = new System.Drawing.Size(800, 1100);
             this.MinimumSize = new System.Drawing.Size(600, 575);
             this.Name = "RequestEditor";
             this.Text = "RequestEditor";
@@ -367,6 +477,8 @@
             this.Request_GroupBox.ResumeLayout(false);
             this.Request_GroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Activities_DataGridView)).EndInit();
+            this.WorkInProgres_GroupBox.ResumeLayout(false);
+            this.WorkInProgres_GroupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -399,10 +511,20 @@
         private System.Windows.Forms.Button AddActivity_Button;
         private System.Windows.Forms.Label Activities_Label;
         private System.Windows.Forms.DataGridView Activities_DataGridView;
+        private System.Windows.Forms.GroupBox WorkInProgres_GroupBox;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Finish_Button;
+        private System.Windows.Forms.Button StartWork_Button;
+        private System.Windows.Forms.TextBox Status_TextBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox Result_textBox;
+        private System.Windows.Forms.Button ShowActivity_Button;
         private System.Windows.Forms.DataGridViewTextBoxColumn Seq_no;
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Type;
         private System.Windows.Forms.DataGridViewTextBoxColumn DateRequest;
         private System.Windows.Forms.DataGridViewTextBoxColumn DateFinish;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Result1;
     }
 }

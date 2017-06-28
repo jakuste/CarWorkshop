@@ -21,7 +21,7 @@
           <Property Name="description" Type="nvarchar" MaxLength="254" />
           <Property Name="result" Type="nvarchar" MaxLength="254" />
           <Property Name="status" Type="nchar" MaxLength="20" Nullable="false" />
-          <Property Name="date/request" Type="nchar" MaxLength="10" />
+          <Property Name="date/request" Type="datetime" />
           <Property Name="date_fin_cancel" Type="datetime" />
           <Property Name="id_request" Type="int" />
           <Property Name="act_type" Type="nchar" MaxLength="10" />
@@ -48,7 +48,7 @@
           </Key>
           <Property Name="id_object" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="name" Type="nvarchar" MaxLength="50" />
-          <Property Name="id_client" Type="int" />
+          <Property Name="id_client" Type="int" Nullable="false" />
           <Property Name="code_type" Type="nchar" MaxLength="10" />
           <Property Name="registration_number" Type="nchar" MaxLength="10" />
           <Property Name="manufacturer" Type="nchar" MaxLength="50" />
@@ -74,7 +74,7 @@
           <Property Name="last_name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="role" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="username" Type="nvarchar" MaxLength="20" />
-          <Property Name="password" Type="nvarchar" MaxLength="20" />
+          <Property Name="password" Type="nvarchar" MaxLength="250" />
           <Property Name="date_retire" Type="datetime" />
         </EntityType>
         <EntityType Name="Request">
@@ -84,10 +84,9 @@
           <Property Name="id_request" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="description" Type="nvarchar" MaxLength="254" />
           <Property Name="result" Type="nvarchar" MaxLength="254" />
-          <Property Name="status" Type="nchar" MaxLength="4" Nullable="false" />
+          <Property Name="status" Type="nchar" MaxLength="20" Nullable="false" />
           <Property Name="date_request" Type="datetime" />
           <Property Name="date_fin_cancel" Type="datetime" />
-          <Property Name="id_activity" Type="int" Nullable="false" />
           <Property Name="id_object" Type="int" />
           <Property Name="id_personel" Type="int" />
         </EntityType>
@@ -114,7 +113,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Activity_Personel">
-          <End Role="Personel" Type="Self.Personel" Multiplicity="0..1" />
+          <End Role="Personel" Type="Self.Personel" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="Activity" Type="Self.Activity" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Personel">
@@ -126,7 +127,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Activity_Request">
-          <End Role="Request" Type="Self.Request" Multiplicity="0..1" />
+          <End Role="Request" Type="Self.Request" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="Activity" Type="Self.Activity" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Request">
@@ -138,7 +141,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Object_Client">
-          <End Role="Client" Type="Self.Client" Multiplicity="0..1" />
+          <End Role="Client" Type="Self.Client" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="Object" Type="Self.Object" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Client">
@@ -150,7 +155,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Object_object_type">
-          <End Role="Object_type" Type="Self.Object_type" Multiplicity="0..1" />
+          <End Role="Object_type" Type="Self.Object_type" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="Object" Type="Self.Object" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Object_type">
@@ -245,7 +252,7 @@
           <Property Name="description" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
           <Property Name="result" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
           <Property Name="status" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="date_request" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="date_request" Type="DateTime" Precision="3" />
           <Property Name="date_fin_cancel" Type="DateTime" Precision="3" />
           <Property Name="id_request" Type="Int32" />
           <Property Name="act_type" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
@@ -276,7 +283,7 @@
           </Key>
           <Property Name="id_object" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="id_client" Type="Int32" />
+          <Property Name="id_client" Type="Int32" Nullable="false" />
           <Property Name="code_type" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="registration_number" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="manufacturer" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
@@ -306,7 +313,7 @@
           <Property Name="last_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="role" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="username" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="date_retire" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Activity" Relationship="Self.FK_Activity_Personel" FromRole="Personel" ToRole="Activity" />
           <NavigationProperty Name="Request" Relationship="Self.FK_Request_Personel" FromRole="Personel" ToRole="Request" />
@@ -318,10 +325,9 @@
           <Property Name="id_request" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="description" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
           <Property Name="result" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
-          <Property Name="status" Type="String" MaxLength="4" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="status" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="date_request" Type="DateTime" Precision="3" />
           <Property Name="date_fin_cancel" Type="DateTime" Precision="3" />
-          <Property Name="id_activity" Type="Int32" Nullable="false" />
           <Property Name="id_object" Type="Int32" />
           <Property Name="id_personel" Type="Int32" />
           <NavigationProperty Name="Activity" Relationship="Self.FK_Activity_Request" FromRole="Request" ToRole="Activity" />
@@ -351,7 +357,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Activity_Personel">
-          <End Role="Personel" Type="Self.Personel" Multiplicity="0..1" />
+          <End Role="Personel" Type="Self.Personel" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="Activity" Type="Self.Activity" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Personel">
@@ -363,7 +371,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Activity_Request">
-          <End Role="Request" Type="Self.Request" Multiplicity="0..1" />
+          <End Role="Request" Type="Self.Request" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="Activity" Type="Self.Activity" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Request">
@@ -375,7 +385,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Object_Client">
-          <End Role="Client" Type="Self.Client" Multiplicity="0..1" />
+          <End Role="Client" Type="Self.Client" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="Object" Type="Self.Object" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Client">
@@ -387,7 +399,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Object_object_type">
-          <End Role="Object_type" Type="Self.Object_type" Multiplicity="0..1" />
+          <End Role="Object_type" Type="Self.Object_type" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="Object" Type="Self.Object" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Object_type">
@@ -553,7 +567,6 @@
                 <ScalarProperty Name="status" ColumnName="status" />
                 <ScalarProperty Name="date_request" ColumnName="date_request" />
                 <ScalarProperty Name="date_fin_cancel" ColumnName="date_fin_cancel" />
-                <ScalarProperty Name="id_activity" ColumnName="id_activity" />
                 <ScalarProperty Name="id_object" ColumnName="id_object" />
                 <ScalarProperty Name="id_personel" ColumnName="id_personel" />
               </MappingFragment>
