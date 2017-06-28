@@ -50,7 +50,8 @@ namespace CarWorkshop
             Status_TextBox.Text = request.status;
             if(request.status!="In progress")
             {
-                Status_TextBox.BackColor = Color.White;
+               Result_textBox.BackColor = Color.White;
+               Result_textBox.Enabled = true;
             }
 
             Activity activity = new Activity();
@@ -62,6 +63,7 @@ namespace CarWorkshop
                 Activities_DataGridView.DataSource = (from el in result select new
                 {
                     el.id_activity,
+                    el.seq_no,
                     el.description,
                     el.Act_dict.act_name,
                     el.date_request,
@@ -99,6 +101,7 @@ namespace CarWorkshop
                 Activities_DataGridView.DataSource = (from el in result select new
                 {
                     el.id_activity,
+                    el.seq_no,
                     el.description,
                     el.Act_dict.act_name,
                     el.date_request,
@@ -150,6 +153,10 @@ namespace CarWorkshop
                     request.description = Description_TextBox.Text;
                     request.status = Status_TextBox.Text;
                     request.result = Result_textBox.Text;
+                    if ((request.status == "Finished") || (request.status == "Canceled"))
+                    {
+                        request.date_fin_cancel = System.DateTime.Now;
+                    }
                     ManagerService.UpdateRequest(request);
                     this.Close();
                     this.Dispose();

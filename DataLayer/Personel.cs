@@ -24,9 +24,9 @@ namespace DataLayer
         public int id_personel { get; set; }
         public string first_name { get; set; }
         public string last_name { get; set; }
-        public string role { get; set; }
         public string username { get; set; }
         public Nullable<System.DateTime> date_retire { get; set; }
+        public string role { get; set; }
         public string password { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

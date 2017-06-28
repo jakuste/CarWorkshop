@@ -36,12 +36,14 @@
             this.DateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.LogOut_Button = new System.Windows.Forms.Button();
             this.WelcomeText_Label = new System.Windows.Forms.Label();
+            this.Timeout_label = new System.Windows.Forms.Label();
             this.SequenceNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateRequest = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateFinCancel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Timeout_label = new System.Windows.Forms.Label();
+            this.Result = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Activity_DataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,9 +63,11 @@
             this.Activity_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SequenceNumber,
             this.Description,
+            this.Type,
             this.DateRequest,
             this.dateFinCancel,
-            this.Status});
+            this.Status,
+            this.Result});
             this.Activity_DataGridView.Location = new System.Drawing.Point(12, 59);
             this.Activity_DataGridView.Name = "Activity_DataGridView";
             this.Activity_DataGridView.Size = new System.Drawing.Size(760, 365);
@@ -125,6 +129,15 @@
             this.WelcomeText_Label.TabIndex = 43;
             this.WelcomeText_Label.Text = "Welcome!";
             // 
+            // Timeout_label
+            // 
+            this.Timeout_label.AutoSize = true;
+            this.Timeout_label.Location = new System.Drawing.Point(29, 35);
+            this.Timeout_label.Name = "Timeout_label";
+            this.Timeout_label.Size = new System.Drawing.Size(50, 13);
+            this.Timeout_label.TabIndex = 44;
+            this.Timeout_label.Text = "Time Out";
+            // 
             // SequenceNumber
             // 
             this.SequenceNumber.HeaderText = "Seq Nr";
@@ -137,6 +150,11 @@
             this.Description.Name = "Description";
             this.Description.Width = 300;
             // 
+            // Type
+            // 
+            this.Type.HeaderText = "Type";
+            this.Type.Name = "Type";
+            // 
             // DateRequest
             // 
             this.DateRequest.HeaderText = "Date Request";
@@ -144,7 +162,7 @@
             // 
             // dateFinCancel
             // 
-            this.dateFinCancel.HeaderText = "Time Out";
+            this.dateFinCancel.HeaderText = "Date finish";
             this.dateFinCancel.Name = "dateFinCancel";
             // 
             // Status
@@ -152,14 +170,10 @@
             this.Status.HeaderText = "Status";
             this.Status.Name = "Status";
             // 
-            // Timeout_label
+            // Result
             // 
-            this.Timeout_label.AutoSize = true;
-            this.Timeout_label.Location = new System.Drawing.Point(29, 35);
-            this.Timeout_label.Name = "Timeout_label";
-            this.Timeout_label.Size = new System.Drawing.Size(50, 13);
-            this.Timeout_label.TabIndex = 44;
-            this.Timeout_label.Text = "Time Out";
+            this.Result.HeaderText = "Result";
+            this.Result.Name = "Result";
             // 
             // WorkerMainWindow
             // 
@@ -195,11 +209,13 @@
         private System.Windows.Forms.DateTimePicker DateTimePicker;
         private System.Windows.Forms.Button LogOut_Button;
         private System.Windows.Forms.Label WelcomeText_Label;
+        private System.Windows.Forms.Label Timeout_label;
         private System.Windows.Forms.DataGridViewTextBoxColumn SequenceNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Type;
         private System.Windows.Forms.DataGridViewTextBoxColumn DateRequest;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateFinCancel;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
-        private System.Windows.Forms.Label Timeout_label;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Result;
     }
 }

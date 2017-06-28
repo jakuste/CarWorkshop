@@ -36,7 +36,7 @@ namespace CarWorkshop
 
         private void Save_Button_Click(object sender, EventArgs e)
         {
-            if(String.IsNullOrWhiteSpace(Name_TextBox.Text)||String.IsNullOrWhiteSpace(Surname_TextBox.Text)||String.IsNullOrWhiteSpace(Username_TextBox.Text)||String.IsNullOrWhiteSpace(Password_TextBox.Text)||String.IsNullOrWhiteSpace(Role_ComboBox.Text))
+            if(String.IsNullOrWhiteSpace(Name_TextBox.Text)||String.IsNullOrWhiteSpace(Surname_TextBox.Text)||String.IsNullOrWhiteSpace(Username_TextBox.Text)||String.IsNullOrWhiteSpace(Role_ComboBox.Text))
             {
                 Alert.DisplayError("Invalid input values!");
                 return;
@@ -45,6 +45,11 @@ namespace CarWorkshop
             {
                 if (user == null)
                 {
+                    if(String.IsNullOrWhiteSpace(Password_TextBox.Text))
+                    {
+                        Alert.DisplayError("Invalid input values!");
+                        return;
+                    }
                     FillUser();
                     AdminService.NewPersonel(user);
                 }

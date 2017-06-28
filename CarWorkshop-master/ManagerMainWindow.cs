@@ -48,7 +48,7 @@ namespace CarWorkshop
 
         public override void InitOnShow()
         {
-            this.WelcomeText_Label.Text = "Hi, you are logged in as [username]";
+            this.WelcomeText_Label.Text = "Hi, you are logged in as " + user.username;
         }
 
         private void AddNewCustomer_Button_Click(object sender, EventArgs e)
@@ -414,6 +414,7 @@ namespace CarWorkshop
                 Activities_DataGridView.DataSource = (from el in result select new
                 {
                     el.id_activity,
+                    el.seq_no,
                     el.description,
                     el.Act_dict.act_name,
                     el.date_request,

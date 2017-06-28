@@ -35,7 +35,8 @@ namespace CarWorkshop
             Result_TextBox.Text = activity.result;
             if (activity.status != "In progress")
             {
-                Status_TextBox.BackColor = Color.White;
+                Result_TextBox.BackColor = Color.White;
+                Result_TextBox.Enabled = true;
             }
             Status_TextBox.Text = activity.status;
         }
@@ -74,6 +75,7 @@ namespace CarWorkshop
         private void UpdateStatus(string status)
         {
             activity.status = status;
+            activity.result = Result_TextBox.Text;
             if((status=="Finished") || (status=="Canceled"))
             {
                 activity.date_fin_cancel = System.DateTime.Now;

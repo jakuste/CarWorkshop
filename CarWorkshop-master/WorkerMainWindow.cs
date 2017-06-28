@@ -35,7 +35,7 @@ namespace CarWorkshop
 
         public override void InitOnShow()
         {
-            this.WelcomeText_Label.Text = "Hi, you are logged in as [username]";
+            this.WelcomeText_Label.Text = "Hi, you are logged in as " + user.username;
         }
 
         private void LogOut_Button_Click(object sender, EventArgs e)
@@ -46,13 +46,23 @@ namespace CarWorkshop
 
         private void Show_Button_Click(object sender, EventArgs e)
         {
-            if ((Activity)Activity_DataGridView.CurrentRow.DataBoundItem == null)
+            if (Activity_DataGridView.CurrentRow == null)
             {
                 Alert.DisplayError("No item selected!");
                 return;
             }
-            ActivityViever ShowActivityWindow = new ActivityViever((Activity)Activity_DataGridView.CurrentRow.DataBoundItem);
-            ShowActivityWindow.ShowDialog();
+            Activity activity = new Activity();
+            activity.id_activity = (int)Activity_DataGridView.CurrentRow.Cells[0].Value;
+            try
+            {
+                activity = ManagerService.GetActivities(activity).SingleOrDefault();
+                ActivityViever activityViever = new ActivityViever(activity);
+                activityViever.ShowDialog();
+            }
+            catch (ServiceException exc)
+            {
+                Alert.DisplayError(exc.Message);
+            }
         }
 
         private void Search_Button_Click(object sender, EventArgs e)
@@ -69,6 +79,7 @@ namespace CarWorkshop
                                                       select new
                                                       {
                                                           el.id_activity,
+                                                          el.seq_no,
                                                           el.description,
                                                           el.Act_dict.act_name,
                                                           el.date_request,

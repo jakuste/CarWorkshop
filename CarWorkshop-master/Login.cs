@@ -25,7 +25,7 @@ namespace CarWorkshop
 
         private void Login_Button_Click(object sender, EventArgs e)
         {
-            /*
+            
             Personel user = new Personel();
             user.password = Password_TextBox.Text;
             user.username = Username_TextBox.Text;
@@ -36,10 +36,10 @@ namespace CarWorkshop
                 return;
             }
             MainWindow mainWindow;
-            if (result.role=="Admin")
+            if (result.role.StartsWith("Admin"))
             {
                 mainWindow = new AdminMainWindow();
-            } else if (result.role == "Manager")
+            } else if (result.role.StartsWith("Manager"))
             {
                 mainWindow = new ManagerMainWindow(result);
             } else
@@ -51,7 +51,8 @@ namespace CarWorkshop
             mainWindow.InitOnShow();
 
             this.Visible = false;
-            mainWindow.ShowDialog();*/
+            mainWindow.ShowDialog();
+            /*
             string adminText = "admin";
             string managerText = "manager";
             //this.Username_TextBox.Text = managerText;
@@ -73,7 +74,7 @@ namespace CarWorkshop
 
             this.Visible = false;
             mainWindow.ShowDialog();
-
+            */
         }
     }
 }

@@ -49,7 +49,7 @@ namespace BizzLayer
                 CarWorkshopModelContext dc = new CarWorkshopModelContext();
                 var result = from el in dc.Personel
                              where
-                             String.IsNullOrEmpty(searchCrit.username) || (el.username == searchCrit.username)
+                             (el.username == searchCrit.username)
                              &&
                              el.password == searchCrit.password
                              select el;
